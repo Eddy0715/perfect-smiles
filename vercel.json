@@ -1,5 +1,5 @@
 {
   "buildCommand": "cd dr-abin-website && npm install && npm run build",
   "outputDirectory": "dr-abin-website/dist",
-  "installCommand": "cd dr-abin-website && npm install"
+  "framework": null
 }
