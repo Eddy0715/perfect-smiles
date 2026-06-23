@@ -719,12 +719,14 @@ header.scrolled .nav-links a {
 .reviews {
   background-color: var(--bg-surface);
   overflow: hidden;
+  position: relative;
 }
 
 #case-reports-glance {
   background-color: var(--bg-deep);
   overflow: hidden;
   border-top: 1px solid var(--border-light);
+  position: relative;
 }
 
 .carousel-container {
@@ -734,15 +736,56 @@ header.scrolled .nav-links a {
   padding: 3rem 0;
 }
 
+/* Edge fading overlays for premium look */
+.carousel-container::before,
+.carousel-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.reviews .carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-surface) 0%, transparent 100%);
+}
+
+.reviews .carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-surface) 0%, transparent 100%);
+}
+
+#case-reports-glance .carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-deep) 0%, transparent 100%);
+}
+
+#case-reports-glance .carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-deep) 0%, transparent 100%);
+}
+
 .carousel-track {
   display: flex;
   gap: 2.5rem;
-  transition: transform 0.5s ease-in-out;
-  cursor: grab;
+  width: max-content;
+  animation: infiniteScroll 45s linear infinite;
 }
 
-.carousel-track:active {
-  cursor: grabbing;
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .review-slide {
