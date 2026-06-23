@@ -417,10 +417,11 @@ header.scrolled .nav-links a {
 .hero-shape {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(223, 186, 115, 0.05);
-  background: radial-gradient(circle, rgba(223, 186, 115, 0.02) 0%, rgba(0, 0, 0, 0) 70%);
+  border: 1px solid rgba(223, 186, 115, 0.18);
+  background: transparent;
   pointer-events: none;
   z-index: 1;
+  box-shadow: 0 0 40px rgba(223, 186, 115, 0.04) inset;
 }
 
 .shape-1 {
@@ -428,6 +429,9 @@ header.scrolled .nav-links a {
   height: 60vw;
   top: -20%;
   left: -20%;
+  border-width: 1.5px;
+  border-color: rgba(223, 186, 115, 0.14);
+  animation: rotateSlow1 60s linear infinite;
 }
 
 .shape-2 {
@@ -435,6 +439,9 @@ header.scrolled .nav-links a {
   height: 45vw;
   top: 10%;
   right: -10%;
+  border-width: 1px;
+  border-color: rgba(243, 229, 171, 0.20);
+  animation: rotateSlow2 45s linear infinite reverse;
 }
 
 .shape-3 {
@@ -442,6 +449,9 @@ header.scrolled .nav-links a {
   height: 35vw;
   bottom: -10%;
   left: 20%;
+  border-width: 1px;
+  border-color: rgba(184, 144, 71, 0.16);
+  animation: pulseFade 8s ease-in-out infinite;
 }
 
 .hero-container {
@@ -501,6 +511,21 @@ header.scrolled .nav-links a {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-12px); }
   100% { transform: translateY(0px); }
+}
+
+@keyframes rotateSlow1 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes rotateSlow2 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulseFade {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.04); }
 }
 
 .hero .btn-group {
