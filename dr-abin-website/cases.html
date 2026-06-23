@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Case Reports | Perfect Smile</title>
+    <title>Case Reports | PerfectSmilebyMathew</title>
     <!-- SEO Meta Tags -->
     <meta name="description" content="View the comprehensive 2024 Case Reports by Dr. Abin Mathew." />
     <!-- Main Styles -->
     <link rel="stylesheet" href="./style.css">
     <style>
       body {
-        padding-top: 80px; /* Offset for fixed header */
-        background-color: var(--light-teal);
+        padding-top: 90px; /* Offset for fixed header */
+        background-color: var(--bg-deep);
       }
       .pdf-container {
         max-width: 1000px;
@@ -33,20 +33,29 @@
     </style>
   </head>
   <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Background Glow Blobs -->
+    <div class="bg-glow-container">
+      <div class="bg-glow-blob blob-1"></div>
+      <div class="bg-glow-blob blob-2"></div>
+      <div class="bg-glow-blob blob-3"></div>
+    </div>
     
     <!-- Header Navigation -->
     <header>
       <nav>
         <a href="./index.html" class="logo" style="text-decoration: none;">
-          <img src="./assets/about/IMG_0379.jpg" alt="Perfect Smile Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          Perfect Smile
+          <img src="./assets/about/IMG_0379.jpg" alt="PerfectSmilebyMathew Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          PerfectSmilebyMathew
         </a>
         <ul class="nav-links">
           <li><a href="./index.html#home">Home</a></li>
           <li><a href="./index.html#about">About</a></li>
           <li><a href="./index.html#services">Services</a></li>
           <li><a href="./index.html#cases">Cases</a></li>
-          <li><a href="./cases.html" style="color: var(--primary-teal); font-weight: 700;">Case Reports</a></li>
+          <li><a href="./cases.html" style="color: var(--gold-primary); font-weight: 700;">Case Reports</a></li>
           <li><a href="./index.html#reviews">Reviews</a></li>
         </ul>
         <a href="./index.html#contact" class="btn btn-primary">Book Consultation</a>
@@ -55,15 +64,15 @@
 
     
     <main class="pdf-container" style="max-width: 1200px;">
-      <div class="pdf-header">
-        <h4 style="color: var(--accent-teal); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem;">Clinical Outcomes</h4>
-        <h2>Featured Case Reports</h2>
-        <p style="margin-bottom: 2rem;">A comprehensive review of our orthodontic transformations and clinical excellence.</p>
+      <div class="pdf-header reveal">
+        <h4 style="color: var(--gold-primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem;">Clinical Outcomes</h4>
+        <h2>Featured <span class="gold-text-gradient">Case Reports</span></h2>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">A comprehensive review of our orthodontic transformations and clinical excellence.</p>
       </div>
       
       <div class="gallery-grid">
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 1: INVISALIGN</h3>
         <p>INVISALIGN <br>PRETREATMENT <br>POST TREATMENT</p>
         <div class="report-images-grid">
@@ -77,7 +86,7 @@
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 2: INVISALIGN</h3>
         <p>INVISALIGN <br>PRETREATMENT <br>POST TREATMENT</p>
         <div class="report-images-grid">
@@ -93,7 +102,7 @@
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 3: INVISALIGN</h3>
         <p>INVISALIGN <br>PRETREATMENT <br>POST TREATMENT <br>TREATMENT DURATION  8 MONTHS</p>
         <div class="report-images-grid">
@@ -107,7 +116,7 @@
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 4: Non Extraction Cases</h3>
         <p>Non Extraction Cases <br>PRETREATMENT                            POST TREATMENT <br>PATIENT WITH CROWDING AND IMPACTED CANINE TREATED WITH DAMON Q SELF LIGATING BRACKET SYSTEM</p>
         <div class="report-images-grid">
@@ -125,7 +134,7 @@
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 5: CANINE DISIMPACTED USING DIODE LASER</h3>
         <p>PRETREATMENT                            POST TREATMENT <br>CANINE DISIMPACTED USING DIODE LASER <br>DAMON Q SLB BRACKET SYSTEM
 DURATION  15 MONTHS</p>
@@ -139,7 +148,7 @@ DURATION  15 MONTHS</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 6: PRETREATMENT                            POST TREATMENT</h3>
         <p>PRETREATMENT                            POST TREATMENT <br>PREVIOUSLY  CLEFT PALATE TREATED PATIENT TREATED WITH NITI PALATAL EXPANDER AND FIXED MBT MECHANOTHERAPHY</p>
         <div class="report-images-grid">
@@ -157,7 +166,7 @@ DURATION  15 MONTHS</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 7: NITI PALATAL EXPANDER</h3>
         <p>PRETREATMENT                            POST TREATMENT <br>NITI PALATAL EXPANDER <br>MBT PRESCRIPTION USED WITH CUNITI WIRES 
 MISSING MOLAR TO BE REPLACED PROSTHETICALLY</p>
@@ -171,7 +180,7 @@ MISSING MOLAR TO BE REPLACED PROSTHETICALLY</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 8: DILACERATED ROOT</h3>
         <p>PRETREATMENT <br>POSTTREATMENT <br>CLASS I SKELETAL PATTERN,ANGLES CLASS I MOLAR RELATION BILATERALLY  WITH  IMPACTED CANINE IN LOWER ARCH
 OBLIQUELY IMPACTED 33 IS ORIENTED TO CERVICAL 3 RD OF ROOTS OF 41 and 42 AND ALSO HAS A DILACERATED ROOT</p>
@@ -190,7 +199,7 @@ OBLIQUELY IMPACTED 33 IS ORIENTED TO CERVICAL 3 RD OF ROOTS OF 41 and 42 AND ALS
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 9: MBT PRESCRIPTION</h3>
         <p>43 BROUGHT INTO ARCH <br>33 BROUGHT TRANSPORTED TO 4TH QUADRANT <br>LEVELLING AND ALIGNING OF 33AND 43 INTO ARCH ON SAME SIDE <br>MBT PRECRIPTION USED <br>CBCT IMAGE</p>
         <div class="report-images-grid">
@@ -203,7 +212,7 @@ OBLIQUELY IMPACTED 33 IS ORIENTED TO CERVICAL 3 RD OF ROOTS OF 41 and 42 AND ALS
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 10: POST NAM</h3>
         <p>PRETREATMENT <br>POST NAM <br>POST LIP SURGERY <br>PRESURGICAL NASOALVEOLAR MOLDING IN A 4 DAY OLD INFANT WITH UNILATERAL CLEFTLIP ,ALVEOLUS AND PALATE DEFORMITY
 TREATMENT DURATION - 5 MONTHS <br>Infant orthopedic</p>
@@ -219,7 +228,7 @@ TREATMENT DURATION - 5 MONTHS <br>Infant orthopedic</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 11: Myofunctional therapy</h3>
         <p>Myofunctional therapy case (FACEMASK ) <br>PRE TREATMENT       POST FUNCTIONAL PHASE       WITH FACE MASK <br>PRE TREATMENT             POST FUNCTIONAL PHASE</p>
         <div class="report-images-grid">
@@ -235,7 +244,7 @@ TREATMENT DURATION - 5 MONTHS <br>Infant orthopedic</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 12: FACEMASK THERAPY</h3>
         <p>FACEMASK THERAPY – 13 MONTHS 
 CLASS III SKELETAL PATTERN
@@ -251,7 +260,7 @@ MBT FIXED MECHANOTHERAPY IN  DURATION  2 YEARS <br>POST FIXED TREATMENT</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 13: TWIN BLOCK</h3>
         <p>TWIN BLOCK</p>
         <div class="report-images-grid">
@@ -265,7 +274,7 @@ MBT FIXED MECHANOTHERAPY IN  DURATION  2 YEARS <br>POST FIXED TREATMENT</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 14: TWIN BLOCK</h3>
         <p>TWIN BLOCK <br>PRE TREATMENT <br>POST FUNCTIONAL PHASE <br>POST FIXED APPLIANCE</p>
         <div class="report-images-grid">
@@ -276,7 +285,7 @@ MBT FIXED MECHANOTHERAPY IN  DURATION  2 YEARS <br>POST FIXED TREATMENT</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 15: TWIN BLOCK APPLIANCE THERAPY WITH MBT FIXED MECHANOTH...</h3>
         <p>TWIN BLOCK APPLIANCE THERAPY WITH MBT FIXED MECHANOTHERAPY <br>PRE TREATMENT                      WITH TWIN BLOCK <br>POST FUNCTIONAL PHASE          FIXED APPLIANCE <br>POST FIXED APPLIANCE</p>
         <div class="report-images-grid">
@@ -289,7 +298,7 @@ MBT FIXED MECHANOTHERAPY IN  DURATION  2 YEARS <br>POST FIXED TREATMENT</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 16: High pull headgear</h3>
         <p>PRETREATMENT <br>High pull headgear <br>PRETREATMENT <br>POST HEADGEAR THERAPY <br>PHASE I-CLASS I SKELETAL PATTERN GROWING PATIENT WITH PROGNATHIC MAXILLA  TREATED WITH HIGH PULL HEADGEAR
 DURATION -14 MONTHS <br>POST TREATMENT</p>
@@ -302,7 +311,7 @@ DURATION -14 MONTHS <br>POST TREATMENT</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 17: Mutilated Malocclusion Cases</h3>
         <p>Mutilated malocclusion cases <br>PRETREATMENT <br>POST TREATMENT <br>MUTILATED MALOCCLUSION TREATED WITH FIXED APPLIANCE
 MINI IMPLANT RETRACTION</p>
@@ -321,7 +330,7 @@ MINI IMPLANT RETRACTION</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 18: MINI IMPLANT RETRACTION</h3>
         <p>. <br>MINI IMPLANT RETRACTION <br>PRETREATMENT                        POST TREATMENT <br>MBT PRESCRIPTION
 MOLAR UP RIGHTING ALSO DONE IN 47
@@ -337,7 +346,7 @@ DURATION 14 MONTHS</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 19: Orthognathic Surgical Cases</h3>
         <p>Orthognathic surgical cases <br>CLEFT LIP AND PALATE PATIENT TREATED WITH LEFORT  1 OSTEOTOMY AND ADVANCEMENT
 PRE SURGICAL ORTHODONTICS DURATION 14 MONTHS <br>PRETREATMENT <br>PRE SURGICAL <br>POST SURGICAL</p>
@@ -351,7 +360,7 @@ PRE SURGICAL ORTHODONTICS DURATION 14 MONTHS <br>PRETREATMENT <br>PRE SURGICAL <
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 20: Presurgical Orthodontics</h3>
         <p>Lefort 1 supior impaction case
 Presurgical orthodontics</p>
@@ -361,7 +370,7 @@ Presurgical orthodontics</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 21: Extraction Cases</h3>
         <p>Extraction cases <br>Pre-treatment <br>Post-treatment <br>BIMAXILLARY PROTRUSION CASE TREATED WITH EXTRACTION OF ALL FOUR  1stPREMOLARS.
 DURATION – 17 MONTHS 
@@ -377,7 +386,7 @@ MBT PRESCRIPTION</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 22: Orthodontic Transformation</h3>
         <p>PRETREATMENT</p>
         <div class="report-images-grid">
@@ -390,7 +399,7 @@ MBT PRESCRIPTION</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 23: INVISALIGN</h3>
         <p>Lets create some smile</p>
         <div class="report-images-grid">
@@ -405,7 +414,7 @@ MBT PRESCRIPTION</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 24: PRE TREATMENT POST TREATMENT</h3>
         <p>PRE TREATMENT                         POST TREATMENT <br>CROWDING CASE TREATED WITH EXTRACTION OF ALL FOUR 1st PREMOLARS
 MBT PRESCRIPTION</p>
@@ -424,7 +433,7 @@ MBT PRESCRIPTION</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 25: PROCLINED UPPER TEETH WITH LOWER ANTERIOR CROWDING</h3>
         <p>PATIENT WITH PROCLINED UPPER TEETH WITH LOWER ANTERIOR CROWDING TREATED WITH EXTRACTION OF ALL FOUR 1ST PREMOLARS.
 ABSOLUTE ANCHORAGE .5 X 9 MM TITANIUM IMPLANT RETRACTION <br>PRETREATMENT                         MID TREATMENT</p>
@@ -442,7 +451,7 @@ ABSOLUTE ANCHORAGE .5 X 9 MM TITANIUM IMPLANT RETRACTION <br>PRETREATMENT       
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 26: Anchorage case</h3>
         <p>Absolute anchorage case treated with minimplant retraction</p>
         <div class="report-images-grid">
@@ -455,7 +464,7 @@ ABSOLUTE ANCHORAGE .5 X 9 MM TITANIUM IMPLANT RETRACTION <br>PRETREATMENT       
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 27: PRETREATMENT                         POST TREATMENT</h3>
         <p>PRETREATMENT                         POST TREATMENT <br>PATIENT WITH BUCCALY ERUPTED CANINE AND WITH MISSING LOWER 1ST PREMOLARS  WAS TREATED WITH EXTRACTION OF SINGLE PREMOLAR IN UPPER ARCH AND RETRACTED WITH T LOOP.
 MBT PRESCRIPTION</p>
@@ -471,7 +480,7 @@ MBT PRESCRIPTION</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 28: herbst fixed functional appliance</h3>
         <p>herbst fixed functional appliance</p>
         <div class="report-images-grid">
@@ -489,7 +498,7 @@ MBT PRESCRIPTION</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 29: LETS DO SOME EXPANSION</h3>
         <p>LETS DO SOME EXPANSION</p>
         <div class="report-images-grid">
@@ -499,7 +508,7 @@ MBT PRESCRIPTION</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 30: MINI IMPLANTS</h3>
         <p>MINI IMPLANTS TO THE RESCUE WHEN YOU NEED TIPPING OF CANINES</p>
         <div class="report-images-grid">
@@ -509,7 +518,7 @@ MBT PRESCRIPTION</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 31: EXTRACTIONS TO THE RESCUE</h3>
         <p>EXTRACTIONS TO THE RESCUE</p>
         <div class="report-images-grid">
@@ -519,7 +528,7 @@ MBT PRESCRIPTION</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 32: DEEP BITE CORRECTION WITH DAMON SLB BRACKETS</h3>
         <p>DEEP BITE CORRECTION WITH DAMON SLB BRACKETS</p>
         <div class="report-images-grid">
@@ -529,7 +538,7 @@ MBT PRESCRIPTION</p>
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 33: BRUXISM AND PAIN IN TMJ</h3>
         <p>PATIENT CAME WITH A C/O OF BRUXISM AND PAIN IN TMJ  AND WAS TREATED WITH The Michigan Splint
 It increases occlusal stability, muscle relaxation, mandibular posture deprogramming, and vertical dimension modification</p>
@@ -539,7 +548,7 @@ It increases occlusal stability, muscle relaxation, mandibular posture deprogram
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 34: Infrazygomatic Crest</h3>
         <p>Infrazygomatic crest implants have become increasingly popular in orthodontics due to their ability to provide stable anchorage support. These implants are placed on the zygomatic bone, which is located above the maxilla, allowing for more rol and versatility in tooth movement..</p>
         <div class="report-images-grid">
@@ -548,7 +557,7 @@ It increases occlusal stability, muscle relaxation, mandibular posture deprogram
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 35: Molar intrusion using mini inplants</h3>
         <p>Molar intrusion using mini inplants</p>
         <div class="report-images-grid">
@@ -557,7 +566,7 @@ It increases occlusal stability, muscle relaxation, mandibular posture deprogram
         </div>
       </div>
 
-      <div class="report-card">
+      <div class="report-card reveal">
         <h3>Case 36: CLEFT</h3>
         <p>CLEFT PATIENT TREATED WITH EXPANSION APPLIANCE AND FIXED APPLAIANCE</p>
         <div class="report-images-grid">
@@ -575,7 +584,7 @@ It increases occlusal stability, muscle relaxation, mandibular posture deprogram
 
 
     <!-- Footer -->
-    <footer id="contact" style="background-color: #0A9396; padding: 4rem 2rem 3rem; text-align: center; color: var(--white); margin-top: 4rem;">
+    <footer id="contact" style="padding: 4rem 2rem 3rem; text-align: center; margin-top: 4rem;">
       <div class="container">
         <div style="max-width: 600px; margin: 0 auto 3rem;">
           <p style="font-size: 1.1rem; margin-bottom: 0.5rem; opacity: 0.9;">Precision alignment for a confident you.</p>
@@ -611,6 +620,50 @@ It increases occlusal stability, muscle relaxation, mandibular posture deprogram
           header.classList.remove('scrolled');
         }
       });
+
+      // Scroll Progress Indicator (Glowing Gold Bar at top)
+      const progressBar = document.querySelector('.scroll-progress');
+      if (progressBar) {
+        window.addEventListener('scroll', () => {
+          const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          if (height > 0) {
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + '%';
+          }
+        });
+      }
+
+      // Background Blobs scroll parallax effect
+      const blobs = document.querySelectorAll('.bg-glow-blob');
+      if (blobs.length > 0) {
+        window.addEventListener('scroll', () => {
+          const scrollY = window.scrollY;
+          blobs.forEach((blob, index) => {
+            const speed = (index + 1) * 0.05;
+            blob.style.transform = `translateY(${scrollY * speed}px)`;
+          });
+        });
+      }
+
+      // Intersection Observer for scroll-driven reveal animations
+      const revealElements = document.querySelectorAll('.reveal, .gold-glow-divider');
+      if (revealElements.length > 0) {
+        const revealOnScroll = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.05,
+          rootMargin: '0px 0px -20px 0px'
+        });
+        revealElements.forEach(element => {
+          revealOnScroll.observe(element);
+        });
+      }
     </script>
   </body>
 </html>

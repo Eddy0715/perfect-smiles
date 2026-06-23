@@ -89,3 +89,51 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
+// Intersection Observer for scroll-driven reveal animations
+const revealElements = document.querySelectorAll('.reveal, .gold-glow-divider');
+
+if (revealElements.length > 0) {
+  const revealOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px'
+  });
+
+  revealElements.forEach(element => {
+    revealOnScroll.observe(element);
+  });
+}
+
+// Scroll Progress Indicator (Glowing Gold Bar at top)
+const progressBar = document.querySelector('.scroll-progress');
+if (progressBar) {
+  window.addEventListener('scroll', () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    if (height > 0) {
+      const scrolled = (winScroll / height) * 100;
+      progressBar.style.width = scrolled + '%';
+    }
+  });
+}
+
+// Background Blobs scroll parallax effect
+const blobs = document.querySelectorAll('.bg-glow-blob');
+if (blobs.length > 0) {
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    blobs.forEach((blob, index) => {
+      const speed = (index + 1) * 0.05;
+      blob.style.transform = `translateY(${scrollY * speed}px)`;
+    });
+  });
+}
+
+

@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perfect Smile | Premium Orthodontic Care</title>
+    <title>PerfectSmilebyMathew | Premium Orthodontic Care</title>
     <!-- SEO Meta Tags -->
     <meta name="description" content="Dr. Abin Mathew offers bespoke, precision-driven orthodontic solutions including clear aligners and surgical orthodontics." />
     <!-- Main Styles -->
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
     
-    <!-- Header Navigation -->
+    <!-- Background Glow Blobs -->
+    <div class="bg-glow-container">
+      <div class="bg-glow-blob blob-1"></div>
+      <div class="bg-glow-blob blob-2"></div>
+      <div class="bg-glow-blob blob-3"></div>
+    </div>
     <header>
       <nav>
         <div class="logo">
-          <img src="./assets/about/IMG_0379.jpg" alt="Perfect Smile Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          Perfect Smile
+          <img src="./assets/about/IMG_0379.jpg" alt="PerfectSmilebyMathew Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          PerfectSmilebyMathew
         </div>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
@@ -37,51 +44,53 @@
       <div class="hero-shape shape-2"></div>
       <div class="hero-shape shape-3"></div>
       <div class="hero-container">
-        <div class="hero-content">
-          <h1>EVERY SMILE HAS A STORY. START YOURS.</h1>
-          <p style="font-size: 1.1rem; max-width: 450px; margin-bottom: 2rem; color: var(--text-dark);">Expert Care. Advanced Technology. Stunning Smiles.</p>
+        <div class="hero-content reveal">
+          <h1>EVERY SMILE HAS A STORY. <span class="gold-text-gradient">START YOURS.</span></h1>
+          <p style="font-size: 1.1rem; max-width: 450px; margin-bottom: 2rem; color: var(--text-muted);">Expert Care &bull; Advanced Technology &bull; Stunning Smiles.</p>
           <div class="btn-group" style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
             <a href="#contact" class="btn btn-primary" style="margin: 0;">BOOK CONSULTATION</a>
             <a href="#cases" class="btn-text" style="font-weight: 600; font-size: 0.9rem; letter-spacing: 1px;">VIEW TREATABLE CASES</a>
           </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image reveal reveal-delay-2">
           <img src="./assets/about/hero_transparent.png" alt="Dr. Abin Mathew" onerror="this.src='./assets/about/IMG_0378.PNG'" />
         </div>
       </div>
     </section>
 
+    <div class="gold-glow-divider"></div>
+
     <!-- About Section -->
     <section id="about" class="section-padding about">
       <div class="container about-grid">
-        <div class="about-image">
+        <div class="about-image reveal">
           <img src="./assets/about/new_about_portrait.jpg" alt="Dr. Abin Mathew" />
         </div>
-        <div class="about-content">
-          <h4 style="color: var(--accent-teal); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem;">Specialist Orthodontist</h4>
-          <h2>Dr. Abin Mathew <span style="font-size: 1.2rem; color: var(--secondary-navy); display: block; margin-top: 0.5rem;">B.D.S., M.D.S.</span></h2>
-          <p><strong>Welcome to my practice.</strong> I believe that a smile is more than just a set of teeth—it is your most powerful form of self-expression. I am Dr. Abin Mathew, a Specialist Orthodontist with over 8 years of clinical experience across India, Saudi Arabia, and the UAE, dedicated to blending clinical precision with an artistic eye to create smiles that are as healthy as they are transformative.</p>
+        <div class="about-content reveal reveal-delay-1">
+          <h4 style="color: var(--gold-primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem;">Specialist Orthodontist</h4>
+          <h2>Dr. Abin Mathew <span style="font-size: 1.2rem; color: var(--gold-primary); display: block; margin-top: 0.5rem;">B.D.S., M.D.S.</span></h2>
+          <p><strong>Welcome to my practice.</strong> I believe that a smile is more than just a set of teeth—it is your most powerful form of self-expression. I am Dr. Abin Mathew, a Specialist Orthodontist with over 10 years of clinical experience across India, Saudi Arabia, and the UAE, dedicated to blending clinical precision with an artistic eye to create smiles that are as healthy as they are transformative.</p>
           <p>With a Master of Dental Surgery (M.D.S.) in Orthodontics, I have spent my career mastering the delicate balance of dental aesthetics and structural alignment. My international experience has allowed me to treat a diverse range of patients, and I am proud to offer care in English, Hindi, Malayalam, and Tamil, while maintaining a strong working proficiency in Arabic to ensure every patient feels comfortable and heard. My approach is rooted in the belief that orthodontic treatment is a collaborative journey; my goal is to guide you through that process with clarity, comfort, and the highest standard of care.</p>
           
-          <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-navy);">My Philosophy</h3>
+          <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--gold-primary);">My Philosophy</h3>
           <p>I treat every patient with the same dedication I apply to my own life. I bring a high level of focus, precision, and drive to your orthodontic treatment plan. I don’t just move teeth; I craft confidence.</p>
           <p>At the core of my practice is a commitment to:</p>
-          <ul style="list-style-position: inside; margin-bottom: 1.5rem; color: var(--text-dark);">
+          <ul style="list-style-position: inside; margin-bottom: 1.5rem; color: var(--text-muted);">
             <li style="margin-bottom: 0.5rem;"><strong>Evidence-Based Excellence:</strong> Utilizing the latest advancements in orthodontic technology to ensure predictable, long-term results.</li>
             <li style="margin-bottom: 0.5rem;"><strong>Personalized Care:</strong> Recognizing that every smile is unique, I develop bespoke treatment plans tailored to your specific facial anatomy and lifestyle goals.</li>
             <li style="margin-bottom: 0.5rem;"><strong>Comfort & Clarity:</strong> I prioritize creating a welcoming environment where you feel empowered, informed, and confident in every step of your journey.</li>
           </ul>
 
-          <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-navy);">Why Choose My Practice?</h3>
+          <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--gold-primary);">Why Choose My Practice?</h3>
           <p>Choosing an orthodontist is a significant decision. When you step into my clinic, you are choosing a partner who values your time, your comfort, and your results. Whether you are seeking discreet alignment options or comprehensive orthodontic care, I am here to provide a sophisticated, modern experience that yields exceptional outcomes.</p>
-          <p>Let’s work together to unlock the smile you’ve always envisioned. <strong>Ready to start your smile transformation? <a href="#contact" style="color: var(--primary-teal); font-weight: 600; text-decoration: underline;">Book your consultation today.</a></strong></p>
+          <p>Let’s work together to unlock the smile you’ve always envisioned. <strong>Ready to start your smile transformation? <a href="#contact" style="color: var(--gold-primary); font-weight: 600; text-decoration: underline;">Book your consultation today.</a></strong></p>
           
           <div class="stats-grid" style="margin-top: 3rem;">
-            <div class="stat-item">
-              <h4>8+</h4>
+            <div class="stat-item reveal reveal-delay-2">
+              <h4>10+</h4>
               <p style="margin:0; font-size: 0.9rem;">Years Experience</p>
             </div>
-            <div class="stat-item">
+            <div class="stat-item reveal reveal-delay-3">
               <h4>5</h4>
               <p style="margin:0; font-size: 0.9rem;">Languages Spoken</p>
             </div>
@@ -90,14 +99,16 @@
       </div>
     </section>
 
+    <div class="gold-glow-divider"></div>
+
     <!-- Services Section -->
     <section id="services" class="section-padding">
-      <div class="container text-center">
-        <h4 style="color: var(--accent-teal); text-transform: uppercase; letter-spacing: 2px;">Our Expertise</h4>
-        <h2>Comprehensive Services</h2>
-        <p style="max-width: 600px; margin: 0 auto 3rem; color: var(--secondary-navy);">Utilizing the latest advancements in orthodontic technology to ensure predictable, long-term results.</p>
+      <div class="container text-center reveal">
+        <h4 style="color: var(--gold-primary); text-transform: uppercase; letter-spacing: 2px;">Our Expertise</h4>
+        <h2>Comprehensive <span class="gold-text-gradient">Services</span></h2>
+        <p style="max-width: 600px; margin: 0 auto 3rem; color: var(--text-muted);">Utilizing the latest advancements in orthodontic technology to ensure predictable, long-term results.</p>
         
-                <div class="services-grid">
+                <div class="services-grid reveal reveal-delay-1">
           <div class="service-card">
             <div class="service-icon">
               <svg width="38" height="38" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="14" width="30" height="12" rx="3"/><circle cx="12" cy="20" r="3"/><circle cx="28" cy="20" r="3"/><line x1="12" y1="14" x2="12" y2="8"/><line x1="28" y1="14" x2="28" y2="8"/><line x1="12" y1="26" x2="12" y2="32"/><line x1="28" y1="26" x2="28" y2="32"/></svg>
@@ -125,6 +136,19 @@
             </div>
             <h3>Clear Aligners</h3>
             <p>Invisible. Removable. Convenient.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="38" height="38" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 24 Q20 10 32 24" />
+                <path d="M11 25.5 Q20 13.5 29 25.5" stroke-dasharray="1.5 2" />
+                <path d="M20 4 L20 8 M18 6 L22 6" />
+                <path d="M7 10 L7 12 M6 11 L8 11" />
+                <path d="M33 10 L33 12 M32 11 L34 11" />
+              </svg>
+            </div>
+            <h3>Invisalign®</h3>
+            <p>Premium, world-class clear aligner system for ultimate comfort.</p>
           </div>
           <div class="service-card">
             <div class="service-icon">
@@ -172,41 +196,43 @@
       </div>
     </section>
 
+    <div class="gold-glow-divider"></div>
+
     <!-- Treatable Cases Section -->
     <section id="cases" class="section-padding cases">
-      <div class="container text-center">
-        <h4 style="color: var(--accent-teal); text-transform: uppercase; letter-spacing: 2px;">Clinical Excellence</h4>
-        <h2>Featured Transformations</h2>
-        <p style="max-width: 700px; margin: 0 auto 3rem; color: var(--light-teal);">Real cases demonstrating our commitment to structural alignment and aesthetic perfection.</p>
+      <div class="container text-center reveal">
+        <h4 style="color: var(--gold-primary); text-transform: uppercase; letter-spacing: 2px;">Clinical Excellence</h4>
+        <h2>Featured <span class="gold-text-gradient">Transformations</span></h2>
+        <p style="max-width: 700px; margin: 0 auto 3rem; color: var(--text-muted);">Real cases demonstrating our commitment to structural alignment and aesthetic perfection.</p>
         
-        <div class="cases-grid">
+        <div class="cases-grid reveal reveal-delay-1">
           <div class="case-card">
-            <img src="./assets/cases/ppt/media/image10.jpeg" alt="Impacted Canine Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+            <img src="./assets/cases_new/slide_5_img_10.jpg" alt="Impacted Canine Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
             <h3>Impacted Canines</h3>
             <p>Complex disimpaction utilizing Diode Lasers and Damon Q Self-Ligating Brackets to perfectly align teeth into the arch.</p>
           </div>
           <div class="case-card">
-            <img src="./assets/cases/ppt/media/image20.jpeg" alt="Cleft Palate Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+            <img src="./assets/cases_new/slide_7_img_10.jpg" alt="Cleft Palate Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
             <h3>Cleft Palate Correction</h3>
             <p>Specialized multidisciplinary care utilizing NiTi Palatal Expanders and MBT mechanotherapy for transformative results.</p>
           </div>
           <div class="case-card">
-            <img src="./assets/cases/ppt/media/image30.jpeg" alt="Bimaxillary Protrusion Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+            <img src="./assets/cases_new/slide_22_img_10.jpg" alt="Bimaxillary Protrusion Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
             <h3>Bimaxillary Protrusion</h3>
             <p>Absolute anchorage cases leveraging 1.5 x 9 mm titanium implants for precise and controlled retraction.</p>
           </div>
           <div class="case-card">
-            <img src="./assets/cases/ppt/media/image40.jpeg" alt="Myofunctional Therapy Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+            <img src="./assets/cases_new/slide_12_img_8.jpg" alt="Myofunctional Therapy Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
             <h3>Myofunctional Therapy</h3>
             <p>Facemask and Twin Block appliances for Class III and Class II skeletal modifications in growing patients.</p>
           </div>
           <div class="case-card">
-            <img src="./assets/cases/ppt/media/image50.jpeg" alt="Deep Bite Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+            <img src="./assets/cases_new/slide_34_img_2.jpg" alt="Deep Bite Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
             <h3>Deep Bite Correction</h3>
             <p>Strategic bite opening using advanced Damon systems and infrazygomatic crest implants for stable anchorage.</p>
           </div>
           <div class="case-card">
-            <img src="./assets/cases/ppt/media/image60.png" alt="Orthognathic Surgery Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;" onerror="this.src='./assets/cases/ppt/media/image61.jpeg'">
+            <img src="./assets/cases_new/slide_20_img_5.png" alt="Orthognathic Surgery Case" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;" onerror="this.src='./assets/cases_new/slide_20_img_1.jpg'">
             <h3>Orthognathic Surgery</h3>
             <p>Pre-surgical orthodontics for LeFort 1 Osteotomy, ensuring perfect alignment before and after jaw surgery.</p>
           </div>
@@ -214,13 +240,15 @@
       </div>
     </section>
 
+    <div class="gold-glow-divider"></div>
+
     <!-- Case Reports Glance Carousel -->
     <section id="case-reports-glance" class="section-padding">
-      <div class="container text-center">
-        <h4 style="color: var(--accent-teal); text-transform: uppercase; letter-spacing: 2px;">Our Work</h4>
-        <h2>A Glance at Case Reports</h2>
+      <div class="container text-center reveal">
+        <h4 style="color: var(--gold-primary); text-transform: uppercase; letter-spacing: 2px;">Our Work</h4>
+        <h2>A Glance at <span class="gold-text-gradient">Case Reports</span></h2>
         
-        <div class="carousel-container">
+        <div class="carousel-container reveal reveal-delay-1">
           <div class="carousel-track" id="casesTrack">
             <div class="review-slide"><img src="./assets/cases_new/slide_2_img_6.jpg" alt="Case Glance"></div>
             <div class="review-slide"><img src="./assets/cases_new/slide_5_img_10.jpg" alt="Case Glance"></div>
@@ -232,15 +260,17 @@
           </div>
         </div>
         
-        <a href="./cases.html" class="btn btn-primary" style="margin-top: 2rem;">View Full Case Reports</a>
+        <a href="./cases.html" class="btn btn-primary reveal reveal-delay-2" style="margin-top: 2rem;">View Full Case Reports</a>
       </div>
     </section>
 
+    <div class="gold-glow-divider"></div>
+
     <!-- Reviews Carousel -->
     <section id="reviews" class="section-padding reviews">
-      <div class="container text-center">
-        <h4 style="color: var(--accent-teal); text-transform: uppercase; letter-spacing: 2px;">Patient Stories</h4>
-        <h2 style="color: var(--primary-navy);">What Our Patients Say</h2>
+      <div class="container text-center reveal">
+        <h4 style="color: var(--gold-primary); text-transform: uppercase; letter-spacing: 2px;">Patient Stories</h4>
+        <h2>What Our <span class="gold-text-gradient">Patients Say</span></h2>Say</h2>
         
         <div class="carousel-container">
           <div class="carousel-track" id="reviewTrack">
@@ -256,9 +286,10 @@
       </div>
     </section>
 
+    <div class="gold-glow-divider"></div>
 
     <!-- Contact Info Banner -->
-    <section id="contact-info" style="background-color: var(--primary-navy); padding: 4rem 2rem;">
+    <section id="contact-info" class="reveal" style="background-color: var(--bg-surface); padding: 4rem 2rem;">
       <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
           
@@ -266,80 +297,82 @@
           <div>
             <!-- 24/7 Header -->
             <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
-              <div style="width: 70px; height: 70px; border: 2px solid var(--vibrant-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--vibrant-teal)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div style="width: 70px; height: 70px; border: 2px solid var(--gold-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               </div>
               <div>
-                <h3 style="color: var(--white); font-size: 1.4rem; font-weight: 800; letter-spacing: 1px; margin-bottom: 0.2rem;">24x7 AVAILABLE</h3>
-                <h3 style="color: var(--vibrant-teal); font-size: 1.4rem; font-weight: 800; letter-spacing: 1px;">ONLINE DISCUSSION</h3>
-                <p style="color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-top: 0.5rem; max-width: 300px;">Specialist orthodontist available 24x7 to clear all your doubts about orthodontic treatment.</p>
+                <h3 style="color: var(--text-light); font-size: 1.4rem; font-weight: 800; letter-spacing: 1px; margin-bottom: 0.2rem;">24x7 AVAILABLE</h3>
+                <h3 class="gold-text-gradient" style="font-size: 1.4rem; font-weight: 800; letter-spacing: 1px;">ONLINE DISCUSSION</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; max-width: 300px;">Specialist orthodontist available 24x7 to clear all your doubts about orthodontic treatment.</p>
               </div>
             </div>
-
+ 
             <!-- Phone / WhatsApp -->
-            <a href="tel:+971567673764" style="display: flex; align-items: center; gap: 1.2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.2rem 1.5rem; text-decoration: none; margin-bottom: 1rem; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.background='rgba(10,147,150,0.15)'; this.style.borderColor='var(--vibrant-teal)';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)';">
-              <a href="https://wa.me/971567673764" target="_blank" onclick="event.stopPropagation();" style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; background: #25D366; border-radius: 50%; flex-shrink: 0; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';">
+            <div style="display: flex; align-items: center; gap: 1.2rem; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 14px; padding: 1.2rem 1.5rem; margin-bottom: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='var(--bg-card-hover)'; this.style.borderColor='var(--gold-primary)';" onmouseout="this.style.background='var(--bg-card)'; this.style.borderColor='var(--border-light)';">
+              <a href="https://wa.me/971567673764" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; background: #25D366; border-radius: 50%; flex-shrink: 0; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
               </a>
               <div style="flex: 1;">
-                <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.2rem;">CONTACT / WHATSAPP</p>
-                <p style="color: var(--vibrant-teal); font-size: 1.5rem; font-weight: 800; letter-spacing: 2px; margin: 0;">056 767 3764</p>
-                <p style="color: rgba(255,255,255,0.5); font-size: 0.8rem; margin: 0;">For Bookings &amp; Appointments</p>
+                <p style="color: var(--text-muted); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.2rem;">CONTACT / WHATSAPP</p>
+                <a href="tel:+971567673764" style="text-decoration: none; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
+                  <p class="gold-text-gradient" style="font-size: 1.5rem; font-weight: 800; letter-spacing: 2px; margin: 0; display: inline-block;">056 767 3764</p>
+                </a>
+                <p style="color: var(--text-muted); font-size: 0.8rem; margin: 0;">For Bookings &amp; Appointments</p>
               </div>
-            </a>
-
+            </div>
+ 
             <!-- Location -->
-            <div style="display: flex; align-items: center; gap: 1.2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.2rem 1.5rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(10,147,150,0.15)'; this.style.borderColor='var(--vibrant-teal)';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)';">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--vibrant-teal)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div style="display: flex; align-items: center; gap: 1.2rem; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 14px; padding: 1.2rem 1.5rem; transition: all 0.3s ease;" onmouseover="this.style.background='var(--bg-card-hover)'; this.style.borderColor='var(--gold-primary)';" onmouseout="this.style.background='var(--bg-card)'; this.style.borderColor='var(--border-light)';">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               <div>
-                <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.2rem;">CONSULTATIONS AVAILABLE IN</p>
-                <p style="color: var(--white); font-size: 1.3rem; font-weight: 800; margin: 0;">DUBAI &amp; RAS AL KHAIMAH</p>
+                <p style="color: var(--text-muted); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.2rem;">CONSULTATIONS AVAILABLE IN</p>
+                <p style="color: var(--text-light); font-size: 1.3rem; font-weight: 800; margin: 0;">DUBAI &amp; RAS AL KHAIMAH</p>
               </div>
             </div>
           </div>
-
+          
           <!-- Right Column -->
-          <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 2rem;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 20px; padding: 2rem;">
             <!-- Licenced -->
-            <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(223, 186, 115, 0.15);">
               <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--vibrant-teal)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                <p style="color: var(--white); font-weight: 700; letter-spacing: 1px; margin: 0;">DHA &amp; MOH LICENCED</p>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <p style="color: var(--text-light); font-weight: 700; letter-spacing: 1px; margin: 0;">DHA &amp; MOH LICENCED</p>
               </div>
               <div style="display: flex; align-items: center; gap: 0.8rem;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--vibrant-teal)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                <p style="color: var(--white); font-weight: 700; letter-spacing: 1px; margin: 0;">SPECIALIST ORTHODONTIST</p>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <p style="color: var(--text-light); font-weight: 700; letter-spacing: 1px; margin: 0;">SPECIALIST ORTHODONTIST</p>
               </div>
             </div>
-
+ 
             <!-- Experience -->
-            <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(223, 186, 115, 0.15);">
               <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--vibrant-teal)" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                <p style="color: rgba(255,255,255,0.8); margin: 0;">Has Indian, UAE &amp; Saudi Experience</p>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <p style="color: var(--text-muted); margin: 0;">Has Indian, UAE &amp; Saudi Experience</p>
               </div>
               <div style="display: flex; align-items: center; gap: 0.8rem;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--vibrant-teal)" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                <p style="color: rgba(255,255,255,0.8); margin: 0;">Total 8 Years of Experience</p>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <p style="color: var(--text-muted); margin: 0;">Total 10 Years of Experience</p>
               </div>
             </div>
-
+ 
             <!-- Languages -->
             <div>
               <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--vibrant-teal)" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                <p style="color: var(--white); font-weight: 700; letter-spacing: 1px; margin: 0; text-transform: uppercase;">Languages Fluent In:</p>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <p style="color: var(--text-light); font-weight: 700; letter-spacing: 1px; margin: 0; text-transform: uppercase;">Languages Fluent In:</p>
               </div>
-              <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin: 0; padding-left: 2rem;">Hindi &nbsp;•&nbsp; Tamil &nbsp;•&nbsp; Malayalam<br>English &nbsp;•&nbsp; Moderate Arabic</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0; padding-left: 2rem;">Hindi &nbsp;•&nbsp; Tamil &nbsp;•&nbsp; Malayalam<br>English &nbsp;•&nbsp; Moderate Arabic</p>
             </div>
           </div>
-
+ 
         </div>
       </div>
     </section>
-
+ 
     <!-- Footer -->
-    <footer id="contact" style="background-color: #0A9396; padding: 4rem 2rem 3rem; text-align: center; color: var(--white); margin-top: 4rem;">
+    <footer id="contact" style="padding: 4rem 2rem 3rem; text-align: center; margin-top: 4rem;">
       <div class="container">
         <div style="max-width: 600px; margin: 0 auto 3rem;">
           <p style="font-size: 1.1rem; margin-bottom: 0.5rem; opacity: 0.9;">Precision alignment for a confident you.</p>
