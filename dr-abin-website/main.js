@@ -31,6 +31,14 @@ if (reviewTrack) {
     let isPaused = false;
     let timeoutId = null;
     
+    // Safely schedule next step in sequence and clear any existing timeout to avoid overlaps
+    const setNextTimeout = (callback, delay) => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = setTimeout(callback, delay);
+    };
+    
     // Update translation to center the active slide
     const updatePosition = () => {
       const activeSlide = slides[currentIndex];
@@ -61,7 +69,7 @@ if (reviewTrack) {
       if (isPaused) return;
       
       // Phase 1: Stay still for 2 seconds (zoomed state)
-      timeoutId = setTimeout(() => {
+      setNextTimeout(() => {
         if (isPaused) return;
         
         // Phase 2: Zoom out the current slide (500ms transition)
@@ -70,7 +78,7 @@ if (reviewTrack) {
           currentSlide.classList.remove('zoomed-slide');
         }
         
-        timeoutId = setTimeout(() => {
+        setNextTimeout(() => {
           if (isPaused) return;
           
           // Remove active class from old slide
@@ -87,7 +95,7 @@ if (reviewTrack) {
             updatePosition();
           }
           
-          timeoutId = setTimeout(() => {
+          setNextTimeout(() => {
             if (isPaused) return;
             
             // Phase 4: Zoom in the new active slide (500ms transition)
@@ -95,7 +103,7 @@ if (reviewTrack) {
               nextSlide.classList.add('zoomed-slide');
             }
             
-            timeoutId = setTimeout(() => {
+            setNextTimeout(() => {
               if (isPaused) return;
               // Loop recursively
               startSequence();
@@ -122,7 +130,10 @@ if (reviewTrack) {
     const container = reviewTrack.parentElement;
     container.addEventListener('mouseenter', () => {
       isPaused = true;
-      clearTimeout(timeoutId);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+      }
     });
     
     container.addEventListener('mouseleave', () => {

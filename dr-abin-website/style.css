@@ -850,8 +850,7 @@ header.scrolled .nav-links a {
 /* Ensure review screenshots display completely without vertical cropping */
 .reviews .review-slide img {
   width: 100%;
-  height: auto;
-  max-height: 480px;
+  height: 100px;
   object-fit: contain;
   border-radius: 12px;
   background: transparent;
