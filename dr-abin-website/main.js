@@ -12,15 +12,133 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Carousel Nodes Cloning for CSS infinite scroll
-const tracks = document.querySelectorAll('.carousel-track');
-tracks.forEach(track => {
-  const slides = Array.from(track.children);
+// Cases Glance Carousel: CSS Infinite Scroll
+const casesTrack = document.getElementById('casesTrack');
+if (casesTrack) {
+  const slides = Array.from(casesTrack.children);
   slides.forEach(slide => {
     const clone = slide.cloneNode(true);
-    track.appendChild(clone);
+    casesTrack.appendChild(clone);
   });
-});
+}
+
+// Reviews Carousel: Step-by-Step Slide & Zoom Sequence
+const reviewTrack = document.getElementById('reviewTrack');
+if (reviewTrack) {
+  const slides = Array.from(reviewTrack.children);
+  if (slides.length > 0) {
+    let currentIndex = 0;
+    let isPaused = false;
+    let timeoutId = null;
+    
+    // Update translation to center the active slide
+    const updatePosition = () => {
+      const activeSlide = slides[currentIndex];
+      if (activeSlide) {
+        const containerWidth = reviewTrack.parentElement.clientWidth;
+        const slideWidth = activeSlide.clientWidth;
+        const slideLeft = activeSlide.offsetLeft;
+        
+        // Center alignment offset
+        const offset = slideLeft - (containerWidth - slideWidth) / 2;
+        reviewTrack.style.transform = `translateX(-${offset}px)`;
+      }
+    };
+    
+    // Set initial state
+    const initializeSlider = () => {
+      slides.forEach((slide, index) => {
+        slide.classList.remove('active-slide', 'zoomed-slide');
+        if (index === currentIndex) {
+          slide.classList.add('active-slide', 'zoomed-slide');
+        }
+      });
+      updatePosition();
+    };
+    
+    // Start sequence
+    const startSequence = () => {
+      if (isPaused) return;
+      
+      // Phase 1: Stay still for 2 seconds (zoomed state)
+      timeoutId = setTimeout(() => {
+        if (isPaused) return;
+        
+        // Phase 2: Zoom out the current slide (500ms transition)
+        const currentSlide = slides[currentIndex];
+        if (currentSlide) {
+          currentSlide.classList.remove('zoomed-slide');
+        }
+        
+        timeoutId = setTimeout(() => {
+          if (isPaused) return;
+          
+          // Remove active class from old slide
+          if (currentSlide) {
+            currentSlide.classList.remove('active-slide');
+          }
+          
+          // Phase 3: Increment index and slide to the next card (800ms track transition)
+          currentIndex = (currentIndex + 1) % slides.length;
+          const nextSlide = slides[currentIndex];
+          
+          if (nextSlide) {
+            nextSlide.classList.add('active-slide');
+            updatePosition();
+          }
+          
+          timeoutId = setTimeout(() => {
+            if (isPaused) return;
+            
+            // Phase 4: Zoom in the new active slide (500ms transition)
+            if (nextSlide) {
+              nextSlide.classList.add('zoomed-slide');
+            }
+            
+            timeoutId = setTimeout(() => {
+              if (isPaused) return;
+              // Loop recursively
+              startSequence();
+            }, 500); // Wait for zoom-in completion
+            
+          }, 800); // Wait for slide completion
+          
+        }, 500); // Wait for zoom-out completion
+        
+      }, 2000); // Wait for stay still period
+    };
+    
+    // Initialize and schedule start
+    setTimeout(() => {
+      initializeSlider();
+      startSequence();
+    }, 100);
+    
+    window.addEventListener('resize', () => {
+      updatePosition();
+    });
+    
+    // Pause on hover
+    const container = reviewTrack.parentElement;
+    container.addEventListener('mouseenter', () => {
+      isPaused = true;
+      clearTimeout(timeoutId);
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      isPaused = false;
+      // When resuming, ensure current index has active and zoomed classes and start cycle
+      slides.forEach((slide, index) => {
+        slide.classList.remove('active-slide', 'zoomed-slide');
+        if (index === currentIndex) {
+          slide.classList.add('active-slide', 'zoomed-slide');
+        }
+      });
+      updatePosition();
+      startSequence();
+    });
+  }
+}
 
 // Header Scroll Effect
 const header = document.querySelector('header');
