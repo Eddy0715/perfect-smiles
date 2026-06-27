@@ -54,141 +54,124 @@
         transform: translateY(-2px);
       }
 
-      /* Gallery Grid Layout */
+      /* Premium Card Grid Layout */
       .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-        gap: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
         margin-top: 2rem;
       }
-      @media (max-width: 768px) {
-        .gallery-grid {
-          grid-template-columns: 1fr;
-          gap: 1.5rem;
-        }
-      }
 
-      /* Premium Card Design */
+      /* Premium Card Design matching the services modal */
       .report-card {
-        background: var(--bg-card);
-        border: 1px solid var(--border-light);
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        background: #121214; /* Dark charcoal card background matching services modal */
+        border: 1px solid rgba(223, 186, 115, 0.15);
+        border-radius: 20px;
+        padding: 2.2rem;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
         transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        cursor: pointer;
         display: flex;
         flex-direction: column;
-        position: relative;
+        gap: 1.8rem;
       }
       .report-card:hover {
-        transform: translateY(-5px);
         border-color: var(--gold-primary);
-        box-shadow: var(--gold-glow), 0 15px 40px rgba(0, 0, 0, 0.5);
-      }
-      .slide-image-wrapper {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-        overflow: hidden;
-        background: #000;
-      }
-      .slide-image-wrapper img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-      }
-      .report-card:hover .slide-image-wrapper img {
-        transform: scale(1.03);
-      }
-      
-      /* Card Hover Overlay */
-      .slide-hover-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(10, 10, 11, 0.65);
-        opacity: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: opacity 0.3s ease;
-        pointer-events: none;
-      }
-      .report-card:hover .slide-hover-overlay {
-        opacity: 1;
-      }
-      .zoom-btn {
-        background: var(--gold-gradient);
-        color: var(--text-dark);
-        border: none;
-        border-radius: 30px;
-        padding: 0.8rem 1.6rem;
-        font-weight: 700;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        box-shadow: 0 4px 15px rgba(223, 186, 115, 0.4);
-        transform: scale(0.9);
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-      .report-card:hover .zoom-btn {
-        transform: scale(1);
+        box-shadow: var(--gold-glow), 0 25px 60px rgba(0, 0, 0, 0.65);
       }
 
-      /* Card Content details */
-      .card-details {
-        padding: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        border-top: 1px solid rgba(223, 186, 115, 0.1);
-        background: rgba(20, 20, 22, 0.5);
-      }
-      .card-details h3 {
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: var(--text-light);
-        margin-bottom: 0.4rem;
-        letter-spacing: 0.5px;
-        transition: color 0.3s ease;
-      }
-      .report-card:hover .card-details h3 {
-        color: var(--gold-primary);
-      }
-      .card-details p.card-subtitle {
-        font-size: 0.9rem;
-        color: var(--text-muted);
-        margin-bottom: 1rem;
-        line-height: 1.4;
-      }
-      .card-details .card-meta {
+      /* Card Header */
+      .card-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: auto;
+        border-bottom: 1px solid rgba(223, 186, 115, 0.12);
+        padding-bottom: 1.2rem;
       }
-      .slide-tag {
-        background: rgba(223, 186, 115, 0.1);
+      .card-header h3 {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: var(--text-light);
+        letter-spacing: 0.5px;
+        margin: 0;
+      }
+      .card-header .slide-tag {
+        background: rgba(223, 186, 115, 0.08);
         color: var(--gold-primary);
         border: 1px solid rgba(223, 186, 115, 0.2);
-        padding: 0.25rem 0.75rem;
+        padding: 0.3rem 0.9rem;
         border-radius: 20px;
         font-size: 0.72rem;
-        font-weight: 600;
+        font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
+        letter-spacing: 1px;
       }
-      .slide-number-badge {
-        font-size: 0.8rem;
-        color: var(--text-muted);
-        font-weight: 600;
+
+      /* Treatment Layout Side-by-Side */
+      .case-treatment-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+      }
+      @media (max-width: 900px) {
+        .case-treatment-layout {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+      }
+
+      /* Single Centered Image Layout (for cover or single image slides) */
+      .case-single-layout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 0;
+      }
+      .single-image-container {
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .treatment-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .treatment-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--gold-primary);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin: 0;
+        padding-left: 0.6rem;
+        border-left: 2px solid var(--gold-primary);
+      }
+
+      /* Sub-grids for images */
+      .treatment-images-grid {
+        display: grid;
+        gap: 0.8rem;
+      }
+      .treatment-images-grid.cols-1 { grid-template-columns: 1fr; }
+      .treatment-images-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+      .treatment-images-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+      .treatment-images-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+      .treatment-images-grid img {
+        width: 100%;
+        aspect-ratio: 4 / 3; /* Symmetric layout boxes */
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        background: #17171a;
+      }
+      .treatment-images-grid img:hover {
+        transform: scale(1.035);
+        border-color: var(--gold-primary);
+        box-shadow: 0 8px 25px rgba(223, 186, 115, 0.25);
       }
 
       /* Interactive Lightbox Modal */
@@ -215,7 +198,7 @@
       .lightbox-container {
         position: relative;
         width: 90%;
-        max-width: 1100px;
+        max-width: 1000px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -228,15 +211,15 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        border-radius: 12px;
-        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+        border-radius: 14px;
+        box-shadow: 0 25px 65px rgba(0, 0, 0, 0.9);
         border: 1px solid rgba(223, 186, 115, 0.2);
         background: #000;
         touch-action: none;
       }
       .lightbox-img-wrapper img {
         max-width: 100%;
-        max-height: 72vh;
+        max-height: 75vh;
         object-fit: contain;
         transform-origin: center center;
         transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -244,21 +227,6 @@
       }
       .lightbox-img-wrapper img:active {
         cursor: grabbing;
-      }
-      .lightbox-caption {
-        margin-top: 1.2rem;
-        text-align: center;
-        color: var(--text-light);
-        font-size: 1.05rem;
-        font-weight: 600;
-        max-width: 800px;
-        width: 100%;
-        padding: 0.6rem 1.2rem;
-        border-radius: 8px;
-        background: rgba(223, 186, 115, 0.05);
-        border: 1px solid rgba(223, 186, 115, 0.1);
-        letter-spacing: 0.5px;
-        line-height: 1.4;
       }
       .lightbox-close {
         position: absolute;
@@ -274,46 +242,6 @@
       }
       .lightbox-close:hover {
         color: var(--gold-primary);
-      }
-      .lightbox-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(20, 20, 22, 0.85);
-        border: 1px solid rgba(223, 186, 115, 0.2);
-        color: var(--gold-primary);
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        z-index: 10010;
-        user-select: none;
-      }
-      .lightbox-nav:hover {
-        background: var(--gold-gradient);
-        color: var(--text-dark);
-        box-shadow: 0 0 15px rgba(223, 186, 115, 0.4);
-      }
-      .lightbox-prev {
-        left: -65px;
-      }
-      .lightbox-next {
-        right: -65px;
-      }
-      @media (max-width: 1300px) {
-        .lightbox-prev {
-          left: 10px;
-          background: rgba(20, 20, 22, 0.9);
-        }
-        .lightbox-next {
-          right: 10px;
-          background: rgba(20, 20, 22, 0.9);
-        }
       }
 
       /* Lightbox Zoom Controls */
@@ -400,7 +328,7 @@
       <div class="pdf-header reveal">
         <h4 style="color: var(--gold-primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem;">Clinical Outcomes</h4>
         <h2>Featured <span class="gold-text-gradient">Case Reports</span></h2>
-        <p style="margin-bottom: 2rem; color: var(--text-muted);">Browse the exact slide outcomes from our 2024 Case Reports documentation.</p>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">Side-by-side pre-treatment and post-treatment clinical outcomes from our case portfolio.</p>
       </div>
       
       <!-- Filter tabs -->
@@ -424,12 +352,10 @@
     <!-- Interactive Lightbox Modal -->
     <div id="lightboxModal" class="lightbox-modal">
       <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
-      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous slide">&lt;</button>
-      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next slide">&gt;</button>
       
       <div class="lightbox-container" tabindex="0">
         <div class="lightbox-img-wrapper" id="lightboxWrapper">
-          <img id="lightboxImg" src="" alt="Full Case Slide" draggable="false">
+          <img id="lightboxImg" src="" alt="Clinical Outcome Image" draggable="false">
           
           <div class="lightbox-controls">
             <button class="control-btn" id="zoomInBtn" title="Zoom In">
@@ -443,7 +369,6 @@
             </button>
           </div>
         </div>
-        <div class="lightbox-caption" id="lightboxCaption"></div>
       </div>
     </div>
 
@@ -510,368 +435,519 @@
         });
       }
 
-      // Slides Dataset - Complete list of 39 slides mapped to categories and metadata
-      const slidesData = [
-        {
-          num: 1,
-          title: "Orthodontic Case Reports Portfolio",
-          subtitle: "Presented by Dr. Abin Mathew B.D.S, M.D.S (Ortho)",
-          category: "all",
-          tagLabel: "Cover Page",
-          text: "Presented By- Dr. Abin Mathew B.D.S, M.D.S (ORTHO) | CASE REPORTS"
-        },
+      // Cases Dataset containing the list of cropped images for each slide (Slide 2 to 30, and 32 to 38)
+      const casesData = [
         {
           num: 2,
-          title: "Invisalign® Treatment Alignment",
-          subtitle: "Symmetric Invisalign aligner pre-treatment and post-treatment comparison",
+          title: "Case 1: Invisalign® Treatment",
           category: "invisalign",
           tagLabel: "Invisalign",
-          text: "INVISALIGN | PRETREATMENT | POST TREATMENT"
+          text: "INVISALIGN | PRETREATMENT | POST TREATMENT",
+          images: [
+            "slide_2_img_1.jpg", "slide_2_img_2.jpg", "slide_2_img_3.jpg",
+            "slide_2_img_4.jpg", "slide_2_img_5.jpg", "slide_2_img_6.jpg"
+          ]
         },
         {
           num: 3,
-          title: "Invisalign® Teen Aligner Results",
-          subtitle: "Teenage alignment case showing comprehensive smile correction",
+          title: "Case 2: Invisalign® Teen Alignment",
           category: "invisalign",
           tagLabel: "Invisalign",
-          text: "INVISALIGN | PRETREATMENT | POST TREATMENT"
+          text: "INVISALIGN | PRETREATMENT | POST TREATMENT",
+          images: [
+            "slide_3_img_1.jpg", "slide_3_img_2.jpg", "slide_3_img_3.jpg", "slide_3_img_4.jpg",
+            "slide_3_img_5.jpg", "slide_3_img_6.jpg", "slide_3_img_7.jpg", "slide_3_img_8.jpg"
+          ]
         },
         {
           num: 4,
-          title: "Invisalign® Deep Bite Space Correction",
-          subtitle: "Deep bite and space correction within a treatment duration of 8 months",
+          title: "Case 3: Invisalign® Deep Bite Correction",
           category: "invisalign",
           tagLabel: "Invisalign",
-          text: "INVISALIGN | PRETREATMENT | POST TREATMENT | TREATMENT DURATION 8 MONTHS"
+          text: "INVISALIGN | PRETREATMENT | POST TREATMENT | TREATMENT DURATION 8 MONTHS",
+          images: [
+            "slide_4_img_1.jpg", "slide_4_img_2.jpg", "slide_4_img_3.jpg",
+            "slide_4_img_4.jpg", "slide_4_img_5.jpg", "slide_4_img_6.jpg"
+          ]
         },
         {
           num: 5,
-          title: "Non-Extraction Damon® Q SLB (Case 1)",
-          subtitle: "Resolving crowding and impacted canine utilizing Damon Q Self-Ligating System",
+          title: "Case 4: Non-Extraction Damon® Q SLB (Impacted Canine)",
           category: "self-ligating-braces",
           tagLabel: "Damon SLB",
-          text: "Non Extraction Cases | CASE NO - 1 | PRETREATMENT POST TREATMENT | PATIENT WITH CROWDING AND IMPACTED CANINE TREATED WITH DAMON Q SELF LIGATING BRACKET SYSTEM"
+          text: "Non Extraction Cases | CASE NO - 1 | PRETREATMENT POST TREATMENT | PATIENT WITH CROWDING AND IMPACTED CANINE TREATED WITH DAMON Q SELF LIGATING BRACKET SYSTEM",
+          images: [
+            "slide_5_img_1.jpg", "slide_5_img_2.jpg", "slide_5_img_3.jpg", "slide_5_img_4.jpg", "slide_5_img_5.jpg",
+            "slide_5_img_6.jpg", "slide_5_img_7.jpg", "slide_5_img_8.jpg", "slide_5_img_9.jpg", "slide_5_img_10.jpg"
+          ]
         },
         {
           num: 6,
-          title: "Diode Laser Canine Exposure (Case 1 Cont.)",
-          subtitle: "Laser-assisted disimpaction and alignment using Damon Q SLB in 15 months",
+          title: "Case 5: Diode Laser Canine Exposure (Damon® Q SLB)",
           category: "self-ligating-braces",
           tagLabel: "Damon SLB",
-          text: "CASE No I Cont… | PRETREATMENT POST TREATMENT | CANINE DISIMPACTED USING DIODE LASER | DAMON Q SLB BRACKET SYSTEM DURATION 15 MONTHS"
+          text: "CASE No I Cont… | PRETREATMENT POST TREATMENT | CANINE DISIMPACTED USING DIODE LASER | DAMON Q SLB BRACKET SYSTEM DURATION 15 MONTHS",
+          images: [
+            "slide_6_img_1.jpg", "slide_6_img_2.jpg", "slide_6_img_3.jpg", "slide_6_img_4.jpg", "slide_6_img_5.jpg"
+          ]
         },
         {
           num: 7,
-          title: "Cleft Palate Orthodontics (Case 2)",
-          subtitle: "Transverse expansion with NiTi Palatal Expander and MBT mechanotherapy",
+          title: "Case 6: Cleft Palate Transverse Expansion (NiTi & MBT)",
           category: "cleft-nam palatal-expanders self-ligating-braces",
           tagLabel: "Cleft / Expander",
-          text: "PRETREATMENT POST TREATMENT | PREVIOUSLY CLEFT PALATE TREATED PATIENT TREATED WITH NITI PALATAL EXPANDER AND FIXED MBT MECHANOTHERAPHY | CASE NO -2"
+          text: "PRETREATMENT POST TREATMENT | PREVIOUSLY CLEFT PALATE TREATED PATIENT TREATED WITH NITI PALATAL EXPANDER AND FIXED MBT MECHANOTHERAPHY | CASE NO -2",
+          images: [
+            "slide_7_img_1.jpg", "slide_7_img_2.jpg", "slide_7_img_3.jpg", "slide_7_img_4.jpg", "slide_7_img_5.jpg",
+            "slide_7_img_6.jpg", "slide_7_img_7.jpg", "slide_7_img_8.jpg", "slide_7_img_9.jpg", "slide_7_img_10.jpg"
+          ]
         },
         {
           num: 8,
-          title: "NiTi Palatal Expander & MBT (Case 2 Cont.)",
-          subtitle: "Molar alignment using CuNiTi wires (prosthetic molar replacement planned)",
+          title: "Case 7: Skeletal Palatal Expansion (NiTi Expander)",
           category: "palatal-expanders",
           tagLabel: "Expanders",
-          text: "CASE NO -2 Cont.… | PRETREATMENT POST TREATMENT | NITI PALATAL EXPANDER | MBT PRESCRIPTION USED WITH CUNITI WIRES MISSING MOLAR TO BE REPLACED PROSTHETICALLY"
+          text: "CASE NO -2 Cont.… | PRETREATMENT POST TREATMENT | NITI PALATAL EXPANDER | MBT PRESCRIPTION USED WITH CUNITI WIRES MISSING MOLAR TO BE REPLACED PROSTHETICALLY",
+          images: [
+            "slide_8_img_1.jpg", "slide_8_img_2.jpg", "slide_8_img_3.jpg", "slide_8_img_4.jpg", "slide_8_img_5.jpg"
+          ]
         },
         {
           num: 9,
-          title: "Obliquely Impacted Lower Canine (Case 3)",
-          subtitle: "Class I Skeletal Pattern with 33 dilacerated root oriented to 41/42 roots",
+          title: "Case 8: Obliquely Impacted Lower Canine (MBT)",
           category: "self-ligating-braces",
-          tagLabel: "Damon SLB",
-          text: "CASE NO - 3 | PRETREATMENT | POSTTREATMENT | CLASS I SKELETAL PATTERN,ANGLES CLASS I MOLAR RELATION BILATERALLY WITH IMPACTED CANINE IN LOWER ARCH OBLIQUELY IMPACTED 33 IS ORIENTED TO CERVICAL 3 RD OF ROOTS OF 41 and 42 AND ALSO HAS A DILACERATED ROOT"
+          tagLabel: "MBT Braces",
+          text: "CASE NO - 3 | PRETREATMENT | POSTTREATMENT | CLASS I SKELETAL PATTERN,ANGLES CLASS I MOLAR RELATION BILATERALLY WITH IMPACTED CANINE IN LOWER ARCH OBLIQUELY IMPACTED 33 IS ORIENTED TO CERVICAL 3 RD OF ROOTS OF 41 and 42 AND ALSO HAS A DILACERATED ROOT",
+          images: [
+            "slide_9_img_1.jpg", "slide_9_img_2.jpg", "slide_9_img_3.png", "slide_9_img_4.png", "slide_9_img_5.png",
+            "slide_9_img_6.png", "slide_9_img_7.png", "slide_9_img_8.jpg", "slide_9_img_9.jpg", "slide_9_img_10.jpg"
+          ]
         },
         {
           num: 10,
-          title: "Canine Arch Alignment (Case 3 Cont.)",
-          subtitle: "Transporting canine 33 across quadrants to stable positioning using MBT system",
+          title: "Case 9: Canine Arch Alignment (MBT Prescription)",
           category: "self-ligating-braces",
-          tagLabel: "Damon SLB",
-          text: "CASE NO – 3 Cont… | 43 BROUGHT INTO ARCH | 33 BROUGHT TRANSPORTED TO 4TH QUADRANT | LEVELLING AND ALIGNING OF 33AND 43 INTO ARCH ON SAME SIDE | MBT PRECRIPTION USED | CBCT IMAGE"
+          tagLabel: "MBT Braces",
+          text: "CASE NO – 3 Cont… | 43 BROUGHT INTO ARCH | 33 BROUGHT TRANSPORTED TO 4TH QUADRANT | LEVELLING AND ALIGNING OF 33AND 43 INTO ARCH ON SAME SIDE | MBT PRECRIPTION USED | CBCT IMAGE",
+          images: [
+            "slide_10_img_1.jpg", "slide_10_img_2.jpg", "slide_10_img_3.jpg", "slide_10_img_4.jpg", "slide_10_img_5.jpg"
+          ]
         },
         {
           num: 11,
-          title: "Presurgical Nasoalveolar Molding (Case 4)",
-          subtitle: "Orthopedic NAM treatment in a 4-day-old infant with cleft lip, alveolus and palate",
+          title: "Case 10: Presurgical Nasoalveolar Molding (NAM)",
           category: "cleft-nam",
           tagLabel: "Cleft / NAM",
-          text: "PRETREATMENT | POST NAM | POST LIP SURGERY | PRESURGICAL NASOALVEOLAR MOLDING IN A 4 DAY OLD INFANT WITH UNILATERAL CLEFTLIP ,ALVEOLUS AND PALATE DEFORMITY TREATMENT DURATION - 5 MONTHS | CASE - 4 Infant orthopedic"
+          text: "PRETREATMENT | POST NAM | POST LIP SURGERY | PRESURGICAL NASOALVEOLAR MOLDING IN A 4 DAY OLD INFANT WITH UNILATERAL CLEFTLIP ,ALVEOLUS AND PALATE DEFORMITY TREATMENT DURATION - 5 MONTHS | CASE - 4 Infant orthopedic",
+          images: [
+            "slide_11_img_1.jpg", "slide_11_img_2.jpg", "slide_11_img_3.jpg", "slide_11_img_4.jpg",
+            "slide_11_img_5.jpg", "slide_11_img_6.jpg", "slide_11_img_7.jpg", "slide_11_img_8.jpg"
+          ]
         },
         {
           num: 12,
-          title: "Myofunctional Facemask Therapy (Case 5)",
-          subtitle: "Skeletal Class III growth modification and orthopedic facemask correction",
+          title: "Case 11: Myofunctional Facemask Therapy (Class III)",
           category: "myofunctional-jaw",
           tagLabel: "Myofunctional",
-          text: "CASE NO 5 Myofunctional therapy case (FACEMASK ) | PRE TREATMENT POST FUNCTIONAL PHASE WITH FACE MASK | PRE TREATMENT POST FUNCTIONAL PHASE"
+          text: "CASE NO 5 Myofunctional therapy case (FACEMASK ) | PRE TREATMENT POST FUNCTIONAL PHASE WITH FACE MASK | PRE TREATMENT POST FUNCTIONAL PHASE",
+          images: [
+            "slide_12_img_1.jpg", "slide_12_img_2.jpg", "slide_12_img_3.jpg", "slide_12_img_4.jpg",
+            "slide_12_img_5.jpg", "slide_12_img_6.jpg", "slide_12_img_7.jpg", "slide_12_img_8.jpg"
+          ]
         },
         {
           num: 13,
-          title: "Facemask & Fixed MBT Treatment (Case 5 Cont.)",
-          subtitle: "13 months of facemask followed by 2 years of MBT fixed mechanotherapy",
+          title: "Case 12: Facemask & Fixed MBT Treatment (Class III)",
           category: "myofunctional-jaw self-ligating-braces",
           tagLabel: "Myofunctional",
-          text: "FACEMASK THERAPY – 13 MONTHS CLASS III SKELETAL PATTERN MBT FIXED MECHANOTHERAPY IN DURATION 2 YEARS | CASE NO -5 Cont… | POST FIXED TREATMENT"
+          text: "FACEMASK THERAPY – 13 MONTHS CLASS III SKELETAL PATTERN MBT FIXED MECHANOTHERAPY IN DURATION 2 YEARS | CASE NO -5 Cont… | POST FIXED TREATMENT",
+          images: [
+            "slide_13_img_1.jpg", "slide_13_img_2.jpg", "slide_13_img_3.jpg",
+            "slide_13_img_4.jpg", "slide_13_img_5.jpg", "slide_13_img_6.jpg"
+          ]
         },
         {
           num: 14,
-          title: "Twin Block Appliance Therapy (Case 6)",
-          subtitle: "Skeletal Class II correction using removable functional Twin Block appliance",
+          title: "Case 13: Twin Block Appliance Therapy (Class II)",
           category: "myofunctional-jaw",
           tagLabel: "Twin Block",
-          text: "CASE -TWIN BLOCK | PRE TREATMENT POST FUNCTIONAL PHASE POST FIXED"
+          text: "CASE -TWIN BLOCK | PRE TREATMENT POST FUNCTIONAL PHASE POST FIXED",
+          images: [
+            "slide_14_img_1.jpg", "slide_14_img_2.jpg", "slide_14_img_3.jpg",
+            "slide_14_img_4.jpg", "slide_14_img_5.jpg", "slide_14_img_6.jpg"
+          ]
         },
         {
           num: 15,
-          title: "Twin Block Functional Phase (Case 6 Cont.)",
-          subtitle: "Pre-Treatment, Post-Functional, and Post-Fixed appliance progressions",
+          title: "Case 14: Twin Block Functional Phase (Class II)",
           category: "myofunctional-jaw",
           tagLabel: "Twin Block",
-          text: "TWIN BLOCK | PRE TREATMENT | POST FUNCTIONAL PHASE | POST FIXED APPLIANCE | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew"
+          text: "TWIN BLOCK | PRE TREATMENT | POST FUNCTIONAL PHASE | POST FIXED APPLIANCE",
+          images: [
+            "slide_15_img_1.jpg", "slide_15_img_2.jpg", "slide_15_img_3.jpg"
+          ]
         },
         {
           num: 16,
-          title: "Twin Block & MBT Fixed Therapy (Case 6 Cont.)",
-          subtitle: "Growth modification combined with high-precision MBT detailing",
+          title: "Case 15: Twin Block & MBT Fixed Therapy (Class II)",
           category: "myofunctional-jaw self-ligating-braces",
           tagLabel: "Myofunctional",
-          text: "TWIN BLOCK APPLIANCE THERAPY WITH MBT FIXED MECHANOTHERAPY | PRE TREATMENT WITH TWIN BLOCK | POST FUNCTIONAL PHASE FIXED APPLIANCE | POST FIXED APPLIANCE"
+          text: "TWIN BLOCK APPLIANCE THERAPY WITH MBT FIXED MECHANOTHERAPY | PRE TREATMENT WITH TWIN BLOCK | POST FUNCTIONAL PHASE FIXED APPLIANCE | POST FIXED APPLIANCE",
+          images: [
+            "slide_16_img_1.jpg", "slide_16_img_2.jpg", "slide_16_img_3.jpg", "slide_16_img_4.png", "slide_16_img_5.jpg"
+          ]
         },
         {
           num: 17,
-          title: "High-Pull Headgear Maxillary Retraction (Case 7)",
-          subtitle: "Phase I skeletal Class II maxillary restriction in a growing patient (14 Months)",
+          title: "Case 16: High-Pull Headgear Maxillary Retraction",
           category: "myofunctional-jaw",
           tagLabel: "Myofunctional",
-          text: "PRETREATMENT | CASE NO 7 High pull headgear | PRETREATMENT | POST HEADGEAR THERAPY | PHASE I-CLASS I SKELETAL PATTERN GROWING PATIENT WITH PROGNATHIC MAXILLA TREATED WITH HIGH PULL HEADGEAR DURATION -14 MONTHS | POST TREATMENT"
+          text: "PRETREATMENT | CASE NO 7 High pull headgear | PRETREATMENT | POST HEADGEAR THERAPY | PHASE I-CLASS I SKELETAL PATTERN GROWING PATIENT WITH PROGNATHIC MAXILLA TREATED WITH HIGH PULL HEADGEAR DURATION -14 MONTHS | POST TREATMENT",
+          images: [
+            "slide_17_img_1.jpg", "slide_17_img_2.jpg", "slide_17_img_3.png", "slide_17_img_4.png", "slide_17_img_5.jpg",
+            "slide_17_img_6.png", "slide_17_img_7.png", "slide_17_img_8.jpg", "slide_17_img_9.png"
+          ]
         },
         {
           num: 18,
-          title: "Mutilated Malocclusion Correction (Case 8)",
-          subtitle: "Re-establishing occlusion with mini-implant absolute anchorage",
+          title: "Case 17: Mutilated Malocclusion Fixed Therapy (TADs)",
           category: "self-ligating-braces tads-mini-implants",
           tagLabel: "TADs / Braces",
-          text: "CASE NO-8 Mutilated malocclusion cases | PRETREATMENT | POST TREATMENT | MUTILATED MALOCCLUSION TREATED WITH FIXED APPLIANCE MINI IMPLANT RETRACTION"
+          text: "CASE NO-8 Mutilated malocclusion cases | PRETREATMENT | POST TREATMENT | MUTILATED MALOCCLUSION TREATED WITH FIXED APPLIANCE MINI IMPLANT RETRACTION",
+          images: [
+            "slide_18_img_1.jpg", "slide_18_img_2.jpg", "slide_18_img_3.jpg", "slide_18_img_4.jpg", "slide_18_img_5.png",
+            "slide_18_img_6.png", "slide_18_img_7.png", "slide_18_img_8.jpg", "slide_18_img_9.jpg", "slide_18_img_10.jpg"
+          ]
         },
         {
           num: 19,
-          title: "Molar Uprighting & Retraction (Case 8 Cont.)",
-          subtitle: "Uprighting lower right second molar and space closure using TADs (14 Months)",
+          title: "Case 18: Molar Uprighting & Retraction (TADs)",
           category: "self-ligating-braces tads-mini-implants",
           tagLabel: "TADs / Braces",
-          text: "CASE-8 Cont…. | MINI IMPLANT RETRACTION | PRETREATMENT POST TREATMENT | MBT PRESCRIPTION MOLAR UP RIGHTING ALSO DONE IN 47 DURATION 14 MONTHS"
+          text: "CASE-8 Cont…. | MINI IMPLANT RETRACTION | PRETREATMENT POST TREATMENT | MBT PRESCRIPTION MOLAR UP RIGHTING ALSO DONE IN 47 DURATION 14 MONTHS",
+          images: [
+            "slide_19_img_1.jpg", "slide_19_img_2.jpg", "slide_19_img_3.jpg",
+            "slide_19_img_4.jpg", "slide_19_img_5.jpg", "slide_19_img_6.jpg"
+          ]
         },
         {
           num: 20,
-          title: "Orthognathic Surgical Case (Case 9)",
-          subtitle: "Pre-surgical orthodontics and LeFort 1 advancement for cleft patient",
+          title: "Case 19: LeFort 1 Osteotomy & Advancement (Cleft Patient)",
           category: "surgical-orthodontics cleft-nam",
           tagLabel: "Surgical Cleft",
-          text: "CASE NO – 9 Orthognathic surgical cases | CLEFT LIP AND PALATE PATIENT TREATED WITH LEFORT 1 OSTEOTOMY AND ADVANCEMENT PRE SURGICAL ORTHODONTICS DURATION 14 MONTHS | PRETREATMENT | PRE SURGICAL | POST SURGICAL"
+          text: "CASE NO – 9 Orthognathic surgical cases | CLEFT LIP AND PALATE PATIENT TREATED WITH LEFORT 1 OSTEOTOMY AND ADVANCEMENT PRE SURGICAL ORTHODONTICS DURATION 14 MONTHS | PRETREATMENT | PRE SURGICAL | POST SURGICAL",
+          images: [
+            "slide_20_img_1.jpg", "slide_20_img_2.jpg", "slide_20_img_3.jpg", "slide_20_img_4.png", "slide_20_img_5.png"
+          ]
         },
         {
           num: 21,
-          title: "LeFort 1 Superior Impaction (Case 10)",
-          subtitle: "Presurgical orthodontic leveling and detailing for jaw impaction",
+          title: "Case 20: LeFort 1 Superior Impaction",
           category: "surgical-orthodontics",
           tagLabel: "Surgical",
-          text: "CASE NO – 10 | Lefort 1 supior impaction case Presurgical orthodontics"
+          text: "CASE NO – 10 | Lefort 1 supior impaction case Presurgical orthodontics",
+          images: [
+            "slide_21_img_1.jpg"
+          ]
         },
         {
           num: 22,
-          title: "Extraction Treatment (Case 11)",
-          subtitle: "Bimaxillary protrusion resolved with extraction of all four 1st premolars (17 Months)",
+          title: "Case 21: Bimaxillary Protrusion Extraction (17 Months)",
           category: "extractions-crowding",
           tagLabel: "Extractions",
-          text: "Case No-11 Extraction cases | Pre-treatment | Post-treatment | BIMAXILLARY PROTRUSION CASE TREATED WITH EXTRACTION OF ALL FOUR 1stPREMOLARS. DURATION – 17 MONTHS MBT PRESCRIPTION"
+          text: "Case No-11 Extraction cases | Pre-treatment | Post-treatment | BIMAXILLARY PROTRUSION CASE TREATED WITH EXTRACTION OF ALL FOUR 1stPREMOLARS. DURATION – 17 MONTHS MBT PRESCRIPTION",
+          images: [
+            "slide_22_img_1.jpg", "slide_22_img_2.jpg", "slide_22_img_3.png", "slide_22_img_4.jpg", "slide_22_img_5.jpg",
+            "slide_22_img_6.png", "slide_22_img_7.png", "slide_22_img_8.png", "slide_22_img_9.jpg", "slide_22_img_10.jpg"
+          ]
         },
         {
           num: 23,
-          title: "Pre-Treatment Space Management (Case 12)",
-          subtitle: "Leveling, arch development, and symmetrical space closure",
+          title: "Case 22: Extraction space closure",
           category: "extractions-crowding self-ligating-braces",
           tagLabel: "Extractions",
-          text: "PRETREATMENT | Case No. 12"
+          text: "PRETREATMENT | Case No. 12",
+          images: [
+            "slide_23_img_1.jpg", "slide_23_img_2.jpg", "slide_23_img_3.jpg", "slide_23_img_4.jpg",
+            "slide_23_img_5.jpg", "slide_23_img_6.png", "slide_23_img_7.png"
+          ]
         },
         {
           num: 24,
-          title: "Aesthetic Aligner Space Management",
-          subtitle: "Clear aligner treatment mapping for gap closure and dental arch formation",
+          title: "Case 23: Aesthetic Clear Aligner Closure",
           category: "invisalign",
           tagLabel: "Invisalign",
-          text: "Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Lets create some smile"
+          text: "Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Lets create some smile",
+          images: [
+            "slide_24_img_1.jpg", "slide_24_img_2.jpg", "slide_24_img_3.jpg", "slide_24_img_4.jpg",
+            "slide_24_img_5.jpg", "slide_24_img_6.jpg", "slide_24_img_7.jpg"
+          ]
         },
         {
           num: 25,
-          title: "Severe Crowding Extraction Case (Case 13)",
-          subtitle: "Resolving anterior crowding with four 1st-premolar extractions and MBT brackets",
+          title: "Case 24: Crowding Extraction Treatment (MBT)",
           category: "extractions-crowding",
           tagLabel: "Extractions",
-          text: "Case No. 13 | PRE TREATMENT POST TREATMENT | CROWDING CASE TREATED WITH EXTRACTION OF ALL FOUR 1st PREMOLARS MBT PRESCRIPTION"
+          text: "Case No. 13 | PRE TREATMENT POST TREATMENT | CROWDING CASE TREATED WITH EXTRACTION OF ALL FOUR 1st PREMOLARS MBT PRESCRIPTION",
+          images: [
+            "slide_25_img_1.jpg", "slide_25_img_2.jpg", "slide_25_img_3.jpg", "slide_25_img_4.png", "slide_25_img_5.png",
+            "slide_25_img_6.png", "slide_25_img_7.jpg", "slide_25_img_8.png", "slide_25_img_9.jpg", "slide_25_img_10.jpg",
+            "slide_25_img_11.jpg", "slide_25_img_12.jpg", "slide_25_img_13.jpg", "slide_25_img_14.jpg"
+          ]
         },
         {
           num: 26,
-          title: "Proclined Teeth Implant Retraction (Case 14)",
-          subtitle: "Absolute anchorage retraction using 1.5 x 9 mm titanium implants",
+          title: "Case 25: Proclined Teeth Implant Retraction (TADs)",
           category: "extractions-crowding tads-mini-implants",
           tagLabel: "TADs / Extractions",
-          text: "Case No. 14 | PATIENT WITH PROCLINED UPPER TEETH WITH LOWER ANTERIOR CROWDING TREATED WITH EXTRACTION OF ALL FOUR 1ST PREMOLARS. ABSOLUTE ANCHORAGE CASE 1.5 X 9 MM TITANIUM IMPLANT RETRACTION | PRETREATMENT MID TREATMENT"
+          text: "Case No. 14 | PATIENT WITH PROCLINED UPPER TEETH WITH LOWER ANTERIOR CROWDING TREATED WITH EXTRACTION OF ALL FOUR 1ST PREMOLARS. ABSOLUTE ANCHORAGE CASE 1.5 X 9 MM TITANIUM IMPLANT RETRACTION | PRETREATMENT MID TREATMENT",
+          images: [
+            "slide_26_img_1.jpg", "slide_26_img_2.jpg", "slide_26_img_3.jpg", "slide_26_img_4.png", "slide_26_img_5.png",
+            "slide_26_img_6.png", "slide_26_img_7.jpg", "slide_26_img_8.jpg", "slide_26_img_9.jpg", "slide_26_img_10.jpg",
+            "slide_26_img_11.jpg", "slide_26_img_12.jpg"
+          ]
         },
         {
           num: 27,
-          title: "TAD-Anchored Retraction (Case 14 Cont.)",
-          subtitle: "Demonstrating root and crown retraction control with mini-screws",
+          title: "Case 26: TAD-Anchored Retraction",
           category: "tads-mini-implants",
           tagLabel: "TADs",
-          text: "Case N0. 14 (Contn..) | Absolute anchorage case treated with minimplant retraction"
+          text: "Case N0. 14 (Contn..) | Absolute anchorage case treated with minimplant retraction",
+          images: [
+            "slide_27_img_1.png", "slide_27_img_2.png", "slide_27_img_3.png", "slide_27_img_4.jpg", "slide_27_img_5.jpg"
+          ]
         },
         {
           num: 28,
-          title: "Buccally Erupted Canine (Case 15)",
-          subtitle: "Upper single premolar extraction and T-loop retraction for malpositioned canine",
+          title: "Case 27: Buccally Erupted Canine T-Loop Retraction",
           category: "extractions-crowding self-ligating-braces",
           tagLabel: "Extractions",
-          text: "Case No. 15 | PRETREATMENT POST TREATMENT | PATIENT WITH BUCCALY ERUPTED CANINE AND WITH MISSING LOWER 1ST PREMOLARS WAS TREATED WITH EXTRACTION OF SINGLE PREMOLAR IN UPPER ARCH AND RETRACTED WITH T LOOP. MBT PRESCRIPTION"
+          text: "Case No. 15 | PRETREATMENT POST TREATMENT | PATIENT WITH BUCCALY ERUPTED CANINE AND WITH MISSING LOWER 1ST PREMOLARS WAS TREATED WITH EXTRACTION OF SINGLE PREMOLAR IN UPPER ARCH AND RETRACTED WITH T LOOP. MBT PRESCRIPTION",
+          images: [
+            "slide_28_img_1.jpg", "slide_28_img_2.jpg", "slide_28_img_3.jpg", "slide_28_img_4.jpg", "slide_28_img_5.jpg",
+            "slide_28_img_6.jpg", "slide_28_img_7.jpg", "slide_28_img_8.png", "slide_28_img_9.png"
+          ]
         },
         {
           num: 29,
-          title: "Herbst Fixed Myofunctional Appliance (Case 16)",
-          subtitle: "Fixed bite correction and mandibular advancement in growing patient",
+          title: "Case 28: Herbst Fixed Myofunctional Appliance (Class II)",
           category: "myofunctional-jaw",
           tagLabel: "Herbst Appliance",
-          text: "Case No. 16( herbst) fixed functional appliance"
+          text: "Case No. 16( herbst) fixed functional appliance",
+          images: [
+            "slide_29_img_1.jpg", "slide_29_img_2.jpg", "slide_29_img_3.jpg", "slide_29_img_4.jpg", "slide_29_img_5.jpg",
+            "slide_29_img_6.jpg", "slide_29_img_7.jpg", "slide_29_img_8.jpg", "slide_29_img_9.jpg", "slide_29_img_10.jpg"
+          ]
         },
         {
           num: 30,
-          title: "Maxillary Palatal Expansion",
-          subtitle: "Transverse arch width development pre- and post-expansion comparison",
+          title: "Case 29: Maxillary Palatal Expansion",
           category: "palatal-expanders",
           tagLabel: "Expanders",
-          text: "LETS DO SOME EXPANSION | Dr.Abin Mathew | Dr.Abin Mathew"
-        },
-        {
-          num: 31,
-          title: "Magic of Orthodontics",
-          subtitle: "Clinical outcomes showcasing structural and visual transformation",
-          category: "all",
-          tagLabel: "Divider Page",
-          text: "MAGIC OF ORTHODONTICS"
+          text: "LETS DO SOME EXPANSION | Dr.Abin Mathew | Dr.Abin Mathew",
+          images: [
+            "slide_30_img_1.jpg", "slide_30_img_2.jpg"
+          ]
         },
         {
           num: 32,
-          title: "TADs for Canine Crown Tipping",
-          subtitle: "Using mini implants to control direct vector forces and avoid root damage",
+          title: "Case 30: TAD-Assisted Canine Tipping",
           category: "tads-mini-implants",
           tagLabel: "TADs",
-          text: "MINI IMPLANTS TO THE RESCUE WHEN YOU NEED TIPPING OF CANINES"
+          text: "MINI IMPLANTS TO THE RESCUE WHEN YOU NEED TIPPING OF CANINES",
+          images: [
+            "slide_32_img_1.png", "slide_32_img_2.png"
+          ]
         },
         {
           num: 33,
-          title: "Strategic Extraction Decisions",
-          subtitle: "Managing severe arch discrepancies with highly targeted extractions",
+          title: "Case 31: Strategic Extraction Decisions",
           category: "extractions-crowding",
           tagLabel: "Extractions",
-          text: "EXTRACTIONS TO THE RESCUE | Dr.Abin Mathew | Dr.Abin Mathew"
+          text: "EXTRACTIONS TO THE RESCUE | Dr.Abin Mathew | Dr.Abin Mathew",
+          images: [
+            "slide_33_img_1.jpg", "slide_33_img_2.png"
+          ]
         },
         {
           num: 34,
-          title: "Damon SLB Deep Bite Correction",
-          subtitle: "Unlocking facial height and leveling occlusion using Damon self-ligating bracket system",
+          title: "Case 32: Damon SLB Deep Bite Correction",
           category: "self-ligating-braces",
           tagLabel: "Damon SLB",
-          text: "DEEP BITE CORRECTION WITH DAMON SLB BRACKETS | Dr.Abin Mathew | Dr.Abin Mathew"
+          text: "DEEP BITE CORRECTION WITH DAMON SLB BRACKETS | Dr.Abin Mathew | Dr.Abin Mathew",
+          images: [
+            "slide_34_img_1.jpg", "slide_34_img_2.jpg"
+          ]
         },
         {
           num: 35,
-          title: "Bruxism & TMJ Splint Treatment",
-          subtitle: "Occlusal stabilization and joint deprogramming using a custom Michigan Splint",
+          title: "Case 33: TMJ Splint Management (Michigan Splint)",
           category: "tmj-management",
           tagLabel: "TMJ Splint",
-          text: "PATIENT CAME WITH A C/O OF BRUXISM AND PAIN IN TMJ AND WAS TREATED WITH The Michigan Splint It increases occlusal stability, muscle relaxation, mandibular posture deprogramming, and vertical dimension modification | Dr. Abin Mathew"
+          text: "PATIENT CAME WITH A C/O OF BRUXISM AND PAIN IN TMJ AND WAS TREATED WITH The Michigan Splint It increases occlusal stability, muscle relaxation, mandibular posture deprogramming, and vertical dimension modification | Dr. Abin Mathew",
+          images: [
+            "slide_35_img_1.jpg"
+          ]
         },
         {
           num: 36,
-          title: "Infrazygomatic Crest Implant (IZC)",
-          subtitle: "Extra-alveolar anchorage placed on the zygomatic bone for maximum retraction control",
+          title: "Case 34: Infrazygomatic Crest Implant (IZC)",
           category: "tads-mini-implants",
           tagLabel: "TADs",
-          text: "Infrazygomatic crest implants have become increasingly popular in orthodontics due to their ability to provide stable anchorage support. These implants are placed on the zygomatic bone, which is located above the maxilla, allowing for more control and versatility in tooth movement.."
+          text: "Infrazygomatic crest implants have become increasingly popular in orthodontics due to their ability to provide stable anchorage support. These implants are placed on the zygomatic bone, which is located above the maxilla, allowing for more control and versatility in tooth movement..",
+          images: [
+            "slide_36_img_1.jpg"
+          ]
         },
         {
           num: 37,
-          title: "Molar Intrusion via Mini Screws",
-          subtitle: "Intruding over-erupted molars to level bite forces and close anterior open bite",
+          title: "Case 35: Molar Intrusion via TADs",
           category: "tads-mini-implants",
           tagLabel: "TADs",
-          text: "Molar intrusion using mini inplants"
+          text: "Molar intrusion using mini inplants",
+          images: [
+            "slide_37_img_1.jpg"
+          ]
         },
         {
           num: 38,
-          title: "Multidisciplinary Cleft Palate Care",
-          subtitle: "Coordinating arch expansion and fixed appliance detailing in cleft palate cases",
+          title: "Case 36: Multidisciplinary Cleft Palate Care",
           category: "cleft-nam palatal-expanders",
           tagLabel: "Cleft Palate",
-          text: "CLEFT PATIENT TREATED WITH EXPANSION APPLIANCE AND FIXED APPLAIANCE | Dr. Abin Mathew | Dr. Abin Mathew"
-        },
-        {
-          num: 39,
-          title: "Excellence & Perfection Outro Quote",
-          subtitle: "Reflecting our pursuit of exceptional clinical outcomes",
-          category: "all",
-          tagLabel: "Outro Quote",
-          text: "Perfection is not attainable. But if we chase perfection, we can catch excellence."
+          text: "CLEFT PATIENT TREATED WITH EXPANSION APPLIANCE AND FIXED APPLAIANCE | Dr. Abin Mathew | Dr. Abin Mathew",
+          images: [
+            "slide_38_img_1.png", "slide_38_img_2.png", "slide_38_img_4.png", "slide_38_img_5.png", "slide_38_img_6.png"
+          ]
         }
       ];
 
-      // Dynamically Render Slide Cards
+      // Helper function to split images array into Pre and Post arrays
+      function getPrePostSplit(slideNum, images) {
+        const half = Math.floor(images.length / 2);
+        
+        // Custom overrides for specific slides
+        if (slideNum === 6) { // 5 images: 2 Pre, 3 Post
+          return { pre: images.slice(0, 2), post: images.slice(2) };
+        }
+        if (slideNum === 8) { // 5 images: 2 Pre, 3 Post
+          return { pre: images.slice(0, 2), post: images.slice(2) };
+        }
+        if (slideNum === 10) { // 5 images: 2 Pre, 3 Post
+          return { pre: images.slice(0, 2), post: images.slice(2) };
+        }
+        if (slideNum === 15) { // 3 images: 1 Pre, 2 Post
+          return { pre: images.slice(0, 1), post: images.slice(1) };
+        }
+        if (slideNum === 16) { // 5 images: 2 Pre, 3 Post
+          return { pre: images.slice(0, 2), post: images.slice(2) };
+        }
+        if (slideNum === 17) { // 9 images: 4 Pre, 5 Post
+          return { pre: images.slice(0, 4), post: images.slice(4) };
+        }
+        if (slideNum === 20) { // 5 images: 2 Pre, 3 Post
+          return { pre: images.slice(0, 2), post: images.slice(2) };
+        }
+        if (slideNum === 23) { // 7 images: 3 Pre, 4 Post
+          return { pre: images.slice(0, 3), post: images.slice(3) };
+        }
+        if (slideNum === 24) { // 7 images: 3 Pre, 4 Post
+          return { pre: images.slice(0, 3), post: images.slice(3) };
+        }
+        if (slideNum === 27) { // 5 images: 2 Pre, 3 Post
+          return { pre: images.slice(0, 2), post: images.slice(2) };
+        }
+        if (slideNum === 28) { // 9 images: 4 Pre, 5 Post
+          return { pre: images.slice(0, 4), post: images.slice(4) };
+        }
+        
+        // Symmetrical split
+        return {
+          pre: images.slice(0, half),
+          post: images.slice(half)
+        };
+      }
+
+      // Helper function to return correct column grid class
+      function getGridColsClass(count) {
+        if (count === 1) return 'cols-1';
+        if (count === 2 || count === 4) return 'cols-2';
+        if (count === 3 || count === 5 || count === 6) return 'cols-3';
+        return 'cols-4';
+      }
+
+      // Dynamically Render Case Cards
       const galleryGrid = document.getElementById('galleryGrid');
 
-      function renderSlides() {
+      function renderCases() {
         galleryGrid.innerHTML = '';
-        slidesData.forEach((slide, index) => {
+        casesData.forEach(item => {
           const card = document.createElement('div');
-          // Add category classes to support filtering
           card.className = `report-card reveal`;
-          card.setAttribute('data-category', slide.category);
-          card.setAttribute('data-index', index);
+          card.setAttribute('data-category', item.category);
           
-          card.innerHTML = `
-            <div class="slide-image-wrapper">
-              <img src="./assets/slides/slide_${slide.num}.jpg" alt="${slide.title}" loading="lazy">
-              <div class="slide-hover-overlay">
-                <button class="zoom-btn">View Fullscreen</button>
-              </div>
-            </div>
-            <div class="card-details">
-              <h3>${slide.title}</h3>
-              <p class="card-subtitle">${slide.subtitle}</p>
-              <div class="card-meta">
-                <span class="slide-tag">${slide.tagLabel}</span>
-                <span class="slide-number-badge">Slide ${slide.num} of 39</span>
-              </div>
-            </div>
-            <!-- SEO Fallback Content -->
-            <div class="seo-text-block">
-              ${slide.text}
+          let contentHTML = `
+            <div class="card-header">
+              <h3>${item.title}</h3>
+              <span class="slide-tag">${item.tagLabel}</span>
             </div>
           `;
-          
-          // Open Lightbox on Click
-          card.addEventListener('click', () => {
-            openLightbox(index);
-          });
-          
+
+          if (item.images.length === 1) {
+            // Render single centered image
+            contentHTML += `
+              <div class="case-single-layout">
+                <div class="single-image-container treatment-images-grid cols-1">
+                  <img src="./assets/cases_new/${item.images[0]}" alt="${item.title}" loading="lazy" onclick="openLightbox('./assets/cases_new/${item.images[0]}')">
+                </div>
+              </div>
+            `;
+          } else {
+            // Split into Pre and Post
+            const split = getPrePostSplit(item.num, item.images);
+            const preCols = getGridColsClass(split.pre.length);
+            const postCols = getGridColsClass(split.post.length);
+
+            contentHTML += `
+              <div class="case-treatment-layout">
+                <!-- Pre-Treatment -->
+                <div class="treatment-section">
+                  <h4 class="treatment-title">Pre-Treatment</h4>
+                  <div class="treatment-images-grid ${preCols}">
+                    ${split.pre.map(img => `
+                      <img src="./assets/cases_new/${img}" alt="Pre-Treatment Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}')">
+                    `).join('')}
+                  </div>
+                </div>
+                
+                <!-- Post-Treatment -->
+                <div class="treatment-section">
+                  <h4 class="treatment-title">Post-Treatment</h4>
+                  <div class="treatment-images-grid ${postCols}">
+                    ${split.post.map(img => `
+                      <img src="./assets/cases_new/${img}" alt="Post-Treatment Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}')">
+                    `).join('')}
+                  </div>
+                </div>
+              </div>
+            `;
+          }
+
+          // Add SEO hidden fallback block
+          contentHTML += `
+            <div class="seo-text-block">
+              ${item.text}
+            </div>
+          `;
+
+          card.innerHTML = contentHTML;
           galleryGrid.appendChild(card);
         });
       }
 
       // Initial Render
-      renderSlides();
+      renderCases();
 
-      // Filter logic
+      // Filter tabs logic
       const filterBtns = document.querySelectorAll('.filter-btn');
       
       filterBtns.forEach(btn => {
@@ -896,7 +972,6 @@
       });
 
       // Interactive Lightbox State
-      let currentSlideIndex = 0;
       let zoomScale = 1.0;
       let isDragging = false;
       let startX = 0, startY = 0;
@@ -904,21 +979,15 @@
 
       const lightboxModal = document.getElementById('lightboxModal');
       const lightboxImg = document.getElementById('lightboxImg');
-      const lightboxCaption = document.getElementById('lightboxCaption');
-      const lightboxWrapper = document.getElementById('lightboxWrapper');
-      
       const lightboxClose = document.getElementById('lightboxClose');
-      const lightboxPrev = document.getElementById('lightboxPrev');
-      const lightboxNext = document.getElementById('lightboxNext');
       
       const zoomInBtn = document.getElementById('zoomInBtn');
       const zoomOutBtn = document.getElementById('zoomOutBtn');
       const zoomResetBtn = document.getElementById('zoomResetBtn');
 
-      function openLightbox(index) {
-        currentSlideIndex = index;
+      function openLightbox(imgSrc) {
         resetZoom();
-        updateLightboxContent();
+        lightboxImg.src = imgSrc;
         lightboxModal.classList.add('active');
         document.body.style.overflow = 'hidden'; // Lock background scroll
         document.querySelector('.lightbox-container').focus();
@@ -928,36 +997,6 @@
         lightboxModal.classList.remove('active');
         document.body.style.overflow = ''; // Unlock background scroll
         resetZoom();
-      }
-
-      function updateLightboxContent() {
-        const slide = slidesData[currentSlideIndex];
-        lightboxImg.src = `./assets/slides/slide_${slide.num}.jpg`;
-        lightboxImg.alt = slide.title;
-        lightboxCaption.innerHTML = `<strong>Slide ${slide.num}: ${slide.title}</strong><br>${slide.subtitle}`;
-        
-        // Disable nav arrows at boundaries
-        lightboxPrev.style.opacity = currentSlideIndex === 0 ? '0.3' : '1';
-        lightboxPrev.style.pointerEvents = currentSlideIndex === 0 ? 'none' : 'auto';
-        
-        lightboxNext.style.opacity = currentSlideIndex === slidesData.length - 1 ? '0.3' : '1';
-        lightboxNext.style.pointerEvents = currentSlideIndex === slidesData.length - 1 ? 'none' : 'auto';
-      }
-
-      function nextSlide() {
-        if (currentSlideIndex < slidesData.length - 1) {
-          currentSlideIndex++;
-          resetZoom();
-          updateLightboxContent();
-        }
-      }
-
-      function prevSlide() {
-        if (currentSlideIndex > 0) {
-          currentSlideIndex--;
-          resetZoom();
-          updateLightboxContent();
-        }
       }
 
       // Zoom functions
@@ -990,9 +1029,6 @@
 
       // Event Listeners
       lightboxClose.addEventListener('click', closeLightbox);
-      lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); prevSlide(); });
-      lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); nextSlide(); });
-      
       zoomInBtn.addEventListener('click', (e) => { e.stopPropagation(); zoomIn(); });
       zoomOutBtn.addEventListener('click', (e) => { e.stopPropagation(); zoomOut(); });
       zoomResetBtn.addEventListener('click', (e) => { e.stopPropagation(); resetZoom(); });
@@ -1000,10 +1036,7 @@
       // Keyboard Controls
       document.addEventListener('keydown', (e) => {
         if (!lightboxModal.classList.contains('active')) return;
-        
         if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowRight') nextSlide();
-        if (e.key === 'ArrowLeft') prevSlide();
         if (e.key === '+' || e.key === '=') zoomIn();
         if (e.key === '-') zoomOut();
       });
@@ -1031,7 +1064,7 @@
         }
       });
 
-      // Mobile Touch support for panning
+      // Touch Panning
       lightboxImg.addEventListener('touchstart', (e) => {
         if (zoomScale <= 1.0) return;
         isDragging = true;
@@ -1061,7 +1094,7 @@
         }
       });
 
-      // Intersection Observer for Scroll Animations
+      // Intersection Observer for Reveal Animations
       const revealElements = document.querySelectorAll('.reveal');
       if (revealElements.length > 0) {
         const revealOnScroll = new IntersectionObserver((entries, observer) => {
