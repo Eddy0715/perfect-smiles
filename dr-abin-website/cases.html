@@ -772,16 +772,35 @@
           category: "extractions-crowding",
           tagLabel: "Extractions",
           description: "• CROWDING CASE TREATED WITH EXTRACTION OF ALL FOUR 1st PREMOLARS<br>• MBT PRESCRIPTION",
-          text: "Case No. 13 | PRE TREATMENT POST TREATMENT | CROWROWDING CASE TREATED WITH EXTRACTION OF ALL FOUR 1st PREMOLARS MBT PRESCRIPTION",
+          text: "Case No. 13 | PRE TREATMENT POST TREATMENT | CROWDING CASE TREATED WITH EXTRACTION OF ALL FOUR 1st PREMOLARS MBT PRESCRIPTION",
           sections: [
             {
               columns: [
-                { heading: "PRE TREATMENT", images: ["slide_25_img_1.jpg", "slide_25_img_2.jpg", "slide_25_img_5.png", "slide_25_img_6.png", "slide_25_img_7.jpg"] },
-                { heading: "POST TREATMENT", images: ["slide_25_img_8.png", "slide_25_img_9.jpg", "slide_25_img_12.jpg", "slide_25_img_13.jpg", "slide_25_img_14.jpg"] }
+                { heading: "PRE TREATMENT", images: ["slide_25_face_pre_side.jpg", "slide_25_face_pre_front.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_25_face_post_side.jpg", "slide_25_face_post_front.jpg"] }
+              ]
+            },
+            {
+              columns: [
+                { heading: "PRE TREATMENT", images: ["slide_25_teeth_pre_front.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_25_teeth_post_front.jpg"] }
+              ]
+            },
+            {
+              columns: [
+                { heading: "PRE TREATMENT", images: ["slide_25_teeth_pre_upper.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_25_teeth_post_upper.jpg"] }
+              ]
+            },
+            {
+              columns: [
+                { heading: "PRE TREATMENT", images: ["slide_25_teeth_pre_lower.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_25_teeth_post_lower.jpg"] }
               ]
             }
           ]
         },
+
         {
           num: 22,
           title: "Case No. 14: Absolute anchorage case",
@@ -985,7 +1004,7 @@
                   <div class="case-single-layout" style="margin-bottom: 1.5rem;">
                     <div class="single-image-container treatment-images-grid">
                       ${sec.top.images.map(img => `
-                        <img src="./assets/cases_new/${img}?v=3" alt="Top Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=3')">
+                        <img src="./assets/cases_new/${img}?v=4" alt="Top Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=4')">
                       `).join('')}
                     </div>
                   </div>
@@ -1003,7 +1022,7 @@
                         <h4 class="treatment-title" style="font-size: 0.95rem; line-height: 1.3;">${col.heading}</h4>
                         <div class="treatment-images-grid">
                           ${col.images.map(img => `
-                            <img src="./assets/cases_new/${img}?v=3" alt="${col.heading} Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=3')">
+                            <img src="./assets/cases_new/${img}?v=4" alt="${col.heading} Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=4')">
                           `).join('')}
                         </div>
                       </div>
@@ -1023,7 +1042,7 @@
                     ${headingHTML}
                     <div class="treatment-images-grid" style="${flexStyle}">
                       ${sec.bottom.images.map(img => `
-                        <img src="./assets/cases_new/${img}?v=3" alt="Bottom Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=3')" style="${imgStyle}">
+                        <img src="./assets/cases_new/${img}?v=4" alt="Bottom Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=4')" style="${imgStyle}">
                       `).join('')}
                     </div>
                   </div>
@@ -1037,7 +1056,7 @@
             contentHTML += `
               <div class="case-single-layout">
                 <div class="single-image-container treatment-images-grid">
-                  <img src="./assets/cases_new/${item.images[0]}?v=3" alt="${item.title}" loading="lazy" onclick="openLightbox('./assets/cases_new/${item.images[0]}?v=3')">
+                  <img src="./assets/cases_new/${item.images[0]}?v=4" alt="${item.title}" loading="lazy" onclick="openLightbox('./assets/cases_new/${item.images[0]}?v=4')">
                 </div>
               </div>
             `;
