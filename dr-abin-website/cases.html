@@ -119,7 +119,6 @@
       /* Treatment Layout Side-by-Side */
       .case-treatment-layout {
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 2.5rem;
       }
       @media (max-width: 900px) {
@@ -445,140 +444,157 @@
       const casesData = [
         {
           num: 2,
-          title: "Case 1: Invisalign® Treatment",
+          title: "Invisalign",
           category: "invisalign",
           tagLabel: "Invisalign",
           description: "Patient treated with clear aesthetic aligners to resolve spacing and level the occlusal plane.",
           text: "INVISALIGN | PRETREATMENT | POST TREATMENT",
-          columns: [
-            { heading: "Pre-Treatment", images: ["slide_2_img_1.jpg", "slide_2_img_2.jpg", "slide_2_img_3.jpg"] },
-            { heading: "Post-Treatment", images: ["slide_2_img_4.jpg", "slide_2_img_5.jpg", "slide_2_img_6.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pre-Treatment", images: ["slide_2_img_1.jpg", "slide_2_img_2.jpg", "slide_2_img_3.jpg"] },
+                { heading: "Post-Treatment", images: ["slide_2_img_4.jpg", "slide_2_img_5.jpg", "slide_2_img_6.jpg"] }
+              ]
+            }
           ]
         },
         {
           num: 3,
-          title: "Case 2: Invisalign® Teen Alignment",
+          title: "Invisalign",
           category: "invisalign",
           tagLabel: "Invisalign",
           description: "Teenage alignment case showing comprehensive smile correction and crowding resolution.",
           text: "INVISALIGN | PRETREATMENT | POST TREATMENT",
-          columns: [
-            { heading: "Pre-Treatment", images: ["slide_3_img_1.jpg", "slide_3_img_2.jpg", "slide_3_img_3.jpg", "slide_3_img_4.jpg"] },
-            { heading: "Post-Treatment", images: ["slide_3_img_5.jpg", "slide_3_img_6.jpg", "slide_3_img_7.jpg", "slide_3_img_8.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pre-Treatment", images: ["slide_3_img_1.jpg", "slide_3_img_2.jpg", "slide_3_img_3.jpg", "slide_3_img_4.jpg"] },
+                { heading: "Post-Treatment", images: ["slide_3_img_5.jpg", "slide_3_img_6.jpg", "slide_3_img_7.jpg", "slide_3_img_8.jpg"] }
+              ]
+            }
           ]
         },
         {
           num: 4,
-          title: "Case 3: Invisalign® Deep Bite Correction",
+          title: "Invisalign",
           category: "invisalign",
           tagLabel: "Invisalign",
           description: "Correction of deep bite, leveling the arches, and closing spaces over an 8-month treatment duration.",
           text: "INVISALIGN | PRETREATMENT | POST TREATMENT | TREATMENT DURATION 8 MONTHS",
-          columns: [
-            { heading: "Pre-Treatment", images: ["slide_4_img_1.jpg", "slide_4_img_2.jpg", "slide_4_img_3.jpg"] },
-            { heading: "Post-Treatment", images: ["slide_4_img_4.jpg", "slide_4_img_5.jpg", "slide_4_img_6.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pre-Treatment", images: ["slide_4_img_1.jpg", "slide_4_img_2.jpg", "slide_4_img_3.jpg"] },
+                { heading: "Post-Treatment", images: ["slide_4_img_4.jpg", "slide_4_img_5.jpg", "slide_4_img_6.jpg"] }
+              ]
+            }
           ]
         },
         {
-          num: 5,
-          title: "Case 4: Non-Extraction Damon® Q SLB (Impacted Canine)",
+          num: 5, // Merged slide 5 and 6
+          title: "CASE NO - 1 Non Extraction Cases",
           category: "self-ligating-braces",
           tagLabel: "Damon SLB",
-          description: "Resolving dental crowding and bringing an obliquely impacted canine into the arch using the Damon Q Self-Ligating System.",
-          text: "Non Extraction Cases | CASE NO - 1 | PRETREATMENT POST TREATMENT | PATIENT WITH CROWDING AND IMPACTED CANINE TREATED WITH DAMON Q SELF LIGATING BRACKET SYSTEM",
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_5_img_1.jpg", "slide_5_img_2.jpg", "slide_5_img_3.jpg", "slide_5_img_4.jpg", "slide_5_img_5.jpg"] },
-            { heading: "POST TREATMENT", images: ["slide_5_img_6.jpg", "slide_5_img_7.jpg", "slide_5_img_8.jpg", "slide_5_img_9.jpg", "slide_5_img_10.jpg"] }
+          description: "Patient with crowding and impacted canine treated with Damon Q Self-Ligating Bracket system. Continuation shows canine disimpacted using diode laser. Treatment duration: 15 Months.",
+          text: "Non Extraction Cases | CASE NO - 1 | PRETREATMENT POST TREATMENT | PATIENT WITH CROWDING AND IMPACTED CANINE TREATED WITH DAMON Q SELF LIGATING BRACKET SYSTEM | CANINE DISIMPACTED USING DIODE LASER | DURATION 15 MONTHS",
+          sections: [
+            {
+              title: "Damon Q Self-Ligating System",
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_5_img_1.jpg", "slide_5_img_2.jpg", "slide_5_img_3.jpg", "slide_5_img_4.jpg", "slide_5_img_5.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_5_img_6.jpg", "slide_5_img_7.jpg", "slide_5_img_8.jpg", "slide_5_img_9.jpg", "slide_5_img_10.jpg"] }
+              ]
+            },
+            {
+              title: "Canine Disimpacted using Diode Laser",
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_6_img_1.jpg", "slide_6_img_2.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_6_img_3.jpg", "slide_6_img_4.jpg", "slide_6_img_5.jpg"] }
+              ]
+            }
           ]
         },
         {
-          num: 6,
-          title: "Case 5: Diode Laser Canine Exposure (Damon® Q SLB)",
-          category: "self-ligating-braces",
-          tagLabel: "Damon SLB",
-          description: "Laser-assisted disimpaction of an impacted canine combined with Damon SLB fixed braces. Treatment duration: 15 Months.",
-          text: "CASE No I Cont… | PRETREATMENT POST TREATMENT | CANINE DISIMPACTED USING DIODE LASER | DAMON Q SLB BRACKET SYSTEM DURATION 15 MONTHS",
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_6_img_1.jpg", "slide_6_img_2.jpg"] },
-            { heading: "POST TREATMENT", images: ["slide_6_img_3.jpg", "slide_6_img_4.jpg", "slide_6_img_5.jpg"] }
-          ]
-        },
-        {
-          num: 7,
-          title: "Case 6: Cleft Palate Transverse Expansion (NiTi & MBT)",
+          num: 7, // Merged slide 7 and 8
+          title: "CASE NO - 2",
           category: "cleft-nam palatal-expanders self-ligating-braces",
           tagLabel: "Cleft / Expander",
-          description: "Transverse expansion in a previously treated cleft palate patient utilizing a NiTi Palatal Expander and fixed MBT mechanotherapy.",
-          text: "PRETREATMENT POST TREATMENT | PREVIOUSLY CLEFT PALATE TREATED PATIENT TREATED WITH NITI PALATAL EXPANDER AND FIXED MBT MECHANOTHERAPHY | CASE NO -2",
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_7_img_1.jpg", "slide_7_img_2.jpg", "slide_7_img_3.jpg", "slide_7_img_4.jpg", "slide_7_img_5.jpg"] },
-            { heading: "POST TREATMENT", images: ["slide_7_img_6.jpg", "slide_7_img_7.jpg", "slide_7_img_8.jpg", "slide_7_img_9.jpg", "slide_7_img_10.jpg"] }
+          description: "PREVIOUSLY CLEFT PALATE TREATED PATIENT TREATED WITH NITI PALATAL EXPANDER AND FIXED MBT MECHANOTHERAPHY",
+          text: "PRETREATMENT POST TREATMENT | PREVIOUSLY CLEFT PALATE TREATED PATIENT TREATED WITH NITI PALATAL EXPANDER AND FIXED MBT MECHANOTHERAPHY | CASE NO -2 | MBT PRESCRIPTION USED WITH CUNITI WIRES MISSING MOLAR TO BE REPLACED PROSTHETICALLY",
+          sections: [
+            {
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_7_img_1.jpg", "slide_7_img_2.jpg", "slide_7_img_3.jpg", "slide_7_img_4.jpg", "slide_7_img_5.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_7_img_6.jpg", "slide_7_img_7.jpg", "slide_7_img_8.jpg", "slide_7_img_9.jpg", "slide_7_img_10.jpg"] }
+              ]
+            },
+            {
+              title: "MBT Fixed Mechanotherapy & Transverse Expansion",
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_8_img_1.jpg", "slide_8_img_2.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_8_img_3.jpg", "slide_8_img_4.jpg"] }
+              ],
+              bottom: {
+                heading: "NITI PALATAL EXPANDER",
+                images: ["slide_8_img_5.jpg"]
+              }
+            }
           ]
         },
         {
-          num: 8,
-          title: "Case 7: Skeletal Palatal Expansion (NiTi Expander)",
-          category: "palatal-expanders",
-          tagLabel: "Expanders",
-          description: "Maxillary expansion utilizing a NiTi palatal expander, aligning with CuNiTi archwires to prepare for prosthetic molar replacement.",
-          text: "CASE NO -2 Cont.… | PRETREATMENT POST TREATMENT | NITI PALATAL EXPANDER | MBT PRESCRIPTION USED WITH CUNITI WIRES MISSING MOLAR TO BE REPLACED PROSTHETICALLY",
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_8_img_1.jpg", "slide_8_img_2.jpg"] },
-            { heading: "POST TREATMENT", images: ["slide_8_img_3.jpg", "slide_8_img_4.jpg"] }
-          ],
-          bottom: {
-            heading: "NITI PALATAL EXPANDER",
-            images: ["slide_8_img_5.jpg"]
-          }
-        },
-        {
-          num: 9,
-          title: "Case 8: Obliquely Impacted Lower Canine (MBT)",
+          num: 9, // Merged slide 9 and 10
+          title: "CASE NO - 3",
           category: "self-ligating-braces",
           tagLabel: "MBT Braces",
-          description: "Obliquely impacted canine 33 oriented to cervical third of roots of 41 and 42, featuring a dilacerated root.",
-          text: "CASE NO - 3 | PRETREATMENT | POSTTREATMENT | CLASS I SKELETAL PATTERN,ANGLES CLASS I MOLAR RELATION BILATERALLY WITH IMPACTED CANINE IN LOWER ARCH OBLIQUELY IMPACTED 33 IS ORIENTED TO CERVICAL 3 RD OF ROOTS OF 41 and 42 AND ALSO HAS A DILACERATED ROOT",
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_9_img_1.jpg", "slide_9_img_2.jpg", "slide_9_img_3.png", "slide_9_img_4.png", "slide_9_img_5.png"] },
-            { heading: "POST TREATMENT", images: ["slide_9_img_6.png", "slide_9_img_7.png", "slide_9_img_8.jpg", "slide_9_img_9.jpg", "slide_9_img_10.jpg"] }
+          description: `
+            <p style="margin: 0 0 0.5rem 0; font-weight: 500;">• CLASS I SKELETAL PATTERN, ANGLES CLASS I MOLAR RELATION BILATERALLY WITH IMPACTED CANINE IN LOWER ARCH</p>
+            <p style="margin: 0; font-weight: 500;">• OBLIQUELY IMPACTED 33 IS ORIENTED TO CERVICAL 3 RD OF ROOTS OF 41 and 42 AND ALSO HAS A DILACERATED ROOT</p>
+          `,
+          text: "CASE NO - 3 | PRETREATMENT | POSTTREATMENT | CLASS I SKELETAL PATTERN,ANGLES CLASS I MOLAR RELATION BILATERALLY WITH IMPACTED CANINE IN LOWER ARCH OBLIQUELY IMPACTED 33 IS ORIENTED TO CERVICAL 3 RD OF ROOTS OF 41 and 42 AND ALSO HAS A DILACERATED ROOT | 43 BROUGHT INTO ARCH | 33 BROUGHT TRANSPORTED TO 4TH QUADRANT | LEVELLING AND ALIGNING OF 33AND 43 INTO ARCH ON SAME SIDE | CBCT IMAGE",
+          sections: [
+            {
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_9_img_1.jpg", "slide_9_img_2.jpg", "slide_9_img_3.png", "slide_9_img_4.png", "slide_9_img_5.png"] },
+                { heading: "POST TREATMENT", images: ["slide_9_img_6.png", "slide_9_img_7.png", "slide_9_img_8.jpg", "slide_9_img_9.jpg", "slide_9_img_10.jpg"] }
+              ]
+            },
+            {
+              title: "Canine Arch Alignment & CBCT Imaging",
+              columns: [
+                { heading: "43 BROUGHT INTO ARCH", images: ["slide_10_img_1.jpg"] },
+                { heading: "33 BROUGHT TRANSPORTED TO 4TH QUADRANT", images: ["slide_10_img_2.jpg"] },
+                { heading: "LEVELLING AND ALIGNING OF 33 AND 43 ON SAME SIDE", images: ["slide_10_img_3.jpg"] }
+              ],
+              bottom: {
+                heading: "CBCT IMAGE",
+                images: ["slide_10_img_4.jpg", "slide_10_img_5.jpg"],
+                layout: "row"
+              }
+            }
           ]
-        },
-        {
-          num: 10,
-          title: "Case 9: Canine Arch Alignment (MBT Prescription)",
-          category: "self-ligating-braces",
-          tagLabel: "MBT Braces",
-          description: "Levelling and aligning of impacted canines 33 and 43 into the arch on the same side, verified with CBCT imaging.",
-          text: "CASE NO – 3 Cont… | 43 BROUGHT INTO ARCH | 33 BROUGHT TRANSPORTED TO 4TH QUADRANT | LEVELLING AND ALIGNING OF 33AND 43 INTO ARCH ON SAME SIDE | MBT PRECRIPTION USED | CBCT IMAGE",
-          columns: [
-            { heading: "43 BROUGHT INTO ARCH", images: ["slide_10_img_1.jpg"] },
-            { heading: "33 BROUGHT TRANSPORTED TO 4TH QUADRANT", images: ["slide_10_img_2.jpg"] },
-            { heading: "LEVELLING AND ALIGNING OF 33 AND 43 ON SAME SIDE", images: ["slide_10_img_3.jpg"] }
-          ],
-          bottom: {
-            heading: "CBCT IMAGE",
-            images: ["slide_10_img_4.jpg", "slide_10_img_5.jpg"],
-            layout: "row"
-          }
         },
         {
           num: 11,
-          title: "Case 10: Presurgical Nasoalveolar Molding (NAM)",
+          title: "CASE - 4 Infant orthopedic",
           category: "cleft-nam",
           tagLabel: "Cleft / NAM",
           description: "Nasoalveolar Molding (NAM) therapy in a 4-day-old infant with unilateral cleft lip, alveolus and palate deformity. Duration: 5 Months.",
           text: "PRETREATMENT | POST NAM | POST LIP SURGERY | PRESURGICAL NASOALVEOLAR MOLDING IN A 4 DAY OLD INFANT WITH UNILATERAL CLEFTLIP ,ALVEOLUS AND PALATE DEFORMITY TREATMENT DURATION - 5 MONTHS | CASE - 4 Infant orthopedic",
-          top: {
-            images: ["slide_11_img_1.jpg"]
-          },
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_11_img_2.jpg", "slide_11_img_5.jpg"] },
-            { heading: "POST NAM", images: ["slide_11_img_3.jpg", "slide_11_img_6.jpg"] },
-            { heading: "POST LIP SURGERY", images: ["slide_11_img_4.jpg", "slide_11_img_7.jpg"] }
-          ],
-          bottom: {
-            images: ["slide_11_img_8.jpg"]
-          }
+          sections: [
+            {
+              top: {
+                images: ["slide_11_img_1.jpg"]
+              },
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_11_img_2.jpg", "slide_11_img_5.jpg"] },
+                { heading: "POST NAM", images: ["slide_11_img_3.jpg", "slide_11_img_6.jpg"] },
+                { heading: "POST LIP SURGERY", images: ["slide_11_img_4.jpg", "slide_11_img_7.jpg"] }
+              ],
+              bottom: {
+                images: ["slide_11_img_8.jpg"]
+              }
+            }
+          ]
         },
         {
           num: 12,
@@ -587,9 +603,13 @@
           tagLabel: "Myofunctional",
           description: "Growth modification and orthopedic development in a Class III skeletal pattern case utilizing facemask therapy.",
           text: "CASE NO 5 Myofunctional therapy case (FACEMASK ) | PRE TREATMENT POST FUNCTIONAL PHASE WITH FACE MASK | PRE TREATMENT POST FUNCTIONAL PHASE",
-          columns: [
-            { heading: "PRE TREATMENT", images: ["slide_12_img_1.jpg", "slide_12_img_2.jpg", "slide_12_img_3.jpg", "slide_12_img_4.jpg"] },
-            { heading: "POST FUNCTIONAL PHASE WITH FACE MASK", images: ["slide_12_img_5.jpg", "slide_12_img_6.jpg", "slide_12_img_7.jpg", "slide_12_img_8.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "PRE TREATMENT", images: ["slide_12_img_1.jpg", "slide_12_img_2.jpg", "slide_12_img_3.jpg", "slide_12_img_4.jpg"] },
+                { heading: "POST FUNCTIONAL PHASE WITH FACE MASK", images: ["slide_12_img_5.jpg", "slide_12_img_6.jpg", "slide_12_img_7.jpg", "slide_12_img_8.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -599,9 +619,13 @@
           tagLabel: "Myofunctional",
           description: "Combination treatment: 13 months of orthopedic facemask therapy followed by 2 years of fixed MBT mechanotherapy.",
           text: "FACEMASK THERAPY – 13 MONTHS CLASS III SKELETAL PATTERN MBT FIXED MECHANOTHERAPY IN DURATION 2 YEARS | CASE NO -5 Cont… | POST FIXED TREATMENT",
-          columns: [
-            { heading: "FACEMASK THERAPY - 13 MONTHS", images: ["slide_13_img_1.jpg", "slide_13_img_2.jpg", "slide_13_img_3.jpg"] },
-            { heading: "POST FIXED TREATMENT", images: ["slide_13_img_4.jpg", "slide_13_img_5.jpg", "slide_13_img_6.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "FACEMASK THERAPY - 13 MONTHS", images: ["slide_13_img_1.jpg", "slide_13_img_2.jpg", "slide_13_img_3.jpg"] },
+                { heading: "POST FIXED TREATMENT", images: ["slide_13_img_4.jpg", "slide_13_img_5.jpg", "slide_13_img_6.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -610,10 +634,14 @@
           category: "myofunctional-jaw",
           tagLabel: "Twin Block",
           text: "CASE -TWIN BLOCK | PRE TREATMENT POST FUNCTIONAL PHASE POST FIXED",
-          columns: [
-            { heading: "PRE TREATMENT", images: ["slide_14_img_1.jpg", "slide_14_img_2.jpg"] },
-            { heading: "POST FUNCTIONAL PHASE", images: ["slide_14_img_3.jpg", "slide_14_img_4.jpg"] },
-            { heading: "POST FIXED", images: ["slide_14_img_5.jpg", "slide_14_img_6.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "PRE TREATMENT", images: ["slide_14_img_1.jpg", "slide_14_img_2.jpg"] },
+                { heading: "POST FUNCTIONAL PHASE", images: ["slide_14_img_3.jpg", "slide_14_img_4.jpg"] },
+                { heading: "POST FIXED", images: ["slide_14_img_5.jpg", "slide_14_img_6.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -622,10 +650,14 @@
           category: "myofunctional-jaw",
           tagLabel: "Twin Block",
           text: "TWIN BLOCK | PRE TREATMENT | POST FUNCTIONAL PHASE | POST FIXED APPLIANCE",
-          columns: [
-            { heading: "PRE TREATMENT", images: ["slide_15_img_1.jpg"] },
-            { heading: "POST FUNCTIONAL PHASE", images: ["slide_15_img_2.jpg"] },
-            { heading: "POST FIXED APPLIANCE", images: ["slide_15_img_3.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "PRE TREATMENT", images: ["slide_15_img_1.jpg"] },
+                { heading: "POST FUNCTIONAL PHASE", images: ["slide_15_img_2.jpg"] },
+                { heading: "POST FIXED APPLIANCE", images: ["slide_15_img_3.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -634,10 +666,14 @@
           category: "myofunctional-jaw self-ligating-braces",
           tagLabel: "Myofunctional",
           text: "TWIN BLOCK APPLIANCE THERAPY WITH MBT FIXED MECHANOTHERAPY | PRE TREATMENT WITH TWIN BLOCK | POST FUNCTIONAL PHASE FIXED APPLIANCE | POST FIXED APPLIANCE",
-          columns: [
-            { heading: "PRE TREATMENT WITH TWIN BLOCK", images: ["slide_16_img_1.jpg", "slide_16_img_2.jpg"] },
-            { heading: "POST FUNCTIONAL PHASE FIXED APPLIANCE", images: ["slide_16_img_3.jpg", "slide_16_img_4.png"] },
-            { heading: "POST FIXED APPLIANCE", images: ["slide_16_img_5.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "PRE TREATMENT WITH TWIN BLOCK", images: ["slide_16_img_1.jpg", "slide_16_img_2.jpg"] },
+                { heading: "POST FUNCTIONAL PHASE FIXED APPLIANCE", images: ["slide_16_img_3.jpg", "slide_16_img_4.png"] },
+                { heading: "POST FIXED APPLIANCE", images: ["slide_16_img_5.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -646,9 +682,13 @@
           category: "myofunctional-jaw",
           tagLabel: "Myofunctional",
           text: "PRETREATMENT | CASE NO 7 High pull headgear | PRETREATMENT | POST HEADGEAR THERAPY | PHASE I-CLASS I SKELETAL PATTERN GROWING PATIENT WITH PROGNATHIC MAXILLA TREATED WITH HIGH PULL HEADGEAR DURATION -14 MONTHS | POST TREATMENT",
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_17_img_1.jpg", "slide_17_img_2.jpg", "slide_17_img_3.png", "slide_17_img_4.png"] },
-            { heading: "POST HEADGEAR THERAPY", images: ["slide_17_img_5.jpg", "slide_17_img_6.png", "slide_17_img_7.png", "slide_17_img_8.jpg", "slide_17_img_9.png"] }
+          sections: [
+            {
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_17_img_1.jpg", "slide_17_img_2.jpg", "slide_17_img_3.png", "slide_17_img_4.png"] },
+                { heading: "POST HEADGEAR THERAPY", images: ["slide_17_img_5.jpg", "slide_17_img_6.png", "slide_17_img_7.png", "slide_17_img_8.jpg", "slide_17_img_9.png"] }
+              ]
+            }
           ]
         },
         {
@@ -658,9 +698,13 @@
           tagLabel: "TADs / Braces",
           description: "Complex mutilated malocclusion case treated with fixed appliances and TAD-anchored absolute retraction.",
           text: "CASE NO-8 Mutilated malocclusion cases | PRETREATMENT | POST TREATMENT | MUTILATED MALOCCLUSION TREATED WITH FIXED APPLIANCE MINI IMPLANT RETRACTION",
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_18_img_1.jpg", "slide_18_img_2.jpg", "slide_18_img_3.jpg", "slide_18_img_4.jpg", "slide_18_img_5.png"] },
-            { heading: "POST TREATMENT", images: ["slide_18_img_6.png", "slide_18_img_7.png", "slide_18_img_8.jpg", "slide_18_img_9.jpg", "slide_18_img_10.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_18_img_1.jpg", "slide_18_img_2.jpg", "slide_18_img_3.jpg", "slide_18_img_4.jpg", "slide_18_img_5.png"] },
+                { heading: "POST TREATMENT", images: ["slide_18_img_6.png", "slide_18_img_7.png", "slide_18_img_8.jpg", "slide_18_img_9.jpg", "slide_18_img_10.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -670,9 +714,13 @@
           tagLabel: "TADs / Braces",
           description: "Molar uprighting of 47 and space closure utilizing titanium mini implants. Duration: 14 Months.",
           text: "CASE-8 Cont…. | MINI IMPLANT RETRACTION | PRETREATMENT POST TREATMENT | MBT PRESCRIPTION MOLAR UP RIGHTING ALSO DONE IN 47 DURATION 14 MONTHS",
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_19_img_1.jpg", "slide_19_img_2.jpg", "slide_19_img_3.jpg"] },
-            { heading: "POST TREATMENT", images: ["slide_19_img_4.jpg", "slide_19_img_5.jpg", "slide_19_img_6.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_19_img_1.jpg", "slide_19_img_2.jpg", "slide_19_img_3.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_19_img_4.jpg", "slide_19_img_5.jpg", "slide_19_img_6.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -682,10 +730,14 @@
           tagLabel: "Surgical Cleft",
           description: "Orthognathic surgical cleft lip and palate case combining 14 months of pre-surgical orthodontics with LeFort 1 advancement.",
           text: "CASE NO – 9 Orthognathic surgical cases | CLEFT LIP AND PALATE PATIENT TREATED WITH LEFORT 1 OSTEOTOMY AND ADVANCEMENT PRE SURGICAL ORTHODONTICS DURATION 14 MONTHS | PRETREATMENT | PRE SURGICAL | POST SURGICAL",
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_20_img_1.jpg", "slide_20_img_2.jpg"] },
-            { heading: "PRE SURGICAL", images: ["slide_20_img_3.jpg", "slide_20_img_4.png"] },
-            { heading: "POST SURGICAL", images: ["slide_20_img_5.png"] }
+          sections: [
+            {
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_20_img_1.jpg", "slide_20_img_2.jpg"] },
+                { heading: "PRE SURGICAL", images: ["slide_20_img_3.jpg", "slide_20_img_4.png"] },
+                { heading: "POST SURGICAL", images: ["slide_20_img_5.png"] }
+              ]
+            }
           ]
         },
         {
@@ -704,9 +756,13 @@
           tagLabel: "Extractions",
           description: "Severe bimaxillary protrusion case resolved with extraction of all four 1st premolars under MBT prescription. Duration: 17 Months.",
           text: "Case No-11 Extraction cases | Pre-treatment | Post-treatment | BIMAXILLARY PROTRUSION CASE TREATED WITH EXTRACTION OF ALL FOUR 1stPREMOLARS. DURATION – 17 MONTHS MBT PRESCRIPTION",
-          columns: [
-            { heading: "Pre-treatment", images: ["slide_22_img_1.jpg", "slide_22_img_2.jpg", "slide_22_img_3.png", "slide_22_img_4.jpg", "slide_22_img_5.jpg"] },
-            { heading: "Post-treatment", images: ["slide_22_img_6.png", "slide_22_img_7.png", "slide_22_img_8.png", "slide_22_img_9.jpg", "slide_22_img_10.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pre-treatment", images: ["slide_22_img_1.jpg", "slide_22_img_2.jpg", "slide_22_img_3.png", "slide_22_img_4.jpg", "slide_22_img_5.jpg"] },
+                { heading: "Post-treatment", images: ["slide_22_img_6.png", "slide_22_img_7.png", "slide_22_img_8.png", "slide_22_img_9.jpg", "slide_22_img_10.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -716,9 +772,13 @@
           tagLabel: "Extractions",
           description: "Extraction space closure case detailing leveling and space management.",
           text: "PRETREATMENT | Case No. 12",
-          columns: [
-            { heading: "Pre-Treatment", images: ["slide_23_img_1.jpg", "slide_23_img_2.jpg", "slide_23_img_3.jpg"] },
-            { heading: "Post-Treatment", images: ["slide_23_img_4.jpg", "slide_23_img_5.jpg", "slide_23_img_6.png", "slide_23_img_7.png"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pre-Treatment", images: ["slide_23_img_1.jpg", "slide_23_img_2.jpg", "slide_23_img_3.jpg"] },
+                { heading: "Post-Treatment", images: ["slide_23_img_4.jpg", "slide_23_img_5.jpg", "slide_23_img_6.png", "slide_23_img_7.png"] }
+              ]
+            }
           ]
         },
         {
@@ -728,9 +788,13 @@
           tagLabel: "Invisalign",
           description: "Aesthetic space closure and alignment using clear aligners.",
           text: "Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Lets create some smile",
-          columns: [
-            { heading: "Pre-Treatment", images: ["slide_24_img_1.jpg", "slide_24_img_2.jpg", "slide_24_img_3.jpg"] },
-            { heading: "Post-Treatment", images: ["slide_24_img_4.jpg", "slide_24_img_5.jpg", "slide_24_img_6.jpg", "slide_24_img_7.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pre-Treatment", images: ["slide_24_img_1.jpg", "slide_24_img_2.jpg", "slide_24_img_3.jpg"] },
+                { heading: "Post-Treatment", images: ["slide_24_img_4.jpg", "slide_24_img_5.jpg", "slide_24_img_6.jpg", "slide_24_img_7.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -739,10 +803,14 @@
           category: "extractions-crowding",
           tagLabel: "Extractions",
           description: "Severe arch crowding resolved with extractions of four 1st premolars using fixed MBT prescription.",
-          text: "Case No. 13 | PRE TREATMENT POST TREATMENT | CROWDING CASE TREATED WITH EXTRACTION OF ALL FOUR 1st PREMOLARS MBT PRESCRIPTION",
-          columns: [
-            { heading: "PRE TREATMENT", images: ["slide_25_img_1.jpg", "slide_25_img_2.jpg", "slide_25_img_3.jpg", "slide_25_img_4.png", "slide_25_img_5.png", "slide_25_img_6.png", "slide_25_img_7.jpg"] },
-            { heading: "POST TREATMENT", images: ["slide_25_img_8.png", "slide_25_img_9.jpg", "slide_25_img_10.jpg", "slide_25_img_11.jpg", "slide_25_img_12.jpg", "slide_25_img_13.jpg", "slide_25_img_14.jpg"] }
+          text: "Case No. 13 | PRE TREATMENT POST TREATMENT | CROWROWDING CASE TREATED WITH EXTRACTION OF ALL FOUR 1st PREMOLARS MBT PRESCRIPTION",
+          sections: [
+            {
+              columns: [
+                { heading: "PRE TREATMENT", images: ["slide_25_img_1.jpg", "slide_25_img_2.jpg", "slide_25_img_3.jpg", "slide_25_img_4.png", "slide_25_img_5.png", "slide_25_img_6.png", "slide_25_img_7.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_25_img_8.png", "slide_25_img_9.jpg", "slide_25_img_10.jpg", "slide_25_img_11.jpg", "slide_25_img_12.jpg", "slide_25_img_13.jpg", "slide_25_img_14.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -752,9 +820,13 @@
           tagLabel: "TADs / Extractions",
           description: "Bimaxillary crowding and proclined teeth treated with four premolar extractions and 1.5 x 9 mm titanium mini implant retraction.",
           text: "Case No. 14 | PATIENT WITH PROCLINED UPPER TEETH WITH LOWER ANTERIOR CROWDING TREATED WITH EXTRACTION OF ALL FOUR 1ST PREMOLARS. ABSOLUTE ANCHORAGE CASE 1.5 X 9 MM TITANIUM IMPLANT RETRACTION | PRETREATMENT MID TREATMENT",
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_26_img_1.jpg", "slide_26_img_2.jpg", "slide_26_img_3.jpg", "slide_26_img_4.png", "slide_26_img_5.png", "slide_26_img_6.png"] },
-            { heading: "MID TREATMENT", images: ["slide_26_img_7.jpg", "slide_26_img_8.jpg", "slide_26_img_9.jpg", "slide_26_img_10.jpg", "slide_26_img_11.jpg", "slide_26_img_12.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_26_img_1.jpg", "slide_26_img_2.jpg", "slide_26_img_3.jpg", "slide_26_img_4.png", "slide_26_img_5.png", "slide_26_img_6.png"] },
+                { heading: "MID TREATMENT", images: ["slide_26_img_7.jpg", "slide_26_img_8.jpg", "slide_26_img_9.jpg", "slide_26_img_10.jpg", "slide_26_img_11.jpg", "slide_26_img_12.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -764,9 +836,13 @@
           tagLabel: "TADs",
           description: "Demonstrating absolute anchorage space closure and root angle control with mini-screws.",
           text: "Case N0. 14 (Contn..) | Absolute anchorage case treated with minimplant retraction",
-          columns: [
-            { heading: "Pretreatment", images: ["slide_27_img_1.png", "slide_27_img_2.png"] },
-            { heading: "Posttreatment", images: ["slide_27_img_3.png", "slide_27_img_4.jpg", "slide_27_img_5.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pretreatment", images: ["slide_27_img_1.png", "slide_27_img_2.png"] },
+                { heading: "Posttreatment", images: ["slide_27_img_3.png", "slide_27_img_4.jpg", "slide_27_img_5.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -776,9 +852,13 @@
           tagLabel: "Extractions",
           description: "Buccally erupted canine and missing lower 1st premolars treated with a single upper premolar extraction and retraction using a T-loop.",
           text: "Case No. 15 | PRETREATMENT POST TREATMENT | PATIENT WITH BUCCALY ERUPTED CANINE AND WITH MISSING LOWER 1ST PREMOLARS WAS TREATED WITH EXTRACTION OF SINGLE PREMOLAR IN UPPER ARCH AND RETRACTED WITH T LOOP. MBT PRESCRIPTION",
-          columns: [
-            { heading: "PRETREATMENT", images: ["slide_28_img_1.jpg", "slide_28_img_2.jpg", "slide_28_img_3.jpg", "slide_28_img_4.jpg"] },
-            { heading: "POST TREATMENT", images: ["slide_28_img_5.jpg", "slide_28_img_6.jpg", "slide_28_img_7.jpg", "slide_28_img_8.png", "slide_28_img_9.png"] }
+          sections: [
+            {
+              columns: [
+                { heading: "PRETREATMENT", images: ["slide_28_img_1.jpg", "slide_28_img_2.jpg", "slide_28_img_3.jpg", "slide_28_img_4.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_28_img_5.jpg", "slide_28_img_6.jpg", "slide_28_img_7.jpg", "slide_28_img_8.png", "slide_28_img_9.png"] }
+              ]
+            }
           ]
         },
         {
@@ -788,9 +868,13 @@
           tagLabel: "Herbst Appliance",
           description: "Fixed Herbst functional appliance therapy for mandibular advancement and bite correction in a skeletal Class II growing patient.",
           text: "Case No. 16( herbst) fixed functional appliance",
-          columns: [
-            { heading: "Pre-Treatment", images: ["slide_29_img_1.jpg", "slide_29_img_2.jpg", "slide_29_img_3.jpg", "slide_29_img_4.jpg", "slide_29_img_5.jpg"] },
-            { heading: "Post-Treatment", images: ["slide_29_img_6.jpg", "slide_29_img_7.jpg", "slide_29_img_8.jpg", "slide_29_img_9.jpg", "slide_29_img_10.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pre-Treatment", images: ["slide_29_img_1.jpg", "slide_29_img_2.jpg", "slide_29_img_3.jpg", "slide_29_img_4.jpg", "slide_29_img_5.jpg"] },
+                { heading: "Post-Treatment", images: ["slide_29_img_6.jpg", "slide_29_img_7.jpg", "slide_29_img_8.jpg", "slide_29_img_9.jpg", "slide_29_img_10.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -800,9 +884,13 @@
           tagLabel: "Expanders",
           description: "Maxillary transverse width development and expansion using a fixed orthopedic expander appliance.",
           text: "LETS DO SOME EXPANSION | Dr.Abin Mathew | Dr.Abin Mathew",
-          columns: [
-            { heading: "Pre-Treatment", images: ["slide_30_img_1.jpg"] },
-            { heading: "Post-Treatment", images: ["slide_30_img_2.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pre-Treatment", images: ["slide_30_img_1.jpg"] },
+                { heading: "Post-Treatment", images: ["slide_30_img_2.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -812,9 +900,13 @@
           tagLabel: "TADs",
           description: "Using titanium mini implants to provide stable anchorage and direct force vectors for canine tipping correction.",
           text: "MINI IMPLANTS TO THE RESCUE WHEN YOU NEED TIPPING OF CANINES",
-          columns: [
-            { heading: "Pre-Treatment", images: ["slide_32_img_1.png"] },
-            { heading: "Post-Treatment", images: ["slide_32_img_2.png"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pre-Treatment", images: ["slide_32_img_1.png"] },
+                { heading: "Post-Treatment", images: ["slide_32_img_2.png"] }
+              ]
+            }
           ]
         },
         {
@@ -824,9 +916,13 @@
           tagLabel: "Extractions",
           description: "Managing severe arch crowding and occlusion using strategic extractions and fixed brackets.",
           text: "EXTRACTIONS TO THE RESCUE | Dr.Abin Mathew | Dr.Abin Mathew",
-          columns: [
-            { heading: "Pre-Treatment", images: ["slide_33_img_1.jpg"] },
-            { heading: "Post-Treatment", images: ["slide_33_img_2.png"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pre-Treatment", images: ["slide_33_img_1.jpg"] },
+                { heading: "Post-Treatment", images: ["slide_33_img_2.png"] }
+              ]
+            }
           ]
         },
         {
@@ -836,9 +932,13 @@
           tagLabel: "Damon SLB",
           description: "Leveling the dental arches and correcting severe deep bite using the Damon Self-Ligating System.",
           text: "DEEP BITE CORRECTION WITH DAMON SLB BRACKETS | Dr.Abin Mathew | Dr.Abin Mathew",
-          columns: [
-            { heading: "Pre-Treatment", images: ["slide_34_img_1.jpg"] },
-            { heading: "Post-Treatment", images: ["slide_34_img_2.jpg"] }
+          sections: [
+            {
+              columns: [
+                { heading: "Pre-Treatment", images: ["slide_34_img_1.jpg"] },
+                { heading: "Post-Treatment", images: ["slide_34_img_2.jpg"] }
+              ]
+            }
           ]
         },
         {
@@ -875,9 +975,13 @@
           tagLabel: "Cleft Palate",
           description: "Maxillary expander therapy followed by fixed braces detailing in a cleft palate case.",
           text: "CLEFT PATIENT TREATED WITH EXPANSION APPLIANCE AND FIXED APPLAIANCE | Dr. Abin Mathew | Dr. Abin Mathew",
-          columns: [
-            { heading: "PRE TREATMENT", images: ["slide_38_img_1.png", "slide_38_img_2.png"] },
-            { heading: "POST TREATMENT", images: ["slide_38_img_4.png", "slide_38_img_5.png", "slide_38_img_6.png"] }
+          sections: [
+            {
+              columns: [
+                { heading: "PRE TREATMENT", images: ["slide_38_img_1.png", "slide_38_img_2.png"] },
+                { heading: "POST TREATMENT", images: ["slide_38_img_4.png", "slide_38_img_5.png", "slide_38_img_6.png"] }
+              ]
+            }
           ]
         }
       ];
@@ -897,62 +1001,77 @@
               <h3>${item.title}</h3>
               <span class="slide-tag">${item.tagLabel}</span>
             </div>
-            <p class="case-description">${item.description}</p>
+            <div class="case-description">
+              ${item.description}
+            </div>
           `;
 
-          // 1. Render Top Section if exists
-          if (item.top) {
-            contentHTML += `
-              <div class="case-single-layout" style="margin-bottom: 1.5rem;">
-                <div class="single-image-container treatment-images-grid">
-                  ${item.top.images.map(img => `
-                    <img src="./assets/cases_new/${img}" alt="Top Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}')">
-                  `).join('')}
-                </div>
-              </div>
-            `;
-          }
-
-          // 2. Render Columns Layout
-          if (item.columns && item.columns.length > 0) {
-            const numCols = item.columns.length;
-            const gridStyle = `grid-template-columns: repeat(${numCols}, 1fr);`;
-            
-            contentHTML += `
-              <div class="case-treatment-layout" style="${gridStyle} gap: 2rem;">
-                ${item.columns.map(col => `
-                  <div class="treatment-section">
-                    <h4 class="treatment-title" style="font-size: 0.95rem; line-height: 1.3;">${col.heading}</h4>
-                    <div class="treatment-images-grid">
-                      ${col.images.map(img => `
-                        <img src="./assets/cases_new/${img}" alt="${col.heading} Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}')">
+          // Render Sections (which holds columns and bottoms)
+          if (item.sections && item.sections.length > 0) {
+            item.sections.forEach((sec, idx) => {
+              // Section title divider if there are multiple sections or a title exists
+              if (sec.title) {
+                contentHTML += `
+                  <h4 style="color: var(--gold-primary); font-size: 1.05rem; font-weight: 700; margin: 1.8rem 0 1rem; border-top: 1px solid rgba(223,186,115,0.12); padding-top: 1.5rem; text-transform: uppercase; letter-spacing: 1px;">
+                    ${sec.title}
+                  </h4>
+                `;
+              }
+              
+              // Render top banner if exists in section
+              if (sec.top) {
+                contentHTML += `
+                  <div class="case-single-layout" style="margin-bottom: 1.5rem;">
+                    <div class="single-image-container treatment-images-grid">
+                      ${sec.top.images.map(img => `
+                        <img src="./assets/cases_new/${img}" alt="Top Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}')">
                       `).join('')}
                     </div>
                   </div>
-                `).join('')}
-              </div>
-            `;
+                `;
+              }
+
+              // Render columns inside section
+              if (sec.columns && sec.columns.length > 0) {
+                const numCols = sec.columns.length;
+                const gridStyle = `grid-template-columns: repeat(${numCols}, 1fr);`;
+                contentHTML += `
+                  <div class="case-treatment-layout" style="${gridStyle} gap: 2rem;">
+                    ${sec.columns.map(col => `
+                      <div class="treatment-section">
+                        <h4 class="treatment-title" style="font-size: 0.95rem; line-height: 1.3;">${col.heading}</h4>
+                        <div class="treatment-images-grid">
+                          ${col.images.map(img => `
+                            <img src="./assets/cases_new/${img}" alt="${col.heading} Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}')">
+                          `).join('')}
+                        </div>
+                      </div>
+                    `).join('')}
+                  </div>
+                `;
+              }
+
+              // Render bottom in section
+              if (sec.bottom) {
+                const headingHTML = sec.bottom.heading ? `<h4 class="treatment-title" style="margin-bottom: 1rem;">${sec.bottom.heading}</h4>` : '';
+                const flexStyle = sec.bottom.layout === 'row' ? 'flex-direction: row; gap: 1rem;' : 'flex-direction: column; gap: 1rem;';
+                const imgStyle = sec.bottom.layout === 'row' ? 'flex: 1; width: 50%;' : 'width: 100%;';
+                
+                contentHTML += `
+                  <div class="treatment-section" style="max-width: 800px; margin: 1.5rem auto 0;">
+                    ${headingHTML}
+                    <div class="treatment-images-grid" style="${flexStyle}">
+                      ${sec.bottom.images.map(img => `
+                        <img src="./assets/cases_new/${img}" alt="Bottom Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}')" style="${imgStyle}">
+                      `).join('')}
+                    </div>
+                  </div>
+                `;
+              }
+            });
           }
 
-          // 3. Render Bottom Section if exists
-          if (item.bottom) {
-            const headingHTML = item.bottom.heading ? `<h4 class="treatment-title" style="margin-bottom: 1rem;">${item.bottom.heading}</h4>` : '';
-            const flexStyle = item.bottom.layout === 'row' ? 'flex-direction: row; gap: 1rem;' : 'flex-direction: column; gap: 1rem;';
-            const imgStyle = item.bottom.layout === 'row' ? 'flex: 1; width: 50%;' : 'width: 100%;';
-            
-            contentHTML += `
-              <div class="treatment-section" style="max-width: 800px; margin: 1.5rem auto 0;">
-                ${headingHTML}
-                <div class="treatment-images-grid" style="${flexStyle}">
-                  ${item.bottom.images.map(img => `
-                    <img src="./assets/cases_new/${img}" alt="Bottom Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}')" style="${imgStyle}">
-                  `).join('')}
-                </div>
-              </div>
-            `;
-          }
-
-          // 4. Render standard single layout for TMJ/IZC single image items
+          // Single image case
           if (item.images && item.images.length === 1) {
             contentHTML += `
               <div class="case-single-layout">
@@ -1042,7 +1161,6 @@
         }
       }
 
-      // Zoom functions
       function zoomOut() {
         if (zoomScale > 0.5) {
           zoomScale -= 0.25;
