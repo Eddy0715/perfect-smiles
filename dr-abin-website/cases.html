@@ -776,8 +776,8 @@
           sections: [
             {
               columns: [
-                { heading: "PRE TREATMENT", images: ["slide_25_img_1.jpg", "slide_25_img_2.jpg", "slide_25_img_3.jpg", "slide_25_img_4.png", "slide_25_img_5.png", "slide_25_img_6.png", "slide_25_img_7.jpg"] },
-                { heading: "POST TREATMENT", images: ["slide_25_img_8.png", "slide_25_img_9.jpg", "slide_25_img_10.jpg", "slide_25_img_11.jpg", "slide_25_img_12.jpg", "slide_25_img_13.jpg", "slide_25_img_14.jpg"] }
+                { heading: "PRE TREATMENT", images: ["slide_25_img_1.jpg", "slide_25_img_2.jpg", "slide_25_img_5.png", "slide_25_img_6.png", "slide_25_img_7.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_25_img_8.png", "slide_25_img_9.jpg", "slide_25_img_12.jpg", "slide_25_img_13.jpg", "slide_25_img_14.jpg"] }
               ]
             }
           ]
@@ -793,8 +793,8 @@
             {
               title: "Fixed Appliance & Implant Retraction Phase",
               columns: [
-                { heading: "PRETREATMENT", images: ["slide_26_img_1.jpg", "slide_26_img_2.jpg", "slide_26_img_3.jpg", "slide_26_img_4.png", "slide_26_img_5.png", "slide_26_img_6.png"] },
-                { heading: "MID TREATMENT", images: ["slide_26_img_7.jpg", "slide_26_img_8.jpg", "slide_26_img_9.jpg", "slide_26_img_10.jpg", "slide_26_img_11.jpg", "slide_26_img_12.jpg"] }
+                { heading: "PRETREATMENT", images: ["slide_26_img_1.jpg", "slide_26_img_2.jpg", "slide_26_img_4.png", "slide_26_img_5.png", "slide_26_img_6.png"] },
+                { heading: "MID TREATMENT", images: ["slide_26_img_7.jpg", "slide_26_img_8.jpg", "slide_26_img_10.jpg", "slide_26_img_11.jpg", "slide_26_img_12.jpg"] }
               ]
             },
             {
@@ -816,8 +816,8 @@
           sections: [
             {
               columns: [
-                { heading: "PRETREATMENT", images: ["slide_28_img_1.jpg", "slide_28_img_2.jpg", "slide_28_img_3.jpg", "slide_28_img_4.jpg"] },
-                { heading: "POST TREATMENT", images: ["slide_28_img_5.jpg", "slide_28_img_6.jpg", "slide_28_img_7.jpg", "slide_28_img_8.png", "slide_28_img_9.png"] }
+                { heading: "PRETREATMENT", images: ["slide_28_img_1.jpg", "slide_28_img_3.jpg", "slide_28_img_4.jpg"] },
+                { heading: "POST TREATMENT", images: ["slide_28_img_5.jpg", "slide_28_img_6.jpg", "slide_28_img_8.png", "slide_28_img_9.png"] }
               ]
             }
           ]
@@ -985,7 +985,7 @@
                   <div class="case-single-layout" style="margin-bottom: 1.5rem;">
                     <div class="single-image-container treatment-images-grid">
                       ${sec.top.images.map(img => `
-                        <img src="./assets/cases_new/${img}?v=2" alt="Top Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=2')">
+                        <img src="./assets/cases_new/${img}?v=3" alt="Top Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=3')">
                       `).join('')}
                     </div>
                   </div>
@@ -1003,7 +1003,7 @@
                         <h4 class="treatment-title" style="font-size: 0.95rem; line-height: 1.3;">${col.heading}</h4>
                         <div class="treatment-images-grid">
                           ${col.images.map(img => `
-                            <img src="./assets/cases_new/${img}?v=2" alt="${col.heading} Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=2')">
+                            <img src="./assets/cases_new/${img}?v=3" alt="${col.heading} Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=3')">
                           `).join('')}
                         </div>
                       </div>
@@ -1023,7 +1023,7 @@
                     ${headingHTML}
                     <div class="treatment-images-grid" style="${flexStyle}">
                       ${sec.bottom.images.map(img => `
-                        <img src="./assets/cases_new/${img}?v=2" alt="Bottom Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=2')" style="${imgStyle}">
+                        <img src="./assets/cases_new/${img}?v=3" alt="Bottom Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=3')" style="${imgStyle}">
                       `).join('')}
                     </div>
                   </div>
@@ -1037,7 +1037,7 @@
             contentHTML += `
               <div class="case-single-layout">
                 <div class="single-image-container treatment-images-grid">
-                  <img src="./assets/cases_new/${item.images[0]}?v=2" alt="${item.title}" loading="lazy" onclick="openLightbox('./assets/cases_new/${item.images[0]}?v=2')">
+                  <img src="./assets/cases_new/${item.images[0]}?v=3" alt="${item.title}" loading="lazy" onclick="openLightbox('./assets/cases_new/${item.images[0]}?v=3')">
                 </div>
               </div>
             `;
