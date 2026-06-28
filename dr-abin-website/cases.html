@@ -158,20 +158,16 @@
         border-left: 2px solid var(--gold-primary);
       }
 
-      /* Sub-grids for images */
+      /* Vertical stack layout for images to match PDF column exactly */
       .treatment-images-grid {
-        display: grid;
-        gap: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
       }
-      .treatment-images-grid.cols-1 { grid-template-columns: 1fr; }
-      .treatment-images-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
-      .treatment-images-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-      .treatment-images-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
 
       .treatment-images-grid img {
         width: 100%;
-        aspect-ratio: 4 / 3; /* Symmetric layout boxes */
-        object-fit: cover;
+        height: auto;
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.08);
         cursor: pointer;
@@ -179,7 +175,7 @@
         background: #17171a;
       }
       .treatment-images-grid img:hover {
-        transform: scale(1.035);
+        transform: scale(1.025);
         border-color: var(--gold-primary);
         box-shadow: 0 8px 25px rgba(223, 186, 115, 0.25);
       }
@@ -593,7 +589,6 @@
           title: "Case 13: Twin Block Appliance Therapy (Class II)",
           category: "myofunctional-jaw",
           tagLabel: "Twin Block",
-          description: "Skeletal Class II jaw discrepancy corrected using a removable functional Twin Block appliance.",
           text: "CASE -TWIN BLOCK | PRE TREATMENT POST FUNCTIONAL PHASE POST FIXED",
           images: [
             "slide_14_img_1.jpg", "slide_14_img_2.jpg", "slide_14_img_3.jpg",
@@ -605,7 +600,6 @@
           title: "Case 14: Twin Block Functional Phase (Class II)",
           category: "myofunctional-jaw",
           tagLabel: "Twin Block",
-          description: "Treatment progression showing pre-treatment, post-functional phase, and post-fixed appliance detailing.",
           text: "TWIN BLOCK | PRE TREATMENT | POST FUNCTIONAL PHASE | POST FIXED APPLIANCE",
           images: [
             "slide_15_img_1.jpg", "slide_15_img_2.jpg", "slide_15_img_3.jpg"
@@ -616,7 +610,6 @@
           title: "Case 15: Twin Block & MBT Fixed Therapy (Class II)",
           category: "myofunctional-jaw self-ligating-braces",
           tagLabel: "Myofunctional",
-          description: "Skeletal Class II growth modification combining Twin Block appliance and high-precision fixed MBT braces.",
           text: "TWIN BLOCK APPLIANCE THERAPY WITH MBT FIXED MECHANOTHERAPY | PRE TREATMENT WITH TWIN BLOCK | POST FUNCTIONAL PHASE FIXED APPLIANCE | POST FIXED APPLIANCE",
           images: [
             "slide_16_img_1.jpg", "slide_16_img_2.jpg", "slide_16_img_3.jpg", "slide_16_img_4.png", "slide_16_img_5.jpg"
@@ -866,7 +859,7 @@
         }
       ];
 
-      // Helper function to split images array into Pre and Post arrays
+      // Helper function to split images array into Pre and Post arrays (Left column vs Right column)
       function getPrePostSplit(slideNum, images) {
         const half = Math.floor(images.length / 2);
         
@@ -912,14 +905,6 @@
         };
       }
 
-      // Helper function to return correct column grid class
-      function getGridColsClass(count) {
-        if (count === 1) return 'cols-1';
-        if (count === 2 || count === 4) return 'cols-2';
-        if (count === 3 || count === 5 || count === 6) return 'cols-3';
-        return 'cols-4';
-      }
-
       // Dynamically Render Case Cards
       const galleryGrid = document.getElementById('galleryGrid');
 
@@ -942,7 +927,7 @@
             // Render single centered image
             contentHTML += `
               <div class="case-single-layout">
-                <div class="single-image-container treatment-images-grid cols-1">
+                <div class="single-image-container treatment-images-grid">
                   <img src="./assets/cases_new/${item.images[0]}" alt="${item.title}" loading="lazy" onclick="openLightbox('./assets/cases_new/${item.images[0]}')">
                 </div>
               </div>
@@ -950,15 +935,13 @@
           } else {
             // Split into Pre and Post
             const split = getPrePostSplit(item.num, item.images);
-            const preCols = getGridColsClass(split.pre.length);
-            const postCols = getGridColsClass(split.post.length);
 
             contentHTML += `
               <div class="case-treatment-layout">
                 <!-- Pre-Treatment -->
                 <div class="treatment-section">
                   <h4 class="treatment-title">Pre-Treatment</h4>
-                  <div class="treatment-images-grid ${preCols}">
+                  <div class="treatment-images-grid">
                     ${split.pre.map(img => `
                       <img src="./assets/cases_new/${img}" alt="Pre-Treatment Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}')">
                     `).join('')}
@@ -968,7 +951,7 @@
                 <!-- Post-Treatment -->
                 <div class="treatment-section">
                   <h4 class="treatment-title">Post-Treatment</h4>
-                  <div class="treatment-images-grid ${postCols}">
+                  <div class="treatment-images-grid">
                     ${split.post.map(img => `
                       <img src="./assets/cases_new/${img}" alt="Post-Treatment Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}')">
                     `).join('')}
