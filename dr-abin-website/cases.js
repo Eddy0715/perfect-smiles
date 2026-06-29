@@ -513,37 +513,6 @@ const casesData = [
 // ── Render Case Cards ──
 const galleryGrid = document.getElementById('galleryGrid');
 
-function buildCarouselHTML(col) {
-  const total = col.images.length;
-  const carouselId = 'car-' + Math.random().toString(36).slice(2, 9);
-  if (total === 1) {
-    return `
-      <div class="treatment-section">
-        <h4 class="treatment-title" style="font-size:0.95rem;line-height:1.3;">${col.heading}</h4>
-        <div class="img-carousel" data-total="1" id="${carouselId}">
-          <div class="img-carousel-track">
-            <img src="./assets/cases_new/${col.images[0]}?v=6" alt="${col.heading}" loading="lazy" onclick="openLightbox('./assets/cases_new/${col.images[0]}?v=6')">
-          </div>
-        </div>
-      </div>`;
-  }
-  return `
-    <div class="treatment-section">
-      <h4 class="treatment-title" style="font-size:0.95rem;line-height:1.3;">${col.heading}</h4>
-      <div class="img-carousel" data-total="${total}" id="${carouselId}">
-        <div class="img-carousel-track">
-          ${col.images.map(img => `<img src="./assets/cases_new/${img}?v=6" alt="${col.heading}" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=6')">`).join('')}
-        </div>
-        <button class="carousel-btn prev" aria-label="Previous"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
-        <button class="carousel-btn next" aria-label="Next"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
-        <span class="carousel-counter">1 / ${total}</span>
-      </div>
-      <div class="carousel-dots">
-        ${col.images.map((_, i) => `<button class="carousel-dot${i === 0 ? ' active' : ''}" data-carousel="${carouselId}" data-index="${i}" aria-label="Slide ${i + 1}"></button>`).join('')}
-      </div>
-    </div>`;
-}
-
 function renderCases() {
   galleryGrid.innerHTML = '';
   casesData.forEach(item => {
@@ -576,7 +545,16 @@ function renderCases() {
           const numCols = sec.columns.length;
           contentHTML += `
             <div class="case-treatment-layout" style="grid-template-columns:repeat(${numCols},1fr);gap:2rem;">
-              ${sec.columns.map(col => buildCarouselHTML(col)).join('')}
+              ${sec.columns.map(col => `
+                <div class="treatment-section">
+                  <h4 class="treatment-title" style="font-size: 0.95rem; line-height: 1.3;">${col.heading}</h4>
+                  <div class="treatment-images-grid">
+                    ${col.images.map(img => `
+                      <img src="./assets/cases_new/${img}?v=6" alt="${col.heading} Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=6')">
+                    `).join('')}
+                  </div>
+                </div>
+              `).join('')}
             </div>`;
         }
         if (sec.bottom) {
@@ -609,42 +587,6 @@ function renderCases() {
   });
 }
 
-// ── Carousel Logic ──
-function initCarousels() {
-  document.querySelectorAll('.img-carousel').forEach(carousel => {
-    const total = parseInt(carousel.getAttribute('data-total'));
-    if (!total || total <= 1) return;
-    const track = carousel.querySelector('.img-carousel-track');
-    const prevBtn = carousel.querySelector('.carousel-btn.prev');
-    const nextBtn = carousel.querySelector('.carousel-btn.next');
-    const counter = carousel.querySelector('.carousel-counter');
-    const id = carousel.id;
-    const dots = document.querySelectorAll(`.carousel-dot[data-carousel="${id}"]`);
-    let current = 0;
-
-    function goTo(index) {
-      current = Math.max(0, Math.min(index, total - 1));
-      track.style.transform = `translateX(-${current * 100}%)`;
-      if (counter) counter.textContent = `${current + 1} / ${total}`;
-      dots.forEach((d, i) => d.classList.toggle('active', i === current));
-      if (prevBtn) prevBtn.disabled = current === 0;
-      if (nextBtn) nextBtn.disabled = current === total - 1;
-    }
-
-    prevBtn && prevBtn.addEventListener('click', e => { e.stopPropagation(); goTo(current - 1); });
-    nextBtn && nextBtn.addEventListener('click', e => { e.stopPropagation(); goTo(current + 1); });
-    dots.forEach(dot => dot.addEventListener('click', () => goTo(parseInt(dot.getAttribute('data-index')))));
-
-    let touchStartX = 0;
-    carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    carousel.addEventListener('touchend', e => {
-      const diff = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
-    });
-
-    goTo(0);
-  });
-}
 
 // ── Filter Tabs ──
 function initFilters() {
@@ -780,7 +722,6 @@ function initMobileMenu() {
 
 // ── Init ──
 renderCases();
-initCarousels();
 initFilters();
 initReveal();
 initMobileMenu();
