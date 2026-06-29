@@ -22,133 +22,74 @@ if (casesTrack) {
   });
 }
 
-// Reviews Carousel: Step-by-Step Slide & Zoom Sequence
-const reviewTrack = document.getElementById('reviewTrack');
-if (reviewTrack) {
-  const slides = Array.from(reviewTrack.children);
-  if (slides.length > 0) {
-    let currentIndex = 0;
-    let isPaused = false;
-    let timeoutId = null;
-    
-    // Safely schedule next step in sequence and clear any existing timeout to avoid overlaps
-    const setNextTimeout = (callback, delay) => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-      timeoutId = setTimeout(callback, delay);
-    };
-    
-    // Update translation to center the active slide
-    const updatePosition = () => {
-      const activeSlide = slides[currentIndex];
-      if (activeSlide) {
-        const containerWidth = reviewTrack.parentElement.clientWidth;
-        const slideWidth = activeSlide.clientWidth;
-        const slideLeft = activeSlide.offsetLeft;
-        
-        // Center alignment offset
-        const offset = slideLeft - (containerWidth - slideWidth) / 2;
-        reviewTrack.style.transform = `translateX(-${offset}px)`;
-      }
-    };
-    
-    // Set initial state
-    const initializeSlider = () => {
-      slides.forEach((slide, index) => {
-        slide.classList.remove('active-slide', 'zoomed-slide');
-        if (index === currentIndex) {
-          slide.classList.add('active-slide', 'zoomed-slide');
-        }
-      });
-      updatePosition();
-    };
-    
-    // Start sequence
-    const startSequence = () => {
-      if (isPaused) return;
-      
-      // Phase 1: Stay still for 2 seconds (zoomed state)
-      setNextTimeout(() => {
-        if (isPaused) return;
-        
-        // Phase 2: Zoom out the current slide (500ms transition)
-        const currentSlide = slides[currentIndex];
-        if (currentSlide) {
-          currentSlide.classList.remove('zoomed-slide');
-        }
-        
-        setNextTimeout(() => {
-          if (isPaused) return;
-          
-          // Remove active class from old slide
-          if (currentSlide) {
-            currentSlide.classList.remove('active-slide');
-          }
-          
-          // Phase 3: Increment index and slide to the next card (800ms track transition)
-          currentIndex = (currentIndex + 1) % slides.length;
-          const nextSlide = slides[currentIndex];
-          
-          if (nextSlide) {
-            nextSlide.classList.add('active-slide');
-            updatePosition();
-          }
-          
-          setNextTimeout(() => {
-            if (isPaused) return;
-            
-            // Phase 4: Zoom in the new active slide (500ms transition)
-            if (nextSlide) {
-              nextSlide.classList.add('zoomed-slide');
-            }
-            
-            setNextTimeout(() => {
-              if (isPaused) return;
-              // Loop recursively
-              startSequence();
-            }, 500); // Wait for zoom-in completion
-            
-          }, 800); // Wait for slide completion
-          
-        }, 500); // Wait for zoom-out completion
-        
-      }, 2000); // Wait for stay still period
-    };
-    
-    // Initialize and schedule start
-    setTimeout(() => {
-      initializeSlider();
-      startSequence();
-    }, 100);
-    
-    window.addEventListener('resize', () => {
-      updatePosition();
-    });
-    
-    // Pause on hover
-    const container = reviewTrack.parentElement;
-    container.addEventListener('mouseenter', () => {
-      isPaused = true;
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-        timeoutId = null;
-      }
-    });
-    
-    container.addEventListener('mouseleave', () => {
-      isPaused = false;
-      // When resuming, ensure current index has active and zoomed classes and start cycle
-      slides.forEach((slide, index) => {
-        slide.classList.remove('active-slide', 'zoomed-slide');
-        if (index === currentIndex) {
-          slide.classList.add('active-slide', 'zoomed-slide');
-        }
-      });
-      updatePosition();
-      startSequence();
-    });
+// Reviews Data Array
+const reviewsData = [
+  {
+    name: "Sarah Jenkins",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120",
+    stars: 5,
+    text: "Dr. Abin Mathew completely transformed my smile! The Invisalign treatment was incredibly smooth and invisible. I couldn't be happier with the results."
+  },
+  {
+    name: "Rahul Sharma",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120",
+    stars: 5,
+    text: "Fantastic experience! The self-ligating braces treatment corrected my crowding much faster than expected. The clinic is premium and very professional."
+  },
+  {
+    name: "Priya Patel",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=120",
+    stars: 5,
+    text: "Very detail-oriented and bespoke care. My bite correction using TADs was quick and painless. Dr. Abin is an exceptionally skilled orthodontist."
+  },
+  {
+    name: "Michael Thompson",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=120",
+    stars: 5,
+    text: "Outstanding doctor. His international experience really shows in his clinical precision. Fluent in English, making the entire journey comfortable."
+  },
+  {
+    name: "Aisha Al-Mansoori",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=120",
+    stars: 5,
+    text: "Wonderful experience with clear aligners! Dr. Abin guided me through each step with utmost care and transparency. My smile has never felt more confident."
+  },
+  {
+    name: "David Miller",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=120",
+    stars: 5,
+    text: "The Twin Block myofunctional treatment for my son worked wonders. Excellent communication and patient guidance throughout the entire process."
   }
+];
+
+// Initialize Reviews Marquee
+const reviewMarqueeTrack = document.getElementById('reviewMarqueeTrack');
+if (reviewMarqueeTrack) {
+  // Render the list twice for seamless infinite marquee loop
+  const doubleReviews = [...reviewsData, ...reviewsData];
+  
+  reviewMarqueeTrack.innerHTML = doubleReviews.map(review => {
+    const starsHTML = Array(review.stars).fill().map(() => `
+      <svg class="review-star-icon" viewBox="0 0 24 24">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+      </svg>
+    `).join('');
+
+    return `
+      <div class="review-card-wrapper">
+        <div class="review-card">
+          <div class="review-card-header">
+            <img class="review-avatar" src="${review.avatar}" alt="${review.name}" loading="lazy" onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(review.name)}'">
+            <div class="review-author-info">
+              <div class="review-author-name">${review.name}</div>
+              <div class="review-stars">${starsHTML}</div>
+            </div>
+          </div>
+          <p class="review-text">"${review.text}"</p>
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 // Header Scroll Effect

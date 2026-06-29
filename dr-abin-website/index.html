@@ -288,22 +288,17 @@
 
     <div class="gold-glow-divider"></div>
 
-    <!-- Reviews Carousel -->
-    <section id="reviews" class="section-padding reviews">
+    <!-- Reviews Section -->
+    <section id="reviews" class="section-padding reviews" style="position: relative; overflow: hidden; padding-bottom: 5rem;">
       <div class="container text-center reveal">
         <h4 style="color: var(--gold-primary); text-transform: uppercase; letter-spacing: 2px;">Patient Stories</h4>
         <h2>What Our <span class="gold-text-gradient">Patients Say</span></h2>
-        
-        <div class="carousel-container">
-          <div class="carousel-track" id="reviewTrack">
-            <!-- Dynamically loaded review images -->
-            <div class="review-slide"><img src="./assets/reviews/IMG_1941.PNG" alt="Patient Review"></div>
-            <div class="review-slide"><img src="./assets/reviews/IMG_1943.PNG" alt="Patient Review"></div>
-            <div class="review-slide"><img src="./assets/reviews/IMG_1956.PNG" alt="Patient Review"></div>
-            <div class="review-slide"><img src="./assets/reviews/IMG_1961.PNG" alt="Patient Review"></div>
-            <div class="review-slide"><img src="./assets/reviews/IMG_1969.PNG" alt="Patient Review"></div>
-            <div class="review-slide"><img src="./assets/reviews/IMG_2011.JPG" alt="Patient Review"></div>
-          </div>
+      </div>
+      
+      <!-- Infinite Marquee Wrapper -->
+      <div class="reviews-marquee-wrapper reveal reveal-delay-1">
+        <div class="reviews-marquee-track" id="reviewMarqueeTrack">
+          <!-- Dynamically loaded review cards from main.js -->
         </div>
       </div>
     </section>
