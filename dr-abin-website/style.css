@@ -1703,4 +1703,81 @@ footer {
 /* Mobile menu visibility handled in main responsive block above */
 
 
+/* ============================================
+   BOTTOM CREDIT BAR — Developer Credit
+   ============================================ */
+.bottom-credit-bar {
+  background: #0A0A0B;
+  border-top: 1px solid rgba(223, 186, 115, 0.15);
+  padding: 1.2rem 2rem;
+}
 
+.bottom-credit-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.bottom-credit-bar .copyright {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.bottom-credit-bar .developer-credit {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.bottom-credit-bar .dev-link {
+  color: var(--gold-primary);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.bottom-credit-bar .dev-link:hover {
+  color: var(--gold-light);
+  text-shadow: 0 0 12px rgba(243, 229, 171, 0.5);
+}
+
+.bottom-credit-bar .dev-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold-gradient);
+  transition: width 0.3s ease;
+}
+
+.bottom-credit-bar .dev-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .bottom-credit-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.4rem;
+  }
+  .bottom-credit-bar .developer-credit {
+    justify-content: center;
+  }
+}
