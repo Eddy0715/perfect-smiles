@@ -865,15 +865,20 @@ header.scrolled .nav-links a {
 /* Reviews Infinite Marquee CSS */
 .reviews-marquee-wrapper {
   position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
   overflow: hidden;
   padding: 3rem 0;
   mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+}
+
+@media (min-width: 769px) {
+  .mobile-nav-overlay {
+    display: none !important;
+  }
+  .menu-toggle {
+    display: none !important;
+  }
 }
 
 .reviews-marquee-track {
