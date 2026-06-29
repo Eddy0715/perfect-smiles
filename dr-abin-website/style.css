@@ -903,6 +903,24 @@ header.scrolled .nav-links a {
   }
 }
 
+@keyframes infiniteScrollReverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 /* Subtle Floating Animation for each card to feel alive */
 .review-card-wrapper {
   display: inline-block;
