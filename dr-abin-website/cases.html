@@ -311,7 +311,6 @@
       <div class="bg-glow-blob blob-3"></div>
     </div>
     
-    <!-- Header Navigation -->
     <header>
       <nav>
         <a href="./index.html" class="logo" style="text-decoration: none;">
@@ -326,8 +325,25 @@
           <li><a href="./index.html#reviews">Reviews</a></li>
         </ul>
         <a href="./index.html#contact" class="btn btn-primary">Book Consultation</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+      <ul class="mobile-nav-links">
+        <li><a href="./index.html#home">Home</a></li>
+        <li><a href="./index.html#about">About</a></li>
+        <li><a href="./index.html#services">Services</a></li>
+        <li><a href="./cases.html">Case Reports</a></li>
+        <li><a href="./index.html#reviews">Reviews</a></li>
+        <li><a href="./index.html#contact" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Book Consultation</a></li>
+      </ul>
+    </div>
 
     <main class="pdf-container">
       <div class="pdf-header reveal">
@@ -1269,6 +1285,33 @@
         });
         revealElements.forEach(element => {
           revealOnScroll.observe(element);
+        });
+      }
+
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileNav = document.getElementById('mobileNav');
+      if (menuToggle && mobileNav) {
+        const mobileLinks = mobileNav.querySelectorAll('a');
+        
+        const toggleMenu = () => {
+          menuToggle.classList.toggle('active');
+          mobileNav.classList.toggle('active');
+          if (mobileNav.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+          } else {
+            document.body.style.overflow = '';
+          }
+        };
+        
+        menuToggle.addEventListener('click', toggleMenu);
+        
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = '';
+          });
         });
       }
     </script>

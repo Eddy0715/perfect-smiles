@@ -34,8 +34,25 @@
           <li><a href="#reviews">Reviews</a></li>
         </ul>
         <a href="#contact" class="btn btn-primary">Book Consultation</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+      <ul class="mobile-nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="./cases.html">Case Reports</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Book Consultation</a></li>
+      </ul>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -308,7 +325,7 @@
     <!-- Contact Info Banner -->
     <section id="contact-info" class="reveal" style="background-color: var(--bg-surface); padding: 4rem 2rem;">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+        <div class="contact-info-grid">
           
           <!-- Left Column -->
           <div>

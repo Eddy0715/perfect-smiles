@@ -571,5 +571,33 @@ serviceModal.addEventListener('click', (e) => {
   }
 });
 
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('menuToggle');
+const mobileNav = document.getElementById('mobileNav');
+if (menuToggle && mobileNav) {
+  const mobileLinks = mobileNav.querySelectorAll('a');
+  
+  const toggleMenu = () => {
+    menuToggle.classList.toggle('active');
+    mobileNav.classList.toggle('active');
+    if (mobileNav.classList.contains('active')) {
+      document.body.style.overflow = 'hidden'; // Stop scrolling
+    } else {
+      document.body.style.overflow = '';
+    }
+  };
+  
+  menuToggle.addEventListener('click', toggleMenu);
+  
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      mobileNav.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
+
 
 
