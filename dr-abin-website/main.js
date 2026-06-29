@@ -22,74 +22,219 @@ if (casesTrack) {
   });
 }
 
-// Reviews Data Array
+// Reviews Data Array (Google Review Screenshots)
 const reviewsData = [
-  {
-    name: "Sarah Jenkins",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120",
-    stars: 5,
-    text: "Dr. Abin Mathew completely transformed my smile! The Invisalign treatment was incredibly smooth and invisible. I couldn't be happier with the results."
-  },
-  {
-    name: "Rahul Sharma",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120",
-    stars: 5,
-    text: "Fantastic experience! The self-ligating braces treatment corrected my crowding much faster than expected. The clinic is premium and very professional."
-  },
-  {
-    name: "Priya Patel",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=120",
-    stars: 5,
-    text: "Very detail-oriented and bespoke care. My bite correction using TADs was quick and painless. Dr. Abin is an exceptionally skilled orthodontist."
-  },
-  {
-    name: "Michael Thompson",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=120",
-    stars: 5,
-    text: "Outstanding doctor. His international experience really shows in his clinical precision. Fluent in English, making the entire journey comfortable."
-  },
-  {
-    name: "Aisha Al-Mansoori",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=120",
-    stars: 5,
-    text: "Wonderful experience with clear aligners! Dr. Abin guided me through each step with utmost care and transparency. My smile has never felt more confident."
-  },
-  {
-    name: "David Miller",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=120",
-    stars: 5,
-    text: "The Twin Block myofunctional treatment for my son worked wonders. Excellent communication and patient guidance throughout the entire process."
-  }
+  "./assets/reviews/IMG_1939.PNG",
+  "./assets/reviews/IMG_1940.PNG",
+  "./assets/reviews/IMG_1941.PNG",
+  "./assets/reviews/IMG_1942.PNG",
+  "./assets/reviews/IMG_1943.PNG",
+  "./assets/reviews/IMG_1944.PNG",
+  "./assets/reviews/IMG_1945.PNG",
+  "./assets/reviews/IMG_1946.PNG",
+  "./assets/reviews/IMG_1947.PNG",
+  "./assets/reviews/IMG_1948.PNG",
+  "./assets/reviews/IMG_1949.PNG",
+  "./assets/reviews/IMG_1950.PNG",
+  "./assets/reviews/IMG_1951.PNG",
+  "./assets/reviews/IMG_1952.PNG",
+  "./assets/reviews/IMG_1953.PNG",
+  "./assets/reviews/IMG_1954.PNG",
+  "./assets/reviews/IMG_1956.PNG",
+  "./assets/reviews/IMG_1957.PNG",
+  "./assets/reviews/IMG_1958.PNG",
+  "./assets/reviews/IMG_1959.PNG",
+  "./assets/reviews/IMG_1961.PNG",
+  "./assets/reviews/IMG_1962.PNG",
+  "./assets/reviews/IMG_1963.PNG",
+  "./assets/reviews/IMG_1965.PNG",
+  "./assets/reviews/IMG_1966.PNG",
+  "./assets/reviews/IMG_1967.PNG",
+  "./assets/reviews/IMG_1968.PNG",
+  "./assets/reviews/IMG_1969.PNG",
+  "./assets/reviews/IMG_1970.PNG",
+  "./assets/reviews/IMG_1971.PNG",
+  "./assets/reviews/IMG_1972.PNG",
+  "./assets/reviews/IMG_1975.PNG",
+  "./assets/reviews/IMG_1976.PNG",
+  "./assets/reviews/IMG_1977.PNG",
+  "./assets/reviews/IMG_1978.PNG",
+  "./assets/reviews/IMG_1979.PNG",
+  "./assets/reviews/IMG_1980.PNG",
+  "./assets/reviews/IMG_1981.PNG",
+  "./assets/reviews/IMG_1982.PNG",
+  "./assets/reviews/IMG_1983.PNG",
+  "./assets/reviews/IMG_1984.PNG",
+  "./assets/reviews/IMG_1985.PNG",
+  "./assets/reviews/IMG_1986.PNG",
+  "./assets/reviews/IMG_1987.PNG",
+  "./assets/reviews/IMG_1988.PNG",
+  "./assets/reviews/IMG_1989.JPG",
+  "./assets/reviews/IMG_1990.JPG",
+  "./assets/reviews/IMG_1991.JPG",
+  "./assets/reviews/IMG_1992.JPG",
+  "./assets/reviews/IMG_1993.JPG",
+  "./assets/reviews/IMG_1994.JPG",
+  "./assets/reviews/IMG_1995.JPG",
+  "./assets/reviews/IMG_1996.JPG",
+  "./assets/reviews/IMG_1997.JPG",
+  "./assets/reviews/IMG_1998.JPG",
+  "./assets/reviews/IMG_1999.JPG",
+  "./assets/reviews/IMG_2001.JPG",
+  "./assets/reviews/IMG_2002.JPG",
+  "./assets/reviews/IMG_2003.JPG",
+  "./assets/reviews/IMG_2004.JPG",
+  "./assets/reviews/IMG_2005.JPG",
+  "./assets/reviews/IMG_2006.JPG",
+  "./assets/reviews/IMG_2007.JPG",
+  "./assets/reviews/IMG_2008.JPG",
+  "./assets/reviews/IMG_2009.JPG",
+  "./assets/reviews/IMG_2010.JPG",
+  "./assets/reviews/IMG_2011.JPG",
+  "./assets/reviews/IMG_2012.JPG",
+  "./assets/reviews/IMG_2013.JPG",
+  "./assets/reviews/IMG_2014.JPG",
+  "./assets/reviews/IMG_2015.JPG",
+  "./assets/reviews/IMG_2016.JPG",
+  "./assets/reviews/IMG_2017.JPG",
+  "./assets/reviews/IMG_2018.JPG",
+  "./assets/reviews/IMG_2019.JPG",
+  "./assets/reviews/IMG_2020.JPG",
+  "./assets/reviews/IMG_2021.JPG",
+  "./assets/reviews/IMG_2022.JPG",
+  "./assets/reviews/IMG_2023.JPG",
+  "./assets/reviews/IMG_2024.JPG",
+  "./assets/reviews/IMG_2025.JPG",
+  "./assets/reviews/IMG_2026.JPG",
+  "./assets/reviews/IMG_2027.JPG",
+  "./assets/reviews/IMG_2028.JPG",
+  "./assets/reviews/IMG_2029.JPG"
 ];
 
-// Initialize Reviews Marquee
-const reviewMarqueeTrack = document.getElementById('reviewMarqueeTrack');
-if (reviewMarqueeTrack) {
-  // Render the list twice for seamless infinite marquee loop
-  const doubleReviews = [...reviewsData, ...reviewsData];
+// Initialize Reviews Pop-up Grid
+const reviewsPopupGrid = document.getElementById('reviewsPopupGrid');
+if (reviewsPopupGrid) {
+  // Shuffle reviews initially so each visit feels fresh
+  const shuffledReviews = [...reviewsData].sort(() => Math.random() - 0.5);
   
-  reviewMarqueeTrack.innerHTML = doubleReviews.map(review => {
-    const starsHTML = Array(review.stars).fill().map(() => `
-      <svg class="review-star-icon" viewBox="0 0 24 24">
-        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-      </svg>
-    `).join('');
+  // Set up active slots based on viewport width:
+  // Desktop (>=993px): 3 slots
+  // Tablet (769px - 992px): 2 slots
+  // Mobile (<=768px): 1 slot
+  const getSlotCount = () => {
+    const width = window.innerWidth;
+    if (width > 992) return 3;
+    if (width > 768) return 2;
+    return 1;
+  };
 
-    return `
-      <div class="review-card-wrapper">
-        <div class="review-card">
-          <div class="review-card-header">
-            <img class="review-avatar" src="${review.avatar}" alt="${review.name}" loading="lazy" onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(review.name)}'">
-            <div class="review-author-info">
-              <div class="review-author-name">${review.name}</div>
-              <div class="review-stars">${starsHTML}</div>
-            </div>
-          </div>
-          <p class="review-text">"${review.text}"</p>
+  let activeSlotCount = getSlotCount();
+  let currentReviewIndex = 0;
+  
+  // Keep track of which images are currently displayed in a slot to avoid duplicates
+  const shownImages = new Set();
+
+  const getNextUnusedReview = () => {
+    let attempts = 0;
+    while (attempts < shuffledReviews.length) {
+      const review = shuffledReviews[currentReviewIndex];
+      currentReviewIndex = (currentReviewIndex + 1) % shuffledReviews.length;
+      if (!shownImages.has(review)) {
+        return review;
+      }
+      attempts++;
+    }
+    return shuffledReviews[currentReviewIndex]; // Fallback
+  };
+
+  // Build grid slots
+  const buildGrid = () => {
+    reviewsPopupGrid.innerHTML = '';
+    shownImages.clear();
+    
+    for (let i = 0; i < activeSlotCount; i++) {
+      const reviewImage = getNextUnusedReview();
+      shownImages.add(reviewImage);
+      
+      const slot = document.createElement('div');
+      slot.className = 'review-popup-slot';
+      slot.innerHTML = `
+        <div class="review-card image-card pop-active" data-slot="${i}" data-review-path="${reviewImage}">
+          <img src="${reviewImage}" alt="Patient Review" loading="lazy">
         </div>
-      </div>
-    `;
-  }).join('');
+      `;
+      reviewsPopupGrid.appendChild(slot);
+    }
+  };
+
+  buildGrid();
+
+  // Listen for window resize to adjust slot count dynamically
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const newSlotCount = getSlotCount();
+      if (newSlotCount !== activeSlotCount) {
+        activeSlotCount = newSlotCount;
+        buildGrid();
+      }
+    }, 250);
+  });
+
+  // Staggered pop rotation logic:
+  let rotateInterval;
+  const startRotation = () => {
+    // Every 3.5 seconds, we pop out one card and replace it with a new one
+    rotateInterval = setInterval(() => {
+      // Pick a random slot to replace
+      const slotIndex = Math.floor(Math.random() * activeSlotCount);
+      const card = reviewsPopupGrid.querySelector(`.review-card[data-slot="${slotIndex}"]`);
+      
+      if (!card || card.classList.contains('pop-exit') || card.classList.contains('pop-enter')) {
+        return;
+      }
+      
+      // 1. Transition Out (Pop-exit)
+      card.classList.remove('pop-active');
+      card.classList.add('pop-exit');
+      
+      // 2. Swap image and Pop back in after exit finishes (500ms)
+      setTimeout(() => {
+        const oldPath = card.getAttribute('data-review-path');
+        shownImages.delete(oldPath);
+        
+        const newReview = getNextUnusedReview();
+        shownImages.add(newReview);
+        
+        card.setAttribute('data-review-path', newReview);
+        const img = card.querySelector('img');
+        img.src = newReview;
+        
+        // Setup state for enter animation
+        card.classList.remove('pop-exit');
+        card.classList.add('pop-enter');
+        
+        // Force browser repaint/reflow
+        card.offsetHeight;
+        
+        // Pop-enter triggers transition to active state
+        card.classList.remove('pop-enter');
+        card.classList.add('pop-active');
+      }, 500);
+    }, 3500);
+  };
+
+  startRotation();
+
+  // Pause rotation on hover of the grid container
+  reviewsPopupGrid.addEventListener('mouseenter', () => {
+    clearInterval(rotateInterval);
+  });
+
+  reviewsPopupGrid.addEventListener('mouseleave', () => {
+    startRotation();
+  });
 }
 
 // Header Scroll Effect
