@@ -562,7 +562,7 @@ function renderCases() {
           const flexStyle = sec.bottom.layout === 'row' ? 'flex-direction:row;gap:1rem;' : 'flex-direction:column;gap:1rem;';
           const imgStyle = sec.bottom.layout === 'row' ? 'flex:1;width:50%;' : 'width:100%;';
           contentHTML += `
-            <div class="treatment-section" style="max-width:800px;margin:1.5rem auto 0;">
+            <div class="treatment-section" style="max-width:350px;margin:1.5rem auto 0;">
               ${headingHTML}
               <div class="treatment-images-grid" style="${flexStyle}">
                 ${sec.bottom.images.map(img => `<img src="./assets/cases_new/${img}?v=6" alt="Bottom Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=6')" style="${imgStyle}">`).join('')}

@@ -111,128 +111,112 @@ const reviewsData = [
   "./assets/reviews/IMG_2029.JPG"
 ];
 
-// Initialize Reviews Pop-up Grid
-const reviewsPopupGrid = document.getElementById('reviewsPopupGrid');
-if (reviewsPopupGrid) {
+// Initialize Reviews Carousel
+const reviewsCarouselContainer = document.getElementById('reviewsCarouselContainer');
+const reviewsCarouselTrack = document.getElementById('reviewsCarouselTrack');
+
+if (reviewsCarouselContainer && reviewsCarouselTrack) {
   // Shuffle reviews initially so each visit feels fresh
   const shuffledReviews = [...reviewsData].sort(() => Math.random() - 0.5);
-  
-  // Set up active slots based on viewport width:
-  // Desktop (>=993px): 3 slots
-  // Tablet (769px - 992px): 2 slots
-  // Mobile (<=768px): 1 slot
-  const getSlotCount = () => {
-    const width = window.innerWidth;
-    if (width > 992) return 3;
-    if (width > 768) return 2;
-    return 1;
-  };
+  const N = shuffledReviews.length;
 
-  let activeSlotCount = getSlotCount();
-  let currentReviewIndex = 0;
-  
-  // Keep track of which images are currently displayed in a slot to avoid duplicates
-  const shownImages = new Set();
+  // Clone 3 times to make infinite scrolling seamless
+  const carouselReviews = [...shuffledReviews, ...shuffledReviews, ...shuffledReviews];
 
-  const getNextUnusedReview = () => {
-    let attempts = 0;
-    while (attempts < shuffledReviews.length) {
-      const review = shuffledReviews[currentReviewIndex];
-      currentReviewIndex = (currentReviewIndex + 1) % shuffledReviews.length;
-      if (!shownImages.has(review)) {
-        return review;
-      }
-      attempts++;
-    }
-    return shuffledReviews[currentReviewIndex]; // Fallback
-  };
-
-  // Build grid slots
-  const buildGrid = () => {
-    reviewsPopupGrid.innerHTML = '';
-    shownImages.clear();
-    
-    for (let i = 0; i < activeSlotCount; i++) {
-      const reviewImage = getNextUnusedReview();
-      shownImages.add(reviewImage);
-      
-      const slot = document.createElement('div');
-      slot.className = 'review-popup-slot';
-      slot.innerHTML = `
-        <div class="review-card image-card pop-active" data-slot="${i}" data-review-path="${reviewImage}">
-          <img src="${reviewImage}" alt="Patient Review" loading="lazy">
-        </div>
-      `;
-      reviewsPopupGrid.appendChild(slot);
-    }
-  };
-
-  buildGrid();
-
-  // Listen for window resize to adjust slot count dynamically
-  let resizeTimeout;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-      const newSlotCount = getSlotCount();
-      if (newSlotCount !== activeSlotCount) {
-        activeSlotCount = newSlotCount;
-        buildGrid();
-      }
-    }, 250);
+  // Render all cards
+  carouselReviews.forEach((reviewImage, index) => {
+    const card = document.createElement('div');
+    card.className = 'reviews-carousel-card';
+    card.dataset.index = index;
+    card.innerHTML = `<img src="${reviewImage}" alt="Patient Review" loading="lazy">`;
+    reviewsCarouselTrack.appendChild(card);
   });
 
-  // Staggered pop rotation logic:
+  const cards = Array.from(reviewsCarouselTrack.children);
+  
+  // Start activeIndex in the middle group (e.g. index 2*N - 1)
+  // We move right, which means activeIndex decreases.
+  let activeIndex = 2 * N - 1;
+  let isTransitioning = false;
+
+  const updateCarousel = (smooth = true) => {
+    if (smooth) {
+      reviewsCarouselTrack.classList.add('transitioning');
+    } else {
+      reviewsCarouselTrack.classList.remove('transitioning');
+    }
+
+    // Set active class
+    cards.forEach((card, idx) => {
+      if (idx === activeIndex) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+
+    // Calculate translation to center the active card
+    const containerWidth = reviewsCarouselContainer.offsetWidth;
+    const card = cards[activeIndex];
+    if (card) {
+      const cardWidth = card.offsetWidth;
+      const cardLeft = card.offsetLeft;
+      // Centering formula
+      const translateX = (containerWidth / 2) - (cardLeft + cardWidth / 2);
+      reviewsCarouselTrack.style.transform = `translateX(${translateX}px)`;
+    }
+
+    // Force reflow
+    reviewsCarouselTrack.offsetHeight;
+  };
+
+  // Initial update without transition
+  // We need to wait for a tick or image load/layout calculation
+  setTimeout(() => {
+    updateCarousel(false);
+  }, 100);
+
   let rotateInterval;
   const startRotation = () => {
-    // Every 3.5 seconds, we pop out one card and replace it with a new one
     rotateInterval = setInterval(() => {
-      // Pick a random slot to replace
-      const slotIndex = Math.floor(Math.random() * activeSlotCount);
-      const card = reviewsPopupGrid.querySelector(`.review-card[data-slot="${slotIndex}"]`);
-      
-      if (!card || card.classList.contains('pop-exit') || card.classList.contains('pop-enter')) {
-        return;
-      }
-      
-      // 1. Transition Out (Pop-exit)
-      card.classList.remove('pop-active');
-      card.classList.add('pop-exit');
-      
-      // 2. Swap image and Pop back in after exit finishes (500ms)
+      if (isTransitioning) return;
+      isTransitioning = true;
+
+      // Move right (decrement index so track shifts right and cards move right)
+      activeIndex--;
+      updateCarousel(true);
+
+      // Wait for the transition to finish (800ms)
       setTimeout(() => {
-        const oldPath = card.getAttribute('data-review-path');
-        shownImages.delete(oldPath);
+        isTransitioning = false;
         
-        const newReview = getNextUnusedReview();
-        shownImages.add(newReview);
-        
-        card.setAttribute('data-review-path', newReview);
-        const img = card.querySelector('img');
-        img.src = newReview;
-        
-        // Setup state for enter animation
-        card.classList.remove('pop-exit');
-        card.classList.add('pop-enter');
-        
-        // Force browser repaint/reflow
-        card.offsetHeight;
-        
-        // Pop-enter triggers transition to active state
-        card.classList.remove('pop-enter');
-        card.classList.add('pop-active');
-      }, 500);
-    }, 3500);
+        // Infinite scroll wrap around check:
+        // If we go below the middle copy range [N, 2*N - 1], jump back into it
+        if (activeIndex < N) {
+          activeIndex = activeIndex + N;
+          updateCarousel(false); // instant jump
+        }
+      }, 800);
+    }, 2800); // 2000ms zoom/pause + 800ms transition
   };
 
   startRotation();
 
-  // Pause rotation on hover of the grid container
-  reviewsPopupGrid.addEventListener('mouseenter', () => {
+  // Listen for window resize to recalculate centering
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      updateCarousel(false);
+    }, 150);
+  });
+
+  // Pause rotation on hover of the container
+  reviewsCarouselContainer.addEventListener('mouseenter', () => {
     clearInterval(rotateInterval);
   });
 
-  reviewsPopupGrid.addEventListener('mouseleave', () => {
+  reviewsCarouselContainer.addEventListener('mouseleave', () => {
     startRotation();
   });
 }
