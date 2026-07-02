@@ -362,7 +362,7 @@ const casesData = [
     description: "• CROWDING CASE TREATED WITH EXTRACTION OF ALL FOUR 1st PREMOLARS<br>• MBT PRESCRIPTION",
     text: "Case No. 13 | PRE TREATMENT POST TREATMENT | CROWDING CASE TREATED WITH EXTRACTION OF ALL FOUR 1st PREMOLARS MBT PRESCRIPTION",
     sections: [
-      { columns: [{ heading: "PRE TREATMENT", images: ["slide_25_face_pre_side.jpg", "slide_25_face_pre_front.jpg"] }, { heading: "POST TREATMENT", images: ["slide_25_face_post_front.jpg"] }] },
+      { columns: [{ heading: "PRE TREATMENT", images: ["slide_25_face_pre_side.jpg", "slide_25_face_pre_front.jpg"] }, { heading: "POST TREATMENT", images: ["slide_25_face_post_side_correct.jpg", "slide_25_face_post_front.jpg"] }] },
       { columns: [{ heading: "PRE TREATMENT", images: ["slide_25_teeth_pre_front.jpg"] }, { heading: "POST TREATMENT", images: ["slide_25_teeth_post_front.jpg"] }] },
       { columns: [{ heading: "PRE TREATMENT", images: ["slide_25_teeth_pre_upper.jpg"] }, { heading: "POST TREATMENT", images: ["slide_25_teeth_post_upper.jpg"] }] },
       { columns: [{ heading: "PRE TREATMENT", images: ["slide_25_teeth_pre_lower.jpg"] }, { heading: "POST TREATMENT", images: ["slide_25_teeth_post_lower.jpg"] }] }
