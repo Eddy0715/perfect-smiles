@@ -1862,3 +1862,101 @@ footer {
     font-size: 1.2rem !important;
   }
 }
+
+/* ============================================================
+   Trust Badges Section (Glassmorphism + Flashing Glow)
+   ============================================================ */
+.trust-badges-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+  flex-wrap: wrap;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(223, 186, 115, 0.15);
+}
+
+.trust-badge-card {
+  /* Glassmorphism base */
+  background: rgba(22, 22, 25, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(223, 186, 115, 0.2);
+  
+  padding: 1.2rem 3rem;
+  border-radius: 16px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  
+  /* Transition and breathing animation */
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
+  animation: glassGlowFlash 3.5s infinite ease-in-out;
+}
+
+/* Let the two cards have slightly offset animations for a natural breathing rhythm */
+.trust-badge-card:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.trust-badge-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0.92) contrast(1.05);
+  transition: filter 0.3s ease;
+}
+
+.happy-smiles-img {
+  mix-blend-mode: luminosity; /* Dissolve white background into transparent glass card */
+}
+
+.invisalign-img {
+  border-radius: 6px;
+}
+
+/* Hover State */
+.trust-badge-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  border-color: rgba(223, 186, 115, 0.7);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8), 
+              0 0 30px rgba(223, 186, 115, 0.25);
+  animation-play-state: paused; /* Pause the flash animation on hover */
+}
+
+.trust-badge-card:hover .trust-badge-img {
+  filter: brightness(1) contrast(1.1);
+}
+
+/* Flashing/Breathing Keyframes */
+@keyframes glassGlowFlash {
+  0%, 100% {
+    border-color: rgba(223, 186, 115, 0.18);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 
+                0 0 15px rgba(223, 186, 115, 0.04);
+  }
+  50% {
+    border-color: rgba(223, 186, 115, 0.55);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), 
+                0 0 35px rgba(223, 186, 115, 0.18);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .trust-badges-row {
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
+  .trust-badge-card {
+    height: 130px;
+    padding: 1rem 2rem;
+  }
+}
+
