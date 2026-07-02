@@ -1862,27 +1862,3 @@ footer {
     font-size: 1.2rem !important;
   }
 }
-
-/* ============================================================
-   Invisalign Provider Badge - In About Section
-   ============================================================ */
-.invisalign-section-badge {
-  width: 220px;
-  height: auto;
-  border-radius: 12px;
-  animation: invisalignFlash 2.5s ease-in-out infinite;
-}
-
-@keyframes invisalignFlash {
-  0%   { opacity: 1;    filter: drop-shadow(0 0 8px  rgba(223, 186, 115, 0.5)); }
-  25%  { opacity: 0.35; filter: drop-shadow(0 0 1px  rgba(223, 186, 115, 0.05)); }
-  50%  { opacity: 1;    filter: drop-shadow(0 0 24px rgba(223, 186, 115, 1)); }
-  75%  { opacity: 0.35; filter: drop-shadow(0 0 1px  rgba(223, 186, 115, 0.05)); }
-  100% { opacity: 1;    filter: drop-shadow(0 0 8px  rgba(223, 186, 115, 0.5)); }
-}
-
-@media (max-width: 768px) {
-  .invisalign-section-badge {
-    width: 160px;
-  }
-}
