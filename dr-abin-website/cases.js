@@ -124,8 +124,8 @@ const casesData = [
       {
         title: "MBT Fixed Mechanotherapy & Transverse Expansion NITI PALATAL EXPANDER",
         columns: [
-          { heading: "PRETREATMENT", images: ["slide_8_img_1.jpg", "slide_8_img_2.jpg", "slide_8_img_5.jpg"] },
-          { heading: "POST TREATMENT", images: ["slide_8_img_3.jpg", "slide_8_img_4.jpg"] }
+          { heading: "PRETREATMENT", images: ["slide_8_img_1.jpg", "slide_8_img_3.jpg", "slide_8_img_2.jpg", "slide_8_img_5.jpg"] },
+          { heading: "POST TREATMENT", images: ["slide_8_img_4.jpg"] }
         ]
       }
     ]
