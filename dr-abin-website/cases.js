@@ -94,8 +94,8 @@ const casesData = [
       {
         title: "Damon Q Self-Ligating System",
         columns: [
-          { heading: "PRETREATMENT", images: ["slide_5_img_1.jpg", "slide_5_img_2.jpg", "slide_5_img_3.jpg", "slide_5_img_4.jpg", "slide_5_img_5.jpg"] },
-          { heading: "POST TREATMENT", images: ["slide_5_img_6.jpg", "slide_5_img_7.jpg", "slide_5_img_8.jpg", "slide_5_img_9.jpg", "slide_5_img_10.jpg"] }
+          { heading: "PRETREATMENT", images: ["slide_5_img_3.jpg", "slide_5_img_4.jpg", "slide_5_img_5.jpg"] },
+          { heading: "POST TREATMENT", images: ["slide_5_img_8.jpg", "slide_5_img_9.jpg", "slide_5_img_10.jpg"] }
         ]
       },
       {
@@ -117,8 +117,8 @@ const casesData = [
     sections: [
       {
         columns: [
-          { heading: "PRETREATMENT", images: ["slide_7_img_1.jpg", "slide_7_img_2.jpg", "slide_7_img_3.jpg", "slide_7_img_4.jpg", "slide_7_img_5.jpg"] },
-          { heading: "POST TREATMENT", images: ["slide_7_img_6.jpg", "slide_7_img_7.jpg", "slide_7_img_8.jpg", "slide_7_img_9.jpg", "slide_7_img_10.jpg"] }
+          { heading: "PRETREATMENT", images: ["slide_7_img_1.jpg", "slide_7_img_3.jpg", "slide_7_img_4.jpg", "slide_7_img_5.jpg"] },
+          { heading: "POST TREATMENT", images: ["slide_7_img_6.jpg", "slide_7_img_8.jpg", "slide_7_img_9.jpg", "slide_7_img_10.jpg"] }
         ]
       },
       {
@@ -143,8 +143,8 @@ const casesData = [
     sections: [
       {
         columns: [
-          { heading: "PRETREATMENT", images: ["slide_9_img_1.jpg", "slide_9_img_2.jpg", "slide_9_img_3.png", "slide_9_img_4.png", "slide_9_img_5.png"] },
-          { heading: "POST TREATMENT", images: ["slide_9_img_6.png", "slide_9_img_7.png", "slide_9_img_8.jpg", "slide_9_img_9.jpg", "slide_9_img_10.jpg"] }
+          { heading: "PRETREATMENT", images: ["slide_9_img_3.png", "slide_9_img_4.png", "slide_9_img_5.png"] },
+          { heading: "POST TREATMENT", images: ["slide_9_img_8.jpg", "slide_9_img_9.jpg", "slide_9_img_10.jpg"] }
         ]
       },
       {
@@ -203,7 +203,7 @@ const casesData = [
         ]
       },
       {
-        title: "Continuation: Facemask Therapy & Fixed MBT Treatment",
+        title: "Facemask Therapy & Fixed MBT Treatment",
         columns: [
           { heading: "FACEMASK THERAPY - 13 MONTHS", images: ["slide_13_img_1.jpg", "slide_13_img_2.jpg", "slide_13_img_3.jpg"] },
           { heading: "POST FIXED TREATMENT", images: ["slide_13_img_4.jpg", "slide_13_img_5.jpg", "slide_13_img_6.jpg"] }
@@ -245,11 +245,11 @@ const casesData = [
         ]
       },
       {
-        title: "Fixed Therapy Phase (Continuation)",
+        title: "Fixed Therapy Phase",
         columns: [
-          { heading: "PRE TREATMENT WITH TWIN BLOCK", images: ["slide_16_img_1.jpg", "slide_16_img_2.jpg"] },
-          { heading: "POST FUNCTIONAL PHASE FIXED APPLIANCE", images: ["slide_16_img_3.jpg", "slide_16_img_4.png"] },
-          { heading: "POST FIXED APPLIANCE", images: ["slide_16_img_5.jpg"] }
+          { heading: "PRE TREATMENT WITH TWIN BLOCK", images: ["slide_16_img_1.jpg", "slide_16_img_4.png"] },
+          { heading: "POST FUNCTIONAL PHASE FIXED APPLIANCE", images: ["slide_16_img_2.jpg", "slide_16_img_5.jpg"] },
+          { heading: "POST FIXED APPLIANCE", images: ["slide_16_img_3.jpg"] }
         ]
       }
     ]
@@ -281,12 +281,12 @@ const casesData = [
       {
         title: "Fixed Appliance & Mini Implant Retraction",
         columns: [
-          { heading: "PRETREATMENT", images: ["slide_18_img_1.jpg", "slide_18_img_2.jpg", "slide_18_img_3.jpg", "slide_18_img_4.jpg", "slide_18_img_5.png"] },
-          { heading: "POST TREATMENT", images: ["slide_18_img_6.png", "slide_18_img_7.png", "slide_18_img_8.jpg", "slide_18_img_9.jpg", "slide_18_img_10.jpg"] }
+          { heading: "PRETREATMENT", images: ["slide_18_img_3.jpg", "slide_18_img_4.jpg", "slide_18_img_5.png"] },
+          { heading: "POST TREATMENT", images: ["slide_18_img_8.jpg", "slide_18_img_9.jpg", "slide_18_img_10.jpg"] }
         ]
       },
       {
-        title: "Continuation: Molar Uprighting & Space Closure (Duration: 14 Months)",
+        title: "Molar Uprighting & Space Closure (Duration: 14 Months)",
         columns: [
           { heading: "PRETREATMENT", images: ["slide_19_img_1.jpg", "slide_19_img_2.jpg", "slide_19_img_3.jpg"] },
           { heading: "POST TREATMENT", images: ["slide_19_img_4.jpg", "slide_19_img_5.jpg", "slide_19_img_6.jpg"] }
@@ -328,8 +328,6 @@ const casesData = [
     description: "• BIMAXILLARY PROTRUSION CASE TREATED WITH EXTRACTION OF ALL FOUR 1st PREMOLARS.<br>• DURATION – 17 MONTHS<br>• MBT PRESCRIPTION",
     text: "Case No-11 Extraction cases | Pre-treatment | Post-treatment | BIMAXILLARY PROTRUSION CASE TREATED WITH EXTRACTION OF ALL FOUR 1stPREMOLARS. DURATION – 17 MONTHS MBT PRESCRIPTION",
     sections: [
-      { columns: [{ heading: "Pre-treatment", images: ["slide_22_img_1.jpg"] }, { heading: "Post-treatment", images: ["slide_22_img_3.png"] }] },
-      { columns: [{ heading: "Pre-treatment", images: ["slide_22_img_8.png"] }, { heading: "Post-treatment", images: ["slide_22_img_6.png"] }] },
       { columns: [{ heading: "Pre-treatment", images: ["slide_22_img_5.jpg"] }, { heading: "Post-treatment", images: ["slide_22_img_10.jpg"] }] }
     ]
   },
@@ -345,13 +343,13 @@ const casesData = [
         title: "Pre-Treatment",
         columns: [
           { heading: "Pretreatment Face Profiles", images: ["slide_23_img_1.jpg", "slide_23_img_2.jpg"] },
-          { heading: "Pretreatment Dental Scans", images: ["slide_23_img_3.jpg", "slide_23_img_4.jpg", "slide_23_img_5.jpg"] }
+          { heading: "", images: ["slide_23_img_3.jpg", "slide_23_img_4.jpg", "slide_23_img_5.jpg"] }
         ]
       },
       {
         title: "Lets create some smile (Treatment Progress)",
         columns: [
-          { heading: "Aligner & Fixed Therapy space management", images: ["slide_24_img_1.jpg", "slide_24_img_2.jpg", "slide_24_img_3.jpg", "slide_24_img_4.jpg", "slide_24_img_5.jpg", "slide_24_img_6.jpg", "slide_24_img_7.jpg"] }
+          { heading: "Fixed Therapy", images: ["slide_24_img_3.jpg", "slide_24_img_6.jpg", "slide_24_img_4.jpg", "slide_24_img_5.jpg", "slide_24_img_7.jpg"] }
         ]
       }
     ]
@@ -388,14 +386,14 @@ const casesData = [
       {
         title: "Fixed Appliance & Implant Retraction Phase",
         columns: [
-          { heading: "PRETREATMENT", images: ["slide_26_pre_side1.jpg", "slide_26_pre_side2.jpg", "slide_26_pre_side3.jpg"] },
-          { heading: "MID TREATMENT", images: ["slide_26_mid_side1.jpg", "slide_26_mid_side2.jpg", "slide_26_mid_side3.jpg"] }
+          { heading: "PRETREATMENT", images: ["slide_26_pre_side3.jpg", "slide_26_pre_side2.jpg", "slide_26_pre_side1.jpg"] },
+          { heading: "MID TREATMENT", images: ["slide_26_mid_side3.jpg", "slide_26_mid_side2.jpg", "slide_26_mid_side1.jpg"] }
         ]
       },
       {
-        title: "Anchor Management & Space Closure (Continuation)",
+        title: "Anchor Management & Space Closure",
         columns: [
-          { heading: "Absolute Anchorage Retraction", images: ["slide_27_brace1.jpg", "slide_27_brace2.jpg", "slide_27_brace3.jpg"] },
+          { heading: "Absolute Anchorage Retraction", images: ["slide_27_brace3.jpg", "slide_27_brace2.jpg", "slide_27_brace1.jpg"] },
           { heading: "Arch Development", images: ["slide_27_arch1.jpg", "slide_27_arch2.jpg", "slide_27_arch3.jpg", "slide_27_arch4.jpg"] }
         ]
       }
@@ -418,19 +416,36 @@ const casesData = [
   {
     num: 24,
     title: "Case No. 16( herbst)",
-    category: "myofunctional-jaw palatal-expanders",
+    category: "myofunctional-jaw",
     tagLabel: "Herbst Appliance",
     description: "• FIXED FUNCTIONAL APPLIANCE THERAPY FOR skeletal Class II correction.",
-    text: "Case No. 16( herbst) fixed functional appliance | LETS DO SOME EXPANSION",
+    text: "Case No. 16( herbst) fixed functional appliance | Dr. Abin Mathew",
     sections: [
       {
+        title: "Face Profile and Alignment",
         columns: [
-          { heading: "Pre-Treatment", images: ["slide_29_img_1.jpg", "slide_29_img_2.jpg", "slide_29_img_3.jpg", "slide_29_img_4.jpg", "slide_29_img_5.jpg"] },
-          { heading: "Post-Treatment", images: ["slide_29_img_6.jpg", "slide_29_img_7.jpg", "slide_29_img_8.jpg", "slide_29_img_9.jpg", "slide_29_img_10.jpg"] }
+          { heading: "Pre-Treatment", images: ["slide_29_img_1.jpg", "slide_29_img_4.jpg"] },
+          { heading: "Post-Treatment", images: ["slide_29_img_2.jpg", "slide_29_img_3.jpg"] }
         ]
       },
       {
-        title: "Maxillary Palatal Expansion (Continuation)",
+        title: "Dental Occlusion & Herbst Appliance",
+        columns: [
+          { heading: "Pre-Treatment", images: ["slide_29_img_7.jpg", "slide_29_img_8.jpg", "slide_29_img_9.jpg"] },
+          { heading: "Mid-Treatment (Herbst Appliance)", images: ["slide_29_img_5.jpg", "slide_29_img_6.jpg", "slide_29_img_10.jpg"] }
+        ]
+      }
+    ]
+  },
+  {
+    num: 25,
+    title: "Case No. 16: Maxillary Palatal Expansion",
+    category: "palatal-expanders",
+    tagLabel: "Palatal Expander",
+    description: "• LETS DO SOME EXPANSION<br>• Maxillary palatal expansion case showing pre-treatment transverse narrowing and post-expansion alignment.",
+    text: "LETS DO SOME EXPANSION | Maxillary Palatal Expansion | Dr. Abin Mathew",
+    sections: [
+      {
         columns: [
           { heading: "Pre-Treatment", images: ["slide_30_img_1.jpg"] },
           { heading: "Post-Treatment", images: ["slide_30_img_2.jpg"] }
@@ -445,7 +460,7 @@ const casesData = [
     tagLabel: "TADs",
     description: "• MINI IMPLANTS TO THE RESCUE WHEN YOU NEED TIPPING OF CANINES",
     text: "MINI IMPLANTS TO THE RESCUE WHEN YOU NEED TIPPING OF CANINES",
-    sections: [{ columns: [{ heading: "Pre-Treatment", images: ["slide_32_img_1.png"] }, { heading: "Post-Treatment", images: ["slide_32_img_2.png"] }] }]
+    sections: [{ columns: [{ heading: "", images: ["slide_32_img_1.png"] }, { heading: "", images: ["slide_32_img_2.png"] }] }]
   },
   {
     num: 27,
@@ -537,7 +552,7 @@ function renderCases() {
           contentHTML += `
             <div class="case-single-layout" style="margin-bottom:1.5rem;">
               <div class="single-image-container treatment-images-grid">
-                ${sec.top.images.map(img => `<img src="./assets/cases_new/${img}?v=6" alt="Top Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=6')">`).join('')}
+                ${sec.top.images.map(img => `<img src="./assets/cases_new/${img}?v=7" alt="Top Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=7')">`).join('')}
               </div>
             </div>`;
         }
@@ -547,10 +562,10 @@ function renderCases() {
             <div class="case-treatment-layout" style="grid-template-columns:repeat(${numCols},1fr);gap:2rem;">
               ${sec.columns.map(col => `
                 <div class="treatment-section">
-                  <h4 class="treatment-title" style="font-size: 0.95rem; line-height: 1.3;">${col.heading}</h4>
+                  <h4 class="treatment-title" style="font-size: 0.95rem; line-height: 1.3; ${col.heading ? '' : 'border-left: none; padding-left: 0;'}">${col.heading ? col.heading : '&nbsp;'}</h4>
                   <div class="treatment-images-grid">
                     ${col.images.map(img => `
-                      <img src="./assets/cases_new/${img}?v=6" alt="${col.heading} Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=6')">
+                      <img src="./assets/cases_new/${img}?v=7" alt="${col.heading} Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=7')">
                     `).join('')}
                   </div>
                 </div>
@@ -565,7 +580,7 @@ function renderCases() {
             <div class="treatment-section" style="max-width:350px;margin:1.5rem auto 0;">
               ${headingHTML}
               <div class="treatment-images-grid" style="${flexStyle}">
-                ${sec.bottom.images.map(img => `<img src="./assets/cases_new/${img}?v=6" alt="Bottom Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=6')" style="${imgStyle}">`).join('')}
+                ${sec.bottom.images.map(img => `<img src="./assets/cases_new/${img}?v=7" alt="Bottom Detail" loading="lazy" onclick="openLightbox('./assets/cases_new/${img}?v=7')" style="${imgStyle}">`).join('')}
               </div>
             </div>`;
         }
@@ -576,7 +591,7 @@ function renderCases() {
       contentHTML += `
         <div class="case-single-layout">
           <div class="single-image-container treatment-images-grid">
-            <img src="./assets/cases_new/${item.images[0]}?v=6" alt="${item.title}" loading="lazy" onclick="openLightbox('./assets/cases_new/${item.images[0]}?v=6')">
+            <img src="./assets/cases_new/${item.images[0]}?v=7" alt="${item.title}" loading="lazy" onclick="openLightbox('./assets/cases_new/${item.images[0]}?v=7')">
           </div>
         </div>`;
     }

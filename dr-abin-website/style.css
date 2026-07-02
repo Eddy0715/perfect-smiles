@@ -833,6 +833,15 @@ header.scrolled .nav-links a {
   will-change: transform;
 }
 
+@keyframes infiniteScrollReverse {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-50% - 0.75rem), 0, 0);
+  }
+}
+
 #case-reports-glance .carousel-container:hover #casesTrack {
   animation-play-state: paused;
 }

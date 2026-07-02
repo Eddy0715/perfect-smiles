@@ -48,13 +48,9 @@
     "slide_num": 5,
     "text": "Non Extraction Cases | CASE NO - 1 | PRETREATMENT                            POST TREATMENT | PATIENT WITH CROWDING AND IMPACTED CANINE TREATED WITH DAMON Q SELF LIGATING BRACKET SYSTEM",
     "images": [
-      "./assets/cases_new/slide_5_img_1.jpg",
-      "./assets/cases_new/slide_5_img_2.jpg",
       "./assets/cases_new/slide_5_img_3.jpg",
       "./assets/cases_new/slide_5_img_4.jpg",
       "./assets/cases_new/slide_5_img_5.jpg",
-      "./assets/cases_new/slide_5_img_6.jpg",
-      "./assets/cases_new/slide_5_img_7.jpg",
       "./assets/cases_new/slide_5_img_8.jpg",
       "./assets/cases_new/slide_5_img_9.jpg",
       "./assets/cases_new/slide_5_img_10.jpg"
@@ -76,12 +72,10 @@
     "text": "PRETREATMENT                            POST TREATMENT | PREVIOUSLY  CLEFT PALATE TREATED PATIENT TREATED WITH NITI PALATAL EXPANDER AND FIXED MBT MECHANOTHERAPHY | CASE NO -2",
     "images": [
       "./assets/cases_new/slide_7_img_1.jpg",
-      "./assets/cases_new/slide_7_img_2.jpg",
       "./assets/cases_new/slide_7_img_3.jpg",
       "./assets/cases_new/slide_7_img_4.jpg",
       "./assets/cases_new/slide_7_img_5.jpg",
       "./assets/cases_new/slide_7_img_6.jpg",
-      "./assets/cases_new/slide_7_img_7.jpg",
       "./assets/cases_new/slide_7_img_8.jpg",
       "./assets/cases_new/slide_7_img_9.jpg",
       "./assets/cases_new/slide_7_img_10.jpg"
@@ -102,13 +96,9 @@
     "slide_num": 9,
     "text": "CASE NO - 3 | PRETREATMENT | POSTTREATMENT | CLASS I SKELETAL PATTERN,ANGLES CLASS I MOLAR RELATION BILATERALLY  WITH  IMPACTED CANINE IN LOWER ARCH\nOBLIQUELY IMPACTED 33 IS ORIENTED TO CERVICAL 3 RD OF ROOTS OF 41 and 42 AND ALSO HAS A DILACERATED ROOT",
     "images": [
-      "./assets/cases_new/slide_9_img_1.jpg",
-      "./assets/cases_new/slide_9_img_2.jpg",
       "./assets/cases_new/slide_9_img_3.png",
       "./assets/cases_new/slide_9_img_4.png",
       "./assets/cases_new/slide_9_img_5.png",
-      "./assets/cases_new/slide_9_img_6.png",
-      "./assets/cases_new/slide_9_img_7.png",
       "./assets/cases_new/slide_9_img_8.jpg",
       "./assets/cases_new/slide_9_img_9.jpg",
       "./assets/cases_new/slide_9_img_10.jpg"
@@ -191,10 +181,10 @@
     "text": "TWIN BLOCK APPLIANCE THERAPY WITH MBT FIXED MECHANOTHERAPY | PRE TREATMENT                      WITH TWIN BLOCK | POST FUNCTIONAL PHASE          FIXED APPLIANCE | POST FIXED APPLIANCE",
     "images": [
       "./assets/cases_new/slide_16_img_1.jpg",
-      "./assets/cases_new/slide_16_img_2.jpg",
-      "./assets/cases_new/slide_16_img_3.jpg",
       "./assets/cases_new/slide_16_img_4.png",
-      "./assets/cases_new/slide_16_img_5.jpg"
+      "./assets/cases_new/slide_16_img_2.jpg",
+      "./assets/cases_new/slide_16_img_5.jpg",
+      "./assets/cases_new/slide_16_img_3.jpg"
     ]
   },
   {
@@ -216,13 +206,9 @@
     "slide_num": 18,
     "text": "CASE NO-8 Mutilated malocclusion cases | PRETREATMENT | POST TREATMENT | MUTILATED MALOCCLUSION TREATED WITH FIXED APPLIANCE\nMINI IMPLANT RETRACTION",
     "images": [
-      "./assets/cases_new/slide_18_img_1.jpg",
-      "./assets/cases_new/slide_18_img_2.jpg",
       "./assets/cases_new/slide_18_img_3.jpg",
       "./assets/cases_new/slide_18_img_4.jpg",
       "./assets/cases_new/slide_18_img_5.png",
-      "./assets/cases_new/slide_18_img_6.png",
-      "./assets/cases_new/slide_18_img_7.png",
       "./assets/cases_new/slide_18_img_8.jpg",
       "./assets/cases_new/slide_18_img_9.jpg",
       "./assets/cases_new/slide_18_img_10.jpg"
@@ -262,15 +248,7 @@
     "slide_num": 22,
     "text": "Case No-11 Extraction cases | Pre-treatment | Post-treatment | BIMAXILLARY PROTRUSION CASE TREATED WITH EXTRACTION OF ALL FOUR  1stPREMOLARS.\nDURATION \u2013 17 MONTHS \nMBT PRESCRIPTION",
     "images": [
-      "./assets/cases_new/slide_22_img_1.jpg",
-      "./assets/cases_new/slide_22_img_2.jpg",
-      "./assets/cases_new/slide_22_img_3.png",
-      "./assets/cases_new/slide_22_img_4.jpg",
       "./assets/cases_new/slide_22_img_5.jpg",
-      "./assets/cases_new/slide_22_img_6.png",
-      "./assets/cases_new/slide_22_img_7.png",
-      "./assets/cases_new/slide_22_img_8.png",
-      "./assets/cases_new/slide_22_img_9.jpg",
       "./assets/cases_new/slide_22_img_10.jpg"
     ]
   },
@@ -292,11 +270,11 @@
     "text": "Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Dr.Abin Mathew | Lets create some smile",
     "images": [
       "./assets/cases_new/slide_24_img_1.jpg",
-      "./assets/cases_new/slide_24_img_2.jpg",
       "./assets/cases_new/slide_24_img_3.jpg",
+      "./assets/cases_new/slide_24_img_6.jpg",
+      "./assets/cases_new/slide_24_img_2.jpg",
       "./assets/cases_new/slide_24_img_4.jpg",
       "./assets/cases_new/slide_24_img_5.jpg",
-      "./assets/cases_new/slide_24_img_6.jpg",
       "./assets/cases_new/slide_24_img_7.jpg"
     ]
   },
