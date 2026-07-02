@@ -1240,9 +1240,12 @@ footer {
 
   /* Footer stacks */
   footer .container > div {
-    flex-direction: column !important;
-    gap: 1.5rem !important;
     text-align: center;
+  }
+  footer .social-icons,
+  footer .footer-nav {
+    flex-direction: row !important;
+    justify-content: center !important;
   }
 
   /* Cases page filter tabs */
