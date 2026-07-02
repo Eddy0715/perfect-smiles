@@ -1862,3 +1862,22 @@ footer {
     font-size: 1.2rem !important;
   }
 }
+
+/* ============================================================
+   Invisalign Provider Badge Animation
+   ============================================================ */
+@keyframes heroLogoFloat {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  25%  { transform: translateY(-6px) rotate(0.5deg); }
+  50%  { transform: translateY(-10px) rotate(0deg); }
+  75%  { transform: translateY(-6px) rotate(-0.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@media (max-width: 768px) {
+  .hero .invisalign-badge {
+    width: 130px !important;
+    top: 1rem !important;
+    right: 1rem !important;
+  }
+}

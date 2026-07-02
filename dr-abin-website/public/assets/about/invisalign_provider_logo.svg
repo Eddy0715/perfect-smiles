@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="340" height="100">
+  <!-- Dark background pill -->
+  <rect width="340" height="100" rx="12" fill="#3c3830"/>
+
+  <!-- Invisalign flower/starburst logo mark - 8 petals -->
+  <g transform="translate(58,50)">
+    <!-- Petal pairs at various angles using diamond/leaf shapes -->
+    <ellipse cx="0" cy="-19" rx="5.5" ry="15" fill="#d0d0d0" opacity="0.95"/>
+    <ellipse cx="0" cy="-19" rx="5.5" ry="15" fill="#b0b0b0" opacity="0.85" transform="rotate(45)"/>
+    <ellipse cx="0" cy="-19" rx="5.5" ry="15" fill="#d0d0d0" opacity="0.95" transform="rotate(90)"/>
+    <ellipse cx="0" cy="-19" rx="5.5" ry="15" fill="#b0b0b0" opacity="0.85" transform="rotate(135)"/>
+    <ellipse cx="0" cy="-19" rx="5.5" ry="15" fill="#d0d0d0" opacity="0.95" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-19" rx="5.5" ry="15" fill="#b0b0b0" opacity="0.85" transform="rotate(225)"/>
+    <ellipse cx="0" cy="-19" rx="5.5" ry="15" fill="#d0d0d0" opacity="0.95" transform="rotate(270)"/>
+    <ellipse cx="0" cy="-19" rx="5.5" ry="15" fill="#b0b0b0" opacity="0.85" transform="rotate(315)"/>
+    <!-- Center highlight -->
+    <circle cx="0" cy="0" r="4" fill="#e8e8e8" opacity="0.6"/>
+  </g>
+
+  <!-- invisalign® text -->
+  <text x="104" y="44" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="300" fill="white" letter-spacing="0.3">invisalign</text>
+  <text x="281" y="36" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="white">®</text>
+
+  <!-- PROVIDER subtext -->
+  <text x="106" y="66" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="white" letter-spacing="6">PROVIDER</text>
+</svg>
