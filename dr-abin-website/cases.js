@@ -205,8 +205,8 @@ const casesData = [
       {
         title: "Facemask Therapy & Fixed MBT Treatment",
         columns: [
-          { heading: "FACEMASK THERAPY - 13 MONTHS", images: ["slide_13_img_1.jpg", "slide_13_img_2.jpg", "slide_13_img_3.jpg"] },
-          { heading: "POST FIXED TREATMENT", images: ["slide_13_img_4.jpg", "slide_13_img_5.jpg", "slide_13_img_6.jpg"] }
+          { heading: "FACEMASK THERAPY - 13 MONTHS", images: ["slide_13_img_1.jpg", "slide_13_img_2.jpg", "slide_13_img_4.jpg", "slide_13_img_5.jpg"] },
+          { heading: "POST FIXED TREATMENT", images: ["slide_13_img_3.jpg", "slide_13_img_6.jpg"] }
         ]
       }
     ]
