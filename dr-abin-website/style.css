@@ -1822,3 +1822,40 @@ footer {
     justify-content: center;
   }
 }
+
+/* Mobile Overrides for Service Modal (fixes image size and side-by-side squishing) */
+@media (max-width: 768px) {
+  .modal-body {
+    grid-template-columns: 1fr !important;
+    padding: 1.8rem 1.25rem !important;
+    gap: 1.5rem !important;
+  }
+  .modal-img-container {
+    position: relative !important;
+    width: 100% !important;
+    max-height: 240px !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .modal-img-container img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+  .modal-details h2 {
+    font-size: 1.8rem !important;
+    text-align: center !important;
+  }
+  .modal-subtitle {
+    text-align: center !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+  .modal-close-btn {
+    top: 1rem !important;
+    right: 1rem !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.2rem !important;
+  }
+}
