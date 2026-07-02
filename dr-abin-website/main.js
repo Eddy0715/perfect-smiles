@@ -116,8 +116,8 @@ const reviewsCarouselContainer = document.getElementById('reviewsCarouselContain
 const reviewsCarouselTrack = document.getElementById('reviewsCarouselTrack');
 
 if (reviewsCarouselContainer && reviewsCarouselTrack) {
-  // Shuffle reviews initially so each visit feels fresh
-  const shuffledReviews = [...reviewsData].sort(() => Math.random() - 0.5);
+  // Shuffle reviews initially and take a subset of 12 for high performance on mobile
+  const shuffledReviews = [...reviewsData].sort(() => Math.random() - 0.5).slice(0, 12);
   const N = shuffledReviews.length;
 
   // Clone 3 times to make infinite scrolling seamless
@@ -171,10 +171,18 @@ if (reviewsCarouselContainer && reviewsCarouselTrack) {
   };
 
   // Initial update without transition
-  // We need to wait for a tick or image load/layout calculation
+  // We run multiple layout passes to guarantee perfect alignment on slow mobile connections
   setTimeout(() => {
     updateCarousel(false);
   }, 100);
+
+  setTimeout(() => {
+    updateCarousel(false);
+  }, 500);
+
+  window.addEventListener('load', () => {
+    updateCarousel(false);
+  });
 
   let rotateInterval;
   const startRotation = () => {
