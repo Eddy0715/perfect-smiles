@@ -1908,8 +1908,13 @@ footer {
   height: 100%;
   width: auto;
   object-fit: contain;
-  filter: brightness(0.92) contrast(1.05);
-  transition: filter 0.3s ease;
+  filter: brightness(0.85) contrast(1.02);
+  transition: filter 0.3s ease, opacity 0.3s ease;
+  animation: innerLogoFlash 3.5s infinite ease-in-out;
+}
+
+.trust-badge-card:nth-child(2) .trust-badge-img {
+  animation-delay: 0.7s;
 }
 
 .happy-smiles-img {
@@ -1926,11 +1931,17 @@ footer {
   border-color: rgba(223, 186, 115, 0.7);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8), 
               0 0 30px rgba(223, 186, 115, 0.25);
-  animation-play-state: paused; /* Pause the flash animation on hover */
+}
+
+/* Pause animations on hover and highlight the images fully */
+.trust-badge-card:hover,
+.trust-badge-card:hover .trust-badge-img {
+  animation-play-state: paused;
 }
 
 .trust-badge-card:hover .trust-badge-img {
-  filter: brightness(1) contrast(1.1);
+  filter: brightness(1.1) contrast(1.1);
+  opacity: 1;
 }
 
 /* Flashing/Breathing Keyframes */
@@ -1939,11 +1950,24 @@ footer {
     border-color: rgba(223, 186, 115, 0.18);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 
                 0 0 15px rgba(223, 186, 115, 0.04);
+    background: rgba(22, 22, 25, 0.4);
   }
   50% {
-    border-color: rgba(223, 186, 115, 0.55);
+    border-color: rgba(223, 186, 115, 0.65);
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), 
-                0 0 35px rgba(223, 186, 115, 0.18);
+                0 0 40px rgba(223, 186, 115, 0.25);
+    background: rgba(22, 22, 25, 0.55);
+  }
+}
+
+@keyframes innerLogoFlash {
+  0%, 100% {
+    opacity: 0.75;
+    filter: brightness(0.8) contrast(1.02);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.15) contrast(1.08) drop-shadow(0 0 10px rgba(223, 186, 115, 0.35));
   }
 }
 
