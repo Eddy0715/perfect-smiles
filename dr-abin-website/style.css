@@ -1864,39 +1864,54 @@ footer {
 }
 
 /* ============================================================
-   Invisalign Provider Badge - Desktop + Mobile
+   Invisalign Provider Badge - Desktop (in navbar, top-right)
    ============================================================ */
-.invisalign-badge {
-  position: absolute;
-  top: 5.5rem;
-  right: 2rem;
-  z-index: 10;
+
+/* Desktop badge: shown inline in the navbar after Book Consultation */
+.invisalign-badge-desktop {
+  width: 140px;
+  height: auto;
+  border-radius: 8px;
   animation: invisalignFlash 2.5s ease-in-out infinite;
+  display: inline-block;
 }
 
-.invisalign-badge img {
-  width: 180px;
-  height: auto;
-  border-radius: 10px;
+/* Mobile badge: hidden on desktop */
+.invisalign-badge-mobile {
+  display: none;
+}
+
+/* Logo div needs to allow column stacking on mobile */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 @keyframes invisalignFlash {
   0%   { opacity: 1;    filter: drop-shadow(0 0 8px  rgba(223, 186, 115, 0.5)); }
-  25%  { opacity: 0.45; filter: drop-shadow(0 0 2px  rgba(223, 186, 115, 0.05)); }
+  25%  { opacity: 0.4;  filter: drop-shadow(0 0 2px  rgba(223, 186, 115, 0.05)); }
   50%  { opacity: 1;    filter: drop-shadow(0 0 24px rgba(223, 186, 115, 1)); }
-  75%  { opacity: 0.45; filter: drop-shadow(0 0 2px  rgba(223, 186, 115, 0.05)); }
+  75%  { opacity: 0.4;  filter: drop-shadow(0 0 2px  rgba(223, 186, 115, 0.05)); }
   100% { opacity: 1;    filter: drop-shadow(0 0 8px  rgba(223, 186, 115, 0.5)); }
 }
 
-/* Mobile — badge placed statically, centered between nav and hero content */
+/* Mobile: hide desktop badge, show mobile badge below the logo */
 @media (max-width: 768px) {
-  .invisalign-badge {
-    position: static;
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem auto 1.5rem;
+  .invisalign-badge-desktop {
+    display: none;
   }
-  .invisalign-badge img {
-    width: 130px;
+  .invisalign-badge-mobile {
+    display: block;
+    width: 110px;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 0.3rem;
+    animation: invisalignFlash 2.5s ease-in-out infinite;
+  }
+  .logo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
   }
 }
